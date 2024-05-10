@@ -16,7 +16,7 @@ const config = {
   url: 'https://predictabledialogs.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/doc/',
+  baseUrl: '/kb/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -43,8 +43,8 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          path: 'WhatsApp',
-          routeBasePath: 'WhatsApp',
+          path: 'docs',
+          routeBasePath: 'docs',
           editUrl:
             'https://github.com/Jaikant/pd-docs/tree/main/docs/',
         },
@@ -68,18 +68,24 @@ const config = {
       // Replace with your project's social card
       image: 'img/documentation-social-card.png',
       navbar: {
-        title: 'Predictable Dialogs',
+        title: 'Knowledge Base',
         // logo: {
         //   alt: 'My Site Logo',
         //   src: 'img/logo.svg',
         // },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'WhatsApp',
+            href: 'https://predictabledialogs.com/agents', // This makes the item link to the absolute root
+            label: 'Agents', // This is the text that appears in the navbar
+            position: 'right', // Ensures it appears on the left side
+            activeBaseRegex: '^https?://predictabledialogs.com/$', // Keeps the title highlighted when on the homepage
           },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'WhatsApp',
+          // },
           // {to: '/doc/blog', label: 'Blog', position: 'left'},
           // {
           //   href: 'https://github.com/facebook/docusaurus',

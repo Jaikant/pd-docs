@@ -30,7 +30,7 @@ import styles from './index.module.css';
 // }
 
 export default function Home() {
-  return <Redirect to="/doc/WhatsApp/category/whatsapp-business-setup" />;
+  return <Redirect to="/kb/docs/category/whatsapp-business-setup" />;
   // const {siteConfig} = useDocusaurusContext();
   // return (
   //   <Layout
