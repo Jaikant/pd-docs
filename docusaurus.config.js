@@ -46,7 +46,7 @@ const config = {
           path: 'docs',
           routeBasePath: 'docs',
           editUrl:
-            'https://github.com/Jaikant/pd-docs/tree/main/docs/',
+            'https://github.com/Jaikant/pd-docs/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -144,6 +144,12 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+    stylesheets: [
+      {
+        href: 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap',
+        type: 'text/css',
+      },
+    ],  
 };
 
 export default config;
