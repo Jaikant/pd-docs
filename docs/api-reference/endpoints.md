@@ -3,7 +3,7 @@ title: ''
 hide_table_of_contents: false
 ---
 
-## Agents
+## Endpoints
 End point to interact with agent data
 
 

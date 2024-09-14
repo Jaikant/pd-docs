@@ -3,7 +3,7 @@ title: ''
 hide_table_of_contents: false
 ---
 
-### Making Requests
+## Making Requests
 You can paste the command below into your terminal to run your first API request. Make sure to replace $PD_ACCESS_TOKEN with your secret access token. And agentId with your agent id. 
 You can get the agent id from the url in the app.
 
