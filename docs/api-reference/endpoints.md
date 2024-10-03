@@ -24,10 +24,9 @@ Ensure to put the correct agent id, else you would get a 500 Error
 
 Or using curl
 ```
-curl -X 'GET' \
-  'http://localhost:8001/v1/agents/cm11onfgu01n1opn7g7ar5ktm/sessions' \
-  -H 'accept: */*' \
-  -H 'Authorization: Bearer PD_ACCESS_TOKEN'
+curl http://localhost:8001/v1/agents/cm11onfgu01n1opn7g7ar5ktm/sessions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $PD_ACCESS_TOKEN"
 ```
 
 Ensure to add your access token.
@@ -68,10 +67,9 @@ GET https://app.predictabledialogs.com/v1/agents/cluut0qmh0306ltbnrmpktciw/sessi
 
 Or using curl
 ```
-curl -X 'GET' \
-  'https://app.predictabledialogs.com/v1/agents/cm11onfgu01n1opn7g7ar5ktn/sessions/a49nbb/conversations' \
-  -H 'accept: */*' \
-  -H 'Authorization: Bearer PD_ACCESS_TOKEN'
+curl https://app.predictabledialogs.com/v1/agents/cm11onfgu01n1opn7g7ar5ktn/sessions/a49nbb/conversations \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $PD_ACCESS_TOKEN"
 ```
 Note: *Currently we are not validating the agent id, in this endpoint as session ids are unique.
 but it is best to use the agent id to future proof the request.*
