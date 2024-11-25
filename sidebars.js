@@ -56,7 +56,11 @@ const sidebars = {
       id: 'settings',
       label: 'Settings',
     },
-
+    {
+      type: 'doc',
+      id: 'results',
+      label: 'Results',
+    },
     {
       type: 'category',
       label: "WhatsApp Business Setup",
