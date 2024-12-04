@@ -89,6 +89,21 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Frequently asked questions',
+      link: {
+        type: 'generated-index',
+        description: 'Here are some answers to some frequently asked questions',
+      },
+      items: [
+        {
+          type: 'doc',
+          id: 'faqs/removing-openai-annotations',
+          label: 'Removing OpenAI Annotations',
+        }
+      ],
+    },
+    {
+      type: 'category',
       label: "API Reference (Beta)",
       link: {
         "type": "generated-index",
