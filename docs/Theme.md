@@ -51,3 +51,5 @@ If you need some custom styling on the button you can target the .agent-button c
   background-image: linear-gradient(to right, #FFA500, #FF6347); 
 }
 ```
+
+More about custom css can be read in the [custom css section](https://predictabledialogs.com/kb/docs/custom-css).

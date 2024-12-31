@@ -53,6 +53,11 @@ const sidebars = {
     },
     {
       type: 'doc',
+      id: 'custom-css',
+      label: 'Custom CSS',
+    },
+    {
+      type: 'doc',
       id: 'settings',
       label: 'Settings',
     },
