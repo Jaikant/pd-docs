@@ -40,9 +40,9 @@ const sidebars = {
         },
 
         {
-        type: 'doc',
-        id: 'getting-started/embedding-your-openai-assistant',
-        label: 'Embedding Your OpenAI Assistant' 
+          type: 'doc',
+          id: 'getting-started/embedding-your-openai-assistant',
+          label: 'Embedding Your OpenAI Assistant' 
         } 
       ],
     },
@@ -50,6 +50,26 @@ const sidebars = {
       type: 'doc',
       id: 'theme',
       label: 'Theme',
+    },
+    {
+      type: 'category',
+      label: 'Styling',
+      link: {
+        "type": "generated-index",
+        "description": "Style your bubble & ai-button"
+      },   
+      items: [
+        {
+          type: 'doc',
+          id: 'styling/bubble',
+          label: 'Bubble' 
+        },
+        {
+          type: 'doc',
+          id: 'styling/ai-button',
+          label: 'AI Button' 
+        }
+      ],
     },
     {
       type: 'doc',
