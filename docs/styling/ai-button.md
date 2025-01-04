@@ -17,6 +17,8 @@ You can style the ai-button using the ::part pseudo-element. Here's an example t
 ```
 This targets the button part of the ai-button component and adjusts its font size.
 
+*Tip:* For WordPress users, If the styles don’t work as expected in your theme, try adding them to the Additional CSS section.
+
 ### Adding Interactive Styles
 Enhance user experience by adding hover and active states to your button:
 
