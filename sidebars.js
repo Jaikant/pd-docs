@@ -48,6 +48,11 @@ const sidebars = {
     },
     {
       type: 'doc',
+      id: 'pd-whatsapp',
+      label: 'Add WhatsApp to PD',
+    },
+    {
+      type: 'doc',
       id: 'theme',
       label: 'Theme',
     },
@@ -108,9 +113,8 @@ const sidebars = {
         {
           type: 'doc',
           id: 'whatsapp/add-phone-number',
-          label: 'Add a Phone Number' 
-        }   
-      ],
+          label: 'Add Phone Number to WhatsApp' 
+        }      ],
     },
     {
       type: 'category',
