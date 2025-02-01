@@ -16,7 +16,7 @@ const config = {
   url: 'https://predictabledialogs.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -42,7 +42,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           path: 'docs',
-          routeBasePath: 'docs',
+          routeBasePath: '/',
           editUrl:
             'https://github.com/Jaikant/pd-docs/tree/main/',
         },
