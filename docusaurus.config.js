@@ -16,7 +16,7 @@ const config = {
   url: 'https://predictabledialogs.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/kb/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -41,8 +41,6 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           path: 'docs',
           routeBasePath: 'docs',
           editUrl:
@@ -50,10 +48,9 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          routeBasePath: '/blog',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/Jaikant/pd-docs/tree/main/blog/',
         },
         theme: {
           customCss: './src/css/custom.css',

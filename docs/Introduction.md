@@ -1,7 +1,7 @@
 ---
 id: intro
 description: Predictable Dialogs was designed from the ground up to enable the easy design and embedding of AI agents into websites.
-slug: /introduction
+slug: /
 ---
 
 # Introduction
@@ -14,4 +14,4 @@ Predictable Dialogs is a AI integration tool.
 
 
 ## Something missing? {#something-missing}
-If you find issues with the documentation or have suggestions on how to improve the documentation or the project in general, please send a tweet mentioning the [@jknt](https://x.com/jkntji) Twitter account.
+If you find issues with the documentation or have suggestions on how to improve the documentation or the project in general, please send a tweet mentioning the [@pdialogs](https://x.com/pdialogs) Twitter account.
