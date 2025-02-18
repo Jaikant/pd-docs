@@ -35,6 +35,11 @@ const sidebars = {
         },
         {
           type: 'doc',
+          id: 'getting-started/concepts',
+          label: 'Concepts' 
+        },
+        {
+          type: 'doc',
           id: 'getting-started/creating-an-agent',
           label: 'Creating an Agent' 
         },
