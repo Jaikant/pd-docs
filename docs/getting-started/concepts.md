@@ -10,8 +10,9 @@ In the Predictable Dialogs app, you’ll see two main pages:
 
 ## Agents
 
-An **Agent** is the entity you configure on the Agents page. Currently, each Agent can only be connected to **one** AI Resource at a time, although the underlying design supports multiple connections. 
-You can give each Agent its own theme and setting.
+An **Agent** is the entity you configure on the Agents page. It uses the configured AI models to perform tasks. 
+
+We currently provide Chatbot Agents. Chatbot Agents can be added to websites or connected to WhatsApp. You can give each Chatbot Agent its own theme and setting.
 
 ## AI Resources
 
@@ -32,9 +33,14 @@ For example:
 
 Here, both AI Resource 1 and AI Resource 2 connect to the exact same AI model (the OpenAI Assistant with ID “xyz”), but they have different names in the app.
 
-### Changing AI Resources
+### Relationship between AI Resources & Agents
 
-If you change which AI Model an AI Resource points to, **all Agents** connected to that AI Resource automatically start using the new AI model. You can also update an Agent to connect it to a different AI Resource at any time. This setup gives you a lot of flexibility to switch AI models on the fly.
+Currently, each Agent can only be connected to **one** AI Resource at a time, although the underlying design supports multiple connections. 
+
+- If you change the AI Model an AI Resource points to, **all Agents** connected to that AI Resource automatically start using the new AI model. 
+- You can update an Agent to a different AI Resource at any time. 
+
+This setup gives you a lot of flexibility to switch AI models on the fly.
 
 ### Naming Edge Case
 
