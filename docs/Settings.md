@@ -36,7 +36,8 @@ Click the ✨ button to create an initial response using your OpenAI assistant a
 *Note:* Links in this markdown viewer will open in the same tab, as the 'open in new tab' feature is not currently supported.
 
 
-## Customize the topics
+## Customize the topics 
+__(Applicable only for AI topic button widget, not applicable for Standard, Popup & Bubble widgets)__
 
 Topics allow you to provide pre-generated responses linked to buttons on your website. Each button triggers a specific pre-generated response, making it easier for users to interact with your AI agent.
 

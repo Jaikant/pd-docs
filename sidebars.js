@@ -40,8 +40,8 @@ const sidebars = {
         },
         {
           type: 'doc',
-          id: 'getting-started/creating-an-agent',
-          label: 'Creating an Agent' 
+          id: 'getting-started/creating-an-openai-assistant-chatbot',
+          label: 'Creating an OpenAI Assistant Chatbot' 
         },
 
         {
@@ -54,32 +54,42 @@ const sidebars = {
     {
       type: 'doc',
       id: 'pd-whatsapp',
-      label: 'Add WhatsApp to PD',
+      label: 'Add WhatsApp',
+    },
+    {
+      type: 'category',
+      label: 'Widgets',
+      link: {
+        "type": "generated-index",
+        "description": "Customize & style the different widgets"
+      },   
+      items: [
+        {
+          type: 'doc',
+          id: 'widgets/standard',
+          label: 'Standard' 
+        },
+        {
+          type: 'doc',
+          id: 'widgets/popup',
+          label: 'Popup' 
+        },
+        {
+          type: 'doc',
+          id: 'widgets/bubble',
+          label: 'Bubble' 
+        },
+        {
+          type: 'doc',
+          id: 'widgets/ai-button',
+          label: 'AI Topic Button' 
+        }
+      ],
     },
     {
       type: 'doc',
       id: 'theme',
       label: 'Theme',
-    },
-    {
-      type: 'category',
-      label: 'Styling',
-      link: {
-        "type": "generated-index",
-        "description": "Style your bubble & ai-button"
-      },   
-      items: [
-        {
-          type: 'doc',
-          id: 'styling/bubble',
-          label: 'Bubble' 
-        },
-        {
-          type: 'doc',
-          id: 'styling/ai-button',
-          label: 'AI Button' 
-        }
-      ],
     },
     {
       type: 'doc',
