@@ -1,9 +1,8 @@
 
 # Creating an OpenAI Assistant Chatbot
 **Estimated Time: 1 minute**
-{/*
-If you have not yet created your Assistant on the OpenAI Platform, then read this post, which is a comprehensive guide to help you [create your first OpenAI Assistant](https://predictabledialogs.com/learn/openai/chatbot-for-websites). If you have already created your OpenAI assistant, then follow along below:
-*/}
+
+If you have not yet created your Assistant on the OpenAI Platform, then read this comprehensive guide → [Create & Add OpenAI Chatbot to Website](https://predictabledialogs.com/learn/openai/website-chatbot-implementation#create--add-openai-chatbot-to-website). If you have already created your OpenAI assistant, then follow along below:
 
 ## Sign In
 - Sign in to [Predictable Dialogs](https://predictabledialogs.com/sign-in).
