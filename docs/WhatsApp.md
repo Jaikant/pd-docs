@@ -19,7 +19,7 @@ slug: /add-whatsapp-to-predictable-dialogs
 - Click on **Platform* tab and select WhatsApp. 
 
 ### Add your WA business to PD
-To complete this step you would need your **WhatsApp token** & **Phone Number Id**. You can get this by following the instructions in [WhatsApp Business Setup](http://localhost:3000/kb/docs/category/whatsapp-business-setup) 
+To complete this step you would need your **WhatsApp token** & **Phone Number Id**. You can get this by following the instructions in [WhatsApp Business Setup](https://predictabledialogs.com/docs/category/whatsapp-business-setup) 
 - Click on WhatsApp Business
 - Click button **ADD TO WHATSAPP**
   - Enter your *WhatsApp Token* and click **Next**
