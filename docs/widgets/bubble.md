@@ -34,7 +34,7 @@ Here's the minimum code required to implement the Bubble Widget:
 | Property | Type | Description |
 |----------|------|-------------|
 | `initialPrompt` | string | Initial message displayed when chat opens (only used when server's initial response is disabled) |
-| `filterResponse` | function | `(response: string) => string` - Function to process the AI's responses before display |
+| `filterResponse` | function | `(response: string) => string` - Function to process the AI's responses before display ([see example](/faqs/removing-openai-citations)). |
 | `onClose` | function | `() => void` - Function executed when the chat popup closes |
 | `onOpen` | function | `() => void` - Function executed when the chat popup opens |
 | `theme` | object | Contains customization properties for the widget's appearance |

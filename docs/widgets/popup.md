@@ -35,7 +35,7 @@ Add the following code to your HTML to create a basic popup widget:
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `initialPrompt` | string | Initial message sent to the AI when conversation starts. *Note: Only used when initial responses are disabled on the server.* |
-| `filterResponse` | function | Callback function that processes AI responses before displaying them. Takes the response string as input and returns the modified string. Useful for removing annotations or modifying content. |
+| `filterResponse` | function | Callback function that processes AI responses before displaying them. Takes the response string as input and returns the modified string. Useful for removing citations or modifying content([see example](/faqs/removing-openai-citations)). |
 | `defaultOpen` | boolean | When `true`, the popup will be open by default but can be closed by the user. |
 | `isOpen` | boolean | When `true`, the popup will be open by default and cannot be closed by the user. |
 | `onClose` | function | Callback function that executes when the popup is closed. |

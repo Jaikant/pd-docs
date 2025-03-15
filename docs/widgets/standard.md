@@ -36,7 +36,7 @@ Here's the minimum code required to implement the Standard Widget:
 | Property | Type | Description |
 |----------|------|-------------|
 | `initialPrompt` | string | Message sent to the agent when the chat first loads. Only used when initial response is disabled on the server. If server-side initial response is enabled, this property is ignored. |
-| `filterResponse` | function | A callback function that processes the AI's responses before displaying them. Takes the original response string as input and should return the modified response string. Useful for removing annotations or formatting responses. |
+| `filterResponse` | function | A callback function that processes the AI's responses before displaying them. Takes the original response string as input and should return the modified response string. Useful for removing citations or formatting responses ([see example](/faqs/removing-openai-citations)). |
 
 ## Styling Options
 
@@ -66,7 +66,7 @@ Agent.initStandard({
 
 ## Best Practices
 - Use `initialPrompt` to create a welcoming experience when server-side initial responses are disabled.
-- Implement `filterResponse` to clean up AI responses when necessary, such as removing technical annotations.
+- Implement `filterResponse` to clean up AI responses when necessary, such as removing citations.
 - Apply external styling for consistency with your website's design.
 - Configure internal styling through the Predictable Dialogs app for cohesive chat interfaces.
 

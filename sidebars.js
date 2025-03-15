@@ -141,8 +141,8 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'faqs/removing-openai-annotations',
-          label: 'Removing OpenAI Annotations',
+          id: 'faqs/removing-openai-citations',
+          label: 'Removing OpenAI Citations',
         }
       ],
     },

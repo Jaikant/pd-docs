@@ -24,7 +24,7 @@ Ensure to put the correct agent id, else you would get a 500 Error
 
 Or using curl
 ```
-curl http://localhost:8001/v1/agents/cm11onfgu01n1opn7g7ar5ktm/sessions \
+curl https://app.predictabledialogs.com/v1/agents/cm11onfgu01n1opn7g7ar5ktm/sessions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $PD_ACCESS_TOKEN"
 ```

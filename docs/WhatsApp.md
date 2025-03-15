@@ -16,7 +16,7 @@ slug: /add-whatsapp-to-predictable-dialogs
 
 ## Add WhatsApp to Agent
 ### Select platform 
-- Click on **Platform* tab and select WhatsApp. 
+- Click on **Platform** tab and select WhatsApp. 
 
 ### Add your WA business to PD
 To complete this step you would need your **WhatsApp token** & **Phone Number Id**. You can get this by following the instructions in [WhatsApp Business Setup](https://predictabledialogs.com/docs/category/whatsapp-business-setup) 
