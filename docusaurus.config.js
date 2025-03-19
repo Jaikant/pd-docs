@@ -72,7 +72,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/documentation-social-card.png',
       navbar: {
-        title: 'Knowledge Base',
+        title: 'PD Docs',
         // logo: {
         //   alt: 'My Site Logo',
         //   src: 'img/logo.svg',

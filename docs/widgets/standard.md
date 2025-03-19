@@ -28,15 +28,16 @@ Here's the minimum code required to implement the Standard Widget:
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `apiHost` | string | Endpoint URL that connects to the Predictable Dialogs backend. Can be configured to use your own backend if needed. |
 | `agentName` | string | Specifies the agent name from Predictable Dialogs or your custom backend. This identifies which AI agent will process the conversations. |
 
 ### Optional Properties
 
 | Property | Type | Description |
 |----------|------|-------------|
+| `stream` | boolean | A flag that indicates whether messages should be streamed.|
 | `initialPrompt` | string | Message sent to the agent when the chat first loads. Only used when initial response is disabled on the server. If server-side initial response is enabled, this property is ignored. |
 | `filterResponse` | function | A callback function that processes the AI's responses before displaying them. Takes the original response string as input and should return the modified response string. Useful for removing citations or formatting responses ([see example](/faqs/removing-openai-citations)). |
+| `apiHost` | string | Endpoint URL that connects to the backend. Can be configured to use your own backend if needed. |
 
 ## Styling Options
 

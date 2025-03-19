@@ -141,6 +141,11 @@ const sidebars = {
       items: [
         {
           type: 'doc',
+          id: 'faqs/how-to-enable-disable-streaming',
+          label: 'Enabling & Disabling Streaming',
+        },
+        {
+          type: 'doc',
           id: 'faqs/removing-openai-citations',
           label: 'Removing OpenAI Citations',
         }

@@ -1,9 +1,7 @@
 ---
-title: ''
+title: 'Authentication'
 hide_table_of_contents: false
 ---
-
-## Authentication
 
 ### API Keys
 The Predictable dialogs API uses access tokens for authentication. 

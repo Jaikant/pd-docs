@@ -1,9 +1,8 @@
 ---
-title: ''
+title: 'Embedding Your OpenAI Assistant'
 hide_table_of_contents: false
 ---
 
-# Embedding Your OpenAI Assistant
 **Estimated Time: 1 minute**
 
 ## Go to page which installs agents
@@ -19,6 +18,6 @@ hide_table_of_contents: false
 - You can now proceed to copy and paste the embed code into your platform.
 
 ## Change widget type
-- There are four types of widgets - **Standard**, **Bubble**, **Popup**, **Topic Button**.
+- There are four types of widgets - [Standard](/widgets/standard), [Bubble](/widgets/popup), [Popup](/widgets/popup), [Topic Button](/widgets/ai-button).
 - Click on the widget type you need.
 - You can now proceed to copy and paste the embed code into your platform.

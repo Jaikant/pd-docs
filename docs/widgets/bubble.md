@@ -26,13 +26,13 @@ Here's the minimum code required to implement the Bubble Widget:
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `apiHost` | string | Points to the Predictable Dialogs backend or your custom backend |
 | `agentName` | string | Specifies the Predictable Dialogs agent name or your custom agent name |
 
 ### Optional Properties
 
 | Property | Type | Description |
 |----------|------|-------------|
+| `stream` | boolean | A flag that indicates whether messages should be streamed.|
 | `initialPrompt` | string | Initial message displayed when chat opens (only used when server's initial response is disabled) |
 | `filterResponse` | function | `(response: string) => string` - Function to process the AI's responses before display ([see example](/faqs/removing-openai-citations)). |
 | `onClose` | function | `() => void` - Function executed when the chat popup closes |
@@ -41,6 +41,7 @@ Here's the minimum code required to implement the Bubble Widget:
 | `autoShowDelay` | number | Time in milliseconds after which the chat opens automatically |
 | `previewMessage` | object | Configuration for the preview message bubble |
 | `onPreviewMessageClick` | function | `() => void` - Function executed when preview message is clicked |
+| `apiHost` | string | Points to the Predictable Dialogs backend or your custom backend |
 
 
 ## Internal Elements Styling

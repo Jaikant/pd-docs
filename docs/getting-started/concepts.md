@@ -1,6 +1,6 @@
 ---
 title: 'Concepts'
-hide_table_of_contents: false
+hide_table_of_contents: true
 ---
 
 In the Predictable Dialogs app, you’ll see two main pages:

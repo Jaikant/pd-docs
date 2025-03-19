@@ -1,9 +1,7 @@
 ---
-title: ''
-hide_table_of_contents: false
+title: 'Prerequisites'
+hide_table_of_contents: true
 ---
-
-# Prerequisites
 
 ## OpenAI Account
 

@@ -26,7 +26,6 @@ Add the following code to your HTML to create a basic popup widget:
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `apiHost` | string | URL endpoint for the chat service. Points to Predictable Dialogs backend by default, but can be configured to use your own backend. |
 | `agentName` | string | Name of the assistant that will appear in the widget. Uses the specified Predictable Dialogs agent or an agent from your custom backend. |
 | `autoShowDelay` | number | Time in milliseconds before the popup automatically appears after the page loads. |
 
@@ -34,6 +33,7 @@ Add the following code to your HTML to create a basic popup widget:
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
+| `stream` | boolean | A flag that indicates whether messages should be streamed.|
 | `initialPrompt` | string | Initial message sent to the AI when conversation starts. *Note: Only used when initial responses are disabled on the server.* |
 | `filterResponse` | function | Callback function that processes AI responses before displaying them. Takes the response string as input and returns the modified string. Useful for removing citations or modifying content([see example](/faqs/removing-openai-citations)). |
 | `defaultOpen` | boolean | When `true`, the popup will be open by default but can be closed by the user. |
@@ -41,6 +41,7 @@ Add the following code to your HTML to create a basic popup widget:
 | `onClose` | function | Callback function that executes when the popup is closed. |
 | `onOpen` | function | Callback function that executes when the popup is opened. |
 | `theme` | object | Styling configuration object. Currently supports `width` property to set popup width (default: '512px' on laptop screens). |
+| `apiHost` | string | URL endpoint for the chat service. Points to Predictable Dialogs backend by default, but can be configured to use your own backend. |
 
 ## Example with Optional Parameters
 

@@ -1,10 +1,9 @@
 ---
-title: ''
+title: 'Removing Citation Markers From OpenAI Response'
 hide_table_of_contents: false
 ---
 
-## Removing Citation Markers From OpenAI Response
-**Estimated Time: 2 minute**
+**Estimated Time: 3 minute**
 
 *The citation marker are filtered out automatically from messages sent to WhatsApp.*
 
@@ -24,8 +23,6 @@ Here is an example using the Standard embed
   import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@latest/dist/web.js'
   Agent.initStandard({
     agentName: "your assistant name",
-    apiHost: "https://app.predictabledialogs.com/web/incoming",
-    initialPrompt: 'Tell me a joke',
     filterResponse: function(response) {
       const annotationRegex = /【\d+:\d+†[^\s】]+】/g;
       return response.replace(annotationRegex, "");

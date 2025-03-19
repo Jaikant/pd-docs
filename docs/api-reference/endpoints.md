@@ -1,9 +1,8 @@
 ---
-title: ''
+title: 'Endpoints'
 hide_table_of_contents: false
 ---
 
-## Endpoints
 End point to interact with agent data
 
 
