@@ -78,6 +78,16 @@ Below is an example that changes the styles on the guest and host bubbles. It ta
 ```
 In the above example, for the host bubble we need to apply the styles to the class `bubble-typing` that is a direct child of an element with the class `agent-host-bubble`. This is because of the [difference](https://github.com/Predictable-Dialogs/agent-embed/blob/main/js/src/assets/index.css) in the way we handle the host and guest bubbles.
 
+#### Example: Enabling Word Wrap in the `pre` Element  
+Below CSS enables text wrapping in `<pre>` tags, preventing horizontal overflow.
+
+```css
+pre {
+  white-space: pre-wrap;  /* Preserves whitespace and wraps text */
+  word-break: break-all;  /* Allows breaking words to avoid overflow */
+}
+```
+
 ### 4. Finding Additional CSS Classes to Target
 
 To further customize the agent, you’ll want to identify and target the correct CSS classes. Here’s how:
