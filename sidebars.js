@@ -98,6 +98,11 @@ const sidebars = {
     },
     {
       type: 'doc',
+      id: 'sessions',
+      label: 'Sessions',
+    },
+    {
+      type: 'doc',
       id: 'settings',
       label: 'Settings',
     },

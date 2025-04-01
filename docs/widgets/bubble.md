@@ -15,7 +15,6 @@ Here's the minimum code required to implement the Bubble Widget:
   import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@latest/dist/web.js'
   Agent.initBubble({
     agentName: "your assistant name", //generated on the predictable dialogs app.
-    apiHost: "https://app.predictabledialogs.com/web/incoming",
   });
 </script>
 ```
@@ -32,7 +31,8 @@ Here's the minimum code required to implement the Bubble Widget:
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `stream` | boolean | A flag that indicates whether messages should be streamed.|
+| `stream` | boolean | Default is true. A flag that indicates whether messages should be streamed.|
+| `persistSession` | boolean | Default is true. A flag that indicates whether the seession persists, if set to false a new session is started every time the chatbot loads.  ([Read more](/sessions)) |
 | `initialPrompt` | string | Initial message displayed when chat opens (only used when server's initial response is disabled) |
 | `filterResponse` | function | `(response: string) => string` - Function to process the AI's responses before display ([see example](/faqs/removing-openai-citations)). |
 | `onClose` | function | `() => void` - Function executed when the chat popup closes |
@@ -83,7 +83,6 @@ Control where the bubble appears on your page using the `placement` option:
   import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@latest/dist/web.js'
   Agent.initBubble({
     agentName: "your assistant name",
-    apiHost: "https://app.predictabledialogs.com/web/incoming",
     theme: {
       placement: 'left' // Places bubble in bottom-left corner (default is right)
     }
@@ -101,7 +100,6 @@ Control where the bubble appears on your page using the `placement` option:
   import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@latest/dist/web.js'
   Agent.initBubble({
     agentName: "your assistant name",
-    apiHost: "https://app.predictabledialogs.com/web/incoming",
     theme: {
       button: {
         size: 'large', // Options: 'medium' (default) or 'large'
@@ -118,7 +116,6 @@ Control where the bubble appears on your page using the `placement` option:
   import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@latest/dist/web.js'
   Agent.initBubble({
     agentName: "your assistant name",
-    apiHost: "https://app.predictabledialogs.com/web/incoming",
     theme: {
       button: {
         backgroundColor: "#4CAF50", // Any valid CSS color value
@@ -135,7 +132,6 @@ Control where the bubble appears on your page using the `placement` option:
   import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@latest/dist/web.js'
   Agent.initBubble({
     agentName: "your assistant name",
-    apiHost: "https://app.predictabledialogs.com/web/incoming",
     theme: {
       button: {
         iconColor: "#007BFF",        // Color for default icons
@@ -164,7 +160,6 @@ The preview message appears as a speech bubble connected to the chat button, pro
   import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@latest/dist/web.js'
   Agent.initBubble({
     agentName: "your assistant name",
-    apiHost: "https://app.predictabledialogs.com/web/incoming",
     previewMessage: {
       message: "Need help? Tap here to chat with us!", // Text to display
       avatarUrl: "https://unpkg.com/feather-icons@4.29.2/dist/icons/user.svg", // Optional avatar
@@ -185,7 +180,6 @@ Here is an example styled preview message.
   import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@latest/dist/web.js'
   Agent.initBubble({
     agentName: "your assistant name",
-    apiHost: "https://app.predictabledialogs.com/web/incoming",
     previewMessage: {
       message: "Need help? Tap here to chat with us!",
       avatarUrl: "https://unpkg.com/feather-icons@4.29.2/dist/icons/user.svg",
@@ -237,7 +231,6 @@ Here's an example showing most customization options:
   Agent.initBubble({
     // Required properties
     agentName: "Support Assistant", //generated on the predictable dialogs app
-    apiHost: "https://app.predictabledialogs.com/web/incoming",
     
     // Optional functionality
     initialPrompt: "Hello! How can I help you today?",

@@ -14,7 +14,6 @@ Add the following code to your HTML to create a basic popup widget:
   import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@latest/dist/web.js'
   Agent.initPopup({
     agentName: "your assistant name", //generated on the predictable dialogs app
-    apiHost: "https://app.predictabledialogs.com/web/incoming",
     autoShowDelay: 3000,
   });
 </script>
@@ -33,7 +32,8 @@ Add the following code to your HTML to create a basic popup widget:
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `stream` | boolean | A flag that indicates whether messages should be streamed.|
+| `stream` | boolean | Default is true. A flag that indicates whether messages should be streamed.|
+| `persistSession` | boolean | Default is true. A flag that indicates whether the seession persists, if set to false a new session is started every time the chatbot loads.  ([Read more](/sessions)) |
 | `initialPrompt` | string | Initial message sent to the AI when conversation starts. *Note: Only used when initial responses are disabled on the server.* |
 | `filterResponse` | function | Callback function that processes AI responses before displaying them. Takes the response string as input and returns the modified string. Useful for removing citations or modifying content([see example](/faqs/removing-openai-citations)). |
 | `defaultOpen` | boolean | When `true`, the popup will be open by default but can be closed by the user. |
@@ -48,7 +48,6 @@ Add the following code to your HTML to create a basic popup widget:
 ```javascript
 Agent.initPopup({
   agentName: "Customer Support", //Generated on the predictable dialogs app
-  apiHost: "https://app.predictabledialogs.com/web/incoming",
   autoShowDelay: 5000,
   initialPrompt: 'Tell me a joke',
   filterResponse: function(response) {

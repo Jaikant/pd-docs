@@ -24,7 +24,6 @@ Add the Topic Button Widget to your website by including the following code:
   import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@latest/dist/web.js'
   Agent.initPopup({
     agentName: "Assistant OpenAI-someId", //generated on the PD app
-    apiHost: "https://app.predictabledialogs.com/web/incoming",
   });
 </script>
 
