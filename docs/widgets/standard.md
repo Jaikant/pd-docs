@@ -34,7 +34,7 @@ Here's the minimum code required to implement the Standard Widget:
 | Property | Type | Description |
 |----------|------|-------------|
 | `stream` | boolean | Default is true. A flag that indicates whether messages should be streamed.|
-| `persistSession` | boolean | Default is true. A flag that indicates whether the seession persists, if set to false a new session is started every time the chatbot loads.  ([Read more](/sessions)) |
+| `persistSession` | boolean | Default is false. A flag that indicates whether the seession persists, if set to false a new session is started every time the chatbot loads.  ([Read more](/sessions)) |
 | `initialPrompt` | string | Message sent to the agent when the chat first loads. Only used when initial response is disabled on the server. If server-side initial response is enabled, this property is ignored. |
 | `filterResponse` | function | A callback function that processes the AI's responses before displaying them. Takes the original response string as input and should return the modified response string. Useful for removing citations or formatting responses ([see example](/faqs/removing-openai-citations)). |
 | `apiHost` | string | Endpoint URL that connects to the backend. Can be configured to use your own backend if needed. |

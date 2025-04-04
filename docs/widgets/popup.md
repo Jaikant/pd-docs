@@ -33,7 +33,7 @@ Add the following code to your HTML to create a basic popup widget:
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `stream` | boolean | Default is true. A flag that indicates whether messages should be streamed.|
-| `persistSession` | boolean | Default is true. A flag that indicates whether the seession persists, if set to false a new session is started every time the chatbot loads.  ([Read more](/sessions)) |
+| `persistSession` | boolean | Default is false. A flag that indicates whether the seession persists, if set to false a new session is started every time the chatbot loads.  ([Read more](/sessions)) |
 | `initialPrompt` | string | Initial message sent to the AI when conversation starts. *Note: Only used when initial responses are disabled on the server.* |
 | `filterResponse` | function | Callback function that processes AI responses before displaying them. Takes the response string as input and returns the modified string. Useful for removing citations or modifying content([see example](/faqs/removing-openai-citations)). |
 | `defaultOpen` | boolean | When `true`, the popup will be open by default but can be closed by the user. |
