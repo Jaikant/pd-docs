@@ -48,7 +48,7 @@ Follow these simple steps to create your Meta app:
    - Click on **Setup** next to WhatsApp, then follow the prompts to enable it. 
    - When you see an image like below, you have completed the meta app creation. Congrats!
 
-![Docusaurus logo](/img/whatsapp/meta-app-success.png)
+![Meta App Image](/img/whatsapp/meta-app-success.png)
 
 
 This guide should help you smoothly create a Meta app with WhatsApp integration. If you encounter any issues, refer to the [Meta Developer Documentation](https://developers.facebook.com/docs) for detailed guidance or contact us for help.
