@@ -58,8 +58,8 @@ You can style the widget container using standard CSS properties:
 Agent.initStandard({
   agentName: "customer_support",
   filterResponse: function(response) {
-    const annotationRegex = /【\d+:\d+†[^\s】]+】/g;
-    return response.replace(annotationRegex, "");
+    const citationRegex = /【\d+:\d+†[^【】]+】/g;
+    return response.replace(citationRegex, "");
   }
 });
 ```

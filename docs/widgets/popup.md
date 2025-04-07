@@ -51,8 +51,8 @@ Agent.initPopup({
   autoShowDelay: 5000,
   initialPrompt: 'Tell me a joke',
   filterResponse: function(response) {
-    const annotationRegex = /【\d+:\d+†[^\s】]+】/g;
-    return response.replace(annotationRegex, "");
+    const citationRegex = /【\d+:\d+†[^【】]+】/g;
+    return response.replace(citationRegex, "");
   },
   defaultOpen: false,
   onOpen: () => console.log("Widget opened"),

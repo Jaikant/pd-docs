@@ -24,8 +24,8 @@ Here is an example using the Standard embed
   Agent.initStandard({
     agentName: "your assistant name",
     filterResponse: function(response) {
-      const annotationRegex = /【\d+:\d+†[^\s】]+】/g;
-      return response.replace(annotationRegex, "");
+      const citationRegex = /【\d+:\d+†[^【】]+】/g;
+      return response.replace(citationRegex, "");
     }
   });
 </script>
@@ -43,3 +43,21 @@ function(response) {
 }
 ```
 
+### **Special Note**
+
+Sometimes, the regex provided above might not fully remove citation markers. This usually happens when uploaded file names contain special characters.
+
+If you still see citation markers, check the file names in your OpenAI upload. Try either:
+
+- Renaming the file to remove special characters, or  
+- Asking a GenAI assistant to help adjust the regex to handle your file names.
+
+The current regex will **already** match citations from file names that include:
+
+- Spaces – `"health care.pdf"`  
+- Dashes & underscores – `"health-care_final.pdf"`  
+- Parentheses – `"file(name).txt"`  
+- Commas – `"notes,final.docx"`  
+- Ampersands – `"sales & marketing.xlsx"`  
+- Apostrophes – `"client's-report.pdf"`  
+- Plus signs – `"sum+stats.txt"`  
