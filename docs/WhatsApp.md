@@ -27,7 +27,7 @@ To complete this step you would need your **WhatsApp token** & **Phone Number Id
   
 ### Add the webhook to WhatsApp
 - The next step, is to add the webhook and token to meta.
-  - On the modal, click on the link **"WHATSAPP WEBHOOK ENTRY LINK"**, this will open the page on which you can enter the webhook and token provided. 
+  - On the modal, click on the link **"Meta Console"**, this will open the page on which you can enter the webhook and token provided. 
   - On the meta page click **Verify and save** to save the webhook and token.
   - Scroll down on the meta page and locate the field with the name **"messages"**, click the toggle button so it is **"Subscribed"**.
 
