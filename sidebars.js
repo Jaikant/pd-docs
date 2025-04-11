@@ -186,6 +186,11 @@ const sidebars = {
         }, 
       ],
     },
+    {
+      type: 'doc',
+      id: 'pd-platforms',
+      label: 'Platforms',
+    },
 
 
     // {
