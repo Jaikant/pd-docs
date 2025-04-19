@@ -102,8 +102,8 @@ const sidebars = {
         },
         {
           type: 'doc',
-          id: 'sessions/daily-email-reports',
-          label: 'Daily Email Activity Reports',   // ← new page
+          id: 'sessions/chat-activity-reports',
+          label: 'Chat Activity Reports',   // ← new page
         },
       ],
     }, 
