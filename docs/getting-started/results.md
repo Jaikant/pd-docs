@@ -1,7 +1,5 @@
 ---
-id: results
-description: This page displays the results captured by the OpenAI assistant from the widget embedded on your website.
-slug: /results
+title: 'Results'
 ---
 
 # Results

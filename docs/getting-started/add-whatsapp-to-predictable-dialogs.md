@@ -1,7 +1,5 @@
 ---
-id: pd-whatsapp
-description: Predictable Dialogs was designed from the ground up to make it easy to add AI to WhatsApp
-slug: /add-whatsapp-to-predictable-dialogs
+title: 'Add WhatsApp'
 ---
 
 # Add WhatsApp to Predictable Dialogs

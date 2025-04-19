@@ -21,6 +21,11 @@ const sidebars = {
       label: 'Introduction',
     },
     {
+      type: 'doc',
+      id: 'pd-platforms',
+      label: 'Platforms',
+    },
+    {
       type: 'category',
       label: 'Getting Started',
       link: {
@@ -48,94 +53,46 @@ const sidebars = {
           type: 'doc',
           id: 'getting-started/embedding-your-openai-assistant',
           label: 'Embedding Your OpenAI Assistant' 
+        },
+        {
+          type: 'doc',
+          id: 'getting-started/theme',
+          label: 'Theme' 
+        },
+        {
+          type: 'doc',
+          id: 'getting-started/custom-css',
+          label: 'Custom CSS',
+        },
+        {
+          type: 'doc',
+          id: 'getting-started/settings',
+          label: 'Settings',
+        },
+        {
+          type: 'doc',
+          id: 'getting-started/results',
+          label: 'Results',
+        },
+        {
+          type: 'doc',
+          id: 'getting-started/add-whatsapp-to-predictable-dialogs',
+          label: 'Add WhatsApp' 
         } 
       ],
     },
     {
       type: 'doc',
-      id: 'pd-whatsapp',
-      label: 'Add WhatsApp',
-    },
-    {
-      type: 'category',
-      label: 'Widgets',
-      link: {
-        "type": "generated-index",
-        "description": "Customize & style the different widgets"
-      },   
-      items: [
-        {
-          type: 'doc',
-          id: 'widgets/standard',
-          label: 'Standard' 
-        },
-        {
-          type: 'doc',
-          id: 'widgets/popup',
-          label: 'Popup' 
-        },
-        {
-          type: 'doc',
-          id: 'widgets/bubble',
-          label: 'Bubble' 
-        },
-        {
-          type: 'doc',
-          id: 'widgets/ai-button',
-          label: 'AI Topic Button' 
-        }
-      ],
-    },
-    {
-      type: 'doc',
-      id: 'theme',
-      label: 'Theme',
-    },
-    {
-      type: 'doc',
-      id: 'custom-css',
-      label: 'Custom CSS',
+      id: 'quick-faq',
+      label: 'FAQs',  
     },
     {
       type: 'doc',
       id: 'sessions',
       label: 'Sessions',
     },
-    {
-      type: 'doc',
-      id: 'settings',
-      label: 'Settings',
-    },
-    {
-      type: 'doc',
-      id: 'results',
-      label: 'Results',
-    },
-    {
-      type: 'category',
-      label: "WhatsApp Business Setup",
-      link: {
-        "type": "generated-index",
-        "description": "Setup your WhatsApp business account."
-      },   
-      items: [
-        'whatsapp/create-a-business-account',
-        {
-          type: 'doc',
-          id: 'whatsapp/create-a-meta-app',
-          label: 'Create a Meta App' 
-        },
-        {
-          type: 'doc',
-          id: 'whatsapp/generate-whatsapp-token',
-          label: 'Generate a WhatsApp Token' 
-        },
-        {
-          type: 'doc',
-          id: 'whatsapp/add-phone-number',
-          label: 'Add Phone Number to WhatsApp' 
-        }      ],
-    },
+   
+    
     {
       type: 'category',
       label: 'How-to Guides',
@@ -157,45 +114,101 @@ const sidebars = {
       ],
     },
     {
-      type: 'doc',
-      id: 'quick-faq',
-      label: 'FAQs',  
-    },
-    {
       type: 'category',
-      label: "API Reference (Beta)",
+      label: 'Reference',
       link: {
-        "type": "generated-index",
-        "description": "Management API for agents"
-      },   
+        type: 'generated-index',
+        description: 'Explore widget types, props you can customize, API endpoints, and setup guide WhatsApp Business.',
+      },
       items: [
         {
-          type: 'doc',
-          id: 'api-reference/introduction',
-          label: 'Introduction' 
+          type: 'category',
+          label: 'Widgets',
+          link: {
+            "type": "generated-index",
+            "description": "Customize & style the different widgets"
+          },   
+          items: [
+            {
+              type: 'doc',
+              id: 'widgets/standard',
+              label: 'Standard' 
+            },
+            {
+              type: 'doc',
+              id: 'widgets/popup',
+              label: 'Popup' 
+            },
+            {
+              type: 'doc',
+              id: 'widgets/bubble',
+              label: 'Bubble' 
+            },
+            {
+              type: 'doc',
+              id: 'widgets/ai-button',
+              label: 'AI Topic Button' 
+            }
+          ],
         },
         {
-          type: 'doc',
-          id: 'api-reference/authentication',
-          label: 'Authentication' 
+          type: 'category',
+          label: "WhatsApp Business Setup",
+          link: {
+            "type": "generated-index",
+            "description": "Setup your WhatsApp business account."
+          },   
+          items: [
+            'whatsapp/create-a-business-account',
+            {
+              type: 'doc',
+              id: 'whatsapp/create-a-meta-app',
+              label: 'Create a Meta App' 
+            },
+            {
+              type: 'doc',
+              id: 'whatsapp/generate-whatsapp-token',
+              label: 'Generate a WhatsApp Token' 
+            },
+            {
+              type: 'doc',
+              id: 'whatsapp/add-phone-number',
+              label: 'Add Phone Number to WhatsApp' 
+            }      ],
         },
         {
-          type: 'doc',
-          id: 'api-reference/making-requests',
-          label: 'Making Requests' 
-        },
-        {
-          type: 'doc',
-          id: 'api-reference/endpoints',
-          label: 'Endpoints' 
-        }, 
+          type: 'category',
+          label: "API Reference (Beta)",
+          link: {
+            "type": "generated-index",
+            "description": "Management API for agents"
+          },   
+          items: [
+            {
+              type: 'doc',
+              id: 'api-reference/introduction',
+              label: 'Introduction' 
+            },
+            {
+              type: 'doc',
+              id: 'api-reference/authentication',
+              label: 'Authentication' 
+            },
+            {
+              type: 'doc',
+              id: 'api-reference/making-requests',
+              label: 'Making Requests' 
+            },
+            {
+              type: 'doc',
+              id: 'api-reference/endpoints',
+              label: 'Endpoints' 
+            }, 
+          ],
+        }
+    
       ],
-    },
-    {
-      type: 'doc',
-      id: 'pd-platforms',
-      label: 'Platforms',
-    },
+    }
   ],
 
 };

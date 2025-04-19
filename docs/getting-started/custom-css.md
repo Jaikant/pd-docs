@@ -1,7 +1,5 @@
 ---
-id: custom-css
-description: Predictable Dialogs guide to add custom css to the chatbot container and its elements.
-slug: /custom-css
+title: 'Custom CSS'
 ---
 
 # Custom CSS

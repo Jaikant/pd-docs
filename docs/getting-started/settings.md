@@ -1,7 +1,5 @@
 ---
-id: settings
-description: Customize your Predictable Dialogs AI agents effortlessly with our comprehensive settings page. Configure initial responses, manage topic buttons, and embed AI agents seamlessly into your website. Enhance user engagement with markdown, HTML, and OpenAI-generated content.
-slug: /settings
+title: 'Settings'
 ---
 
 # Settings

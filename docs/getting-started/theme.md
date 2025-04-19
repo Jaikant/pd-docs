@@ -1,7 +1,5 @@
 ---
-id: theme
-description: Predictable Dialogs was designed from the ground up to enable the easy design and embedding of AI agents into websites.
-slug: /theme
+title: 'Theme'
 ---
 
 # Theme
