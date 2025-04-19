@@ -34,7 +34,7 @@ Here's the minimum code required to implement the Bubble Widget:
 | `stream` | boolean | Default is true. A flag that indicates whether messages should be streamed.|
 | `persistSession` | boolean | Default is false. A flag that indicates whether the seession persists, if set to false a new session is started every time the chatbot loads.  ([Read more](/sessions)) |
 | `initialPrompt` | string | Initial message displayed when chat opens (only used when server's initial response is disabled) |
-| `filterResponse` | function | `(response: string) => string` - Function to process the AI's responses before display ([see example](/faqs/removing-openai-citations)). |
+| `filterResponse` | function | `(response: string) => string` - Function to process the AI's responses before display ([see example](/how-to/removing-openai-citations)). |
 | `onClose` | function | `() => void` - Function executed when the chat popup closes |
 | `onOpen` | function | `() => void` - Function executed when the chat popup opens |
 | `theme` | object | Contains customization properties for the widget's appearance |

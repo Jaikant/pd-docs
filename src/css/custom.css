@@ -36,3 +36,17 @@
 /* body {
   font-family: 'Work Sans', sans-serif;
 } */
+
+.alert--info {
+  --ifm-alert-border-color: #e8e2d6;     /* border + divider line   */
+  --ifm-alert-color:        #2b3e13;     /* text + chevron arrow    */
+  --ifm-link-color: #2e8555; 
+  --ifm-alert-background-color: #fff; /* optional softer fill    */
+}
+
+[data-theme='dark'] .alert--info {
+  --ifm-alert-border-color: #ebedf0;
+  --ifm-alert-color:        #ebedf0;
+  --ifm-alert-background-color: ##606770;
+  /* leave background as‑is or pick a darker shade */
+}

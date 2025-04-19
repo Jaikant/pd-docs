@@ -8,7 +8,7 @@ slug: /custom-css
 
 Predictable Dialogs makes it easy to embed and style an AI agent on your website. With custom CSS, you can tailor the chatbot’s look and feel to match your brand—from colors and fonts to backgrounds and advanced layouts. This guide explains how to add and manage custom CSS for your chatbot.  
 *Note*: Custom CSS helps style the contents within the chat container. 
-To style the bubble widget go [here](https://predictabledialogs.com/kb/docs/styling/bubble). To style the ai-button go [here](https://predictabledialogs.com/kb/docs/styling/ai-button).
+To style the bubble widget go [here](/docs/widgets/bubble#external-styling). To style the ai-button go [here](/docs/widgets/ai-button#styling-options).
 
 ### 1. Go to page with Custom CSS Section
 
