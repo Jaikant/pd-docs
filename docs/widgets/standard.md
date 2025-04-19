@@ -43,7 +43,7 @@ Here's the minimum code required to implement the Standard Widget:
 ## Styling Options
 
 ### Internal Elements Styling
-To customize the internal elements of the widget (chat bubbles, input field, buttons, etc.), use the [Theme](/theme) tab in the Predictable Dialogs application.
+To customize the internal elements of the widget (chat bubbles, input field, buttons, etc.), use the [Theme](/docs/getting-started/theme) tab in the Predictable Dialogs application.
 
 ### External Styling
 You can style the widget container using standard CSS properties:

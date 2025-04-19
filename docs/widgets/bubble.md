@@ -46,7 +46,7 @@ Here's the minimum code required to implement the Bubble Widget:
 
 ## Internal Elements Styling
 
-To customize the appearance of elements within the chat interface itself (such as message bubbles, fonts, colors), use the ["Theme"](/theme) tab in the Predictable Dialogs app dashboard.
+To customize the appearance of elements within the chat interface itself (such as message bubbles, fonts, colors), use the ["Theme"](/docs/getting-started/theme) tab in the Predictable Dialogs app dashboard.
 
 ## External Styling
 
