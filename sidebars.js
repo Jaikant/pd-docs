@@ -87,12 +87,26 @@ const sidebars = {
       label: 'FAQs',  
     },
     {
-      type: 'doc',
-      id: 'sessions',
-      label: 'Sessions',
-    },
-   
-    
+      type: 'category',
+      label: 'Sessions & Reports',
+      link: {
+        type: 'generated-index',
+        description:
+          'Understand chat sessions and set up automated email reports.',
+      },
+      items: [
+        {
+          type: 'doc',
+          id: 'sessions/overview',          // existing overview
+          label: 'Sessions Overview',
+        },
+        {
+          type: 'doc',
+          id: 'sessions/daily-email-reports',
+          label: 'Daily Email Activity Reports',   // ← new page
+        },
+      ],
+    }, 
     {
       type: 'category',
       label: 'How-to Guides',

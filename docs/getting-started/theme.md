@@ -50,4 +50,4 @@ If you need some custom styling on the button you can target the .agent-button c
 }
 ```
 
-More about custom css can be read in the [custom css section](https://predictabledialogs.com/kb/docs/custom-css).
+More about custom css can be read in the [custom css section](/docs/getting-started/custom-css).

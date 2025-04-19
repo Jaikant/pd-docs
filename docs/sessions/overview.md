@@ -1,9 +1,3 @@
----
-id: sessions
-description: In the PD chatbot, a session can be persisted till it times out or a new session can be started every time.
-slug: /sessions
----
-
 # Sessions
 
 In the PD chatbot, sessions control how conversations are maintained between the chatbot and users. Sessions can either persist until they naturally expire due to inactivity, or a new session can be initiated every time the chatbot is loaded.

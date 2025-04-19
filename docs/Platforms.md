@@ -23,6 +23,8 @@ Below is a list of platforms supported by Predictable Dialogs with relevant inte
 | Webflow         | Supported. If any issue, please [contact us](https://predictabledialogs.com/contact).                |
 | Magento         | Supported. If any issue, please [contact us](https://predictabledialogs.com/contact).                |
 | Custom Websites | [HTML Integration Guide](https://predictabledialogs.com/learn/openai/add-chatbot-html)               |
+| WhatsApp         | Supported. If any issue, please [contact us](https://predictabledialogs.com/contact).                |
+
 
 ## Platform missing? {#something-missing}
 If you find a platform missing in the above table, please do let us know.
