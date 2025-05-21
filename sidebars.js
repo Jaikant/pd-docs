@@ -107,6 +107,11 @@ const sidebars = {
         },
       ],
     }, 
+     {
+      type: 'doc',
+      id: 'function-calling',
+      label: 'Function Calling',  
+    },
     {
       type: 'category',
       label: 'How-to Guides',
