@@ -45,8 +45,8 @@ This link helps you understand more about the [use cases for function calling](h
 
 ![Add endpoint Image](/img/configure-functions.webp)
 
-- Select your method from either `GET` or `POST`:
-  * **GET**: When selected, the function arguments are passed as query parameters. Query parameters are the most common type of parameters. They appear at the end of the request URL after a question mark (?), with different name=value pairs separated by ampersands (&). Currently, we only supports query parameters for GET requests. Support for path parameters (variables included directly in the URL path) is planned for a future release. For more details, see this [explanation of query vs path parameters](https://swagger.io/docs/specification/describing-parameters/).
+### Choosing the HTTP Method {#http-method-selection}
+* **GET**: When selected, the function arguments are passed as query parameters. Query parameters are the most common type of parameters. They appear at the end of the request URL after a question mark (?), with different name=value pairs separated by ampersands (&). Currently, we only support query parameters for GET requests. Support for path parameters (variables included directly in the URL path) is planned for a future release. For more details, see this [explanation of query vs path parameters](https://swagger.io/docs/specification/describing-parameters/).
 
       *Example*:
     If you're using the Open Meteo weather API, a full GET request might look like this:
@@ -61,7 +61,7 @@ This link helps you understand more about the [use cases for function calling](h
 
   * **POST**: When selected, the function arguments are passed in the body of the request.
 
-- Enter your endpoint url (For a `GET` request the query parameters are automatically appended to this endpoint.)
+- Enter your endpoint url (For a `GET` request, include the static query parameters.)
 - If your endpoint needs authentication, click the checkbox **Add authentication** and add your **bearer token**.
 - Click Save, to save the configuration. 
 
