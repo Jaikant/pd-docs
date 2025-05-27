@@ -5,7 +5,7 @@ slug: /function-calling
 ---
 
 # Function Calling
-**Estimated Time: 2 minutes if you have external API details ready**
+**Estimated Time: 4 minutes**
 
 Function calling lets you connect your AI models to external APIs.
 
@@ -22,7 +22,9 @@ This link helps you understand more about the [use cases for function calling](h
 
 ### Prerequisites
 1. Configured your function in OpenAI - [Configuring Function Calling in OpenAI](https://predictabledialogs.com/learn/openai/configuring-function-calling)
+    
 2. Implemented you API endpoints and have the API method (`GET` or `POST`) & URL. 
+
 3. _(optional)_ If your endpoint needs authentication, then the bearer token string.
 (_Note_: If you need a auth mechanism other than bearer token, please contact us)
 
@@ -68,7 +70,18 @@ This link helps you understand more about the [use cases for function calling](h
 ![Add endpoint Image](/img/add-endpoint.webp)
 
 ## Testing 
-You can now start a session on your chatbot and enter the prompt which would trigger the function. You would notice that your function gets called and the chatbot assistant replies accordingly. The OpenAI platform `Threads` tab would also show the function invoked with the args and the response received from the endpoint.
+You can now start a session on your chatbot and enter the prompt which would trigger the function. You would notice that your function gets called and the chatbot assistant replies accordingly. 
+
+### Check Details Of Function Call
+- Go to the "Sessions" tab of your agent which lists all the chat conversations.
+- Select the conversation which triggered the function call.
+- Scroll down to the chat message which triggered the function call and you would be able to see
+   - The function name which was triggered along with the arguments
+   - The endpoint method and url which was used.
+   - The result returned from the endpoint.
+   - The time duration in ms, it took to make the request.
+
+![Function calling information in sessions](/img/function-calling-sessions.webp)
 
 ## Understanding Authentication For Endpoints
 
