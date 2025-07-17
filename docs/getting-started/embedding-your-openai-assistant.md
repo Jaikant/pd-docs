@@ -14,7 +14,7 @@ hide_table_of_contents: false
 - Paste this code into your website
 
 ## Customise embed code for your platform 
-- If you want the embed code for your platform (JavaScript/ WhatsApp / Shopify). Click on **Platform* tab and select your platform type. For configuring WhatsApp, follow instructions in [WhatsApp Business Setup](https://predictabledialogs.com/docs/category/whatsapp-business-setup).
+- If you want the embed code for your platform (JavaScript/ WhatsApp / Shopify). Click on *Platform* tab and select your platform type. For configuring WhatsApp, follow instructions in [WhatsApp Business Setup](https://predictabledialogs.com/docs/category/whatsapp-business-setup).
 - You can now proceed to copy and paste the embed code into your platform.
 
 ## Change widget type

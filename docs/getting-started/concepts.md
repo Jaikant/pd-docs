@@ -42,6 +42,6 @@ Currently, each Agent can only be connected to **one** AI Resource at a time, al
 
 This setup gives you a lot of flexibility to switch AI models on the fly.
 
-### Naming Edge Case
+<!-- ### Naming Edge Case
 
-If you have an AI Resource named **X** in the AI Resources page, and then on the Agents page you add a new OpenAI assistant (with an `assistantId` and `apiKey`) also named **X**, it will **replace** the existing AI Resource named **X**.
+If you have an AI Resource named **X** in the AI Resources page, and then on the Agents page you add a new OpenAI assistant (with an `assistantId` and `apiKey`) also named **X**, it will **replace** the existing AI Resource named **X**. -->

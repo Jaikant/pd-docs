@@ -5,7 +5,7 @@ hide_table_of_contents: false
 
 **Estimated Time: 3 minute**
 
-*The citation marker are filtered out automatically from messages sent to WhatsApp.*
+*The citation markers are filtered out automatically from messages sent to WhatsApp.*
 
 OpenAI models (like GPT-4) use a notation like:`【5:0†source】` as a reference marker when they're citing information.
 `【5:0】` refers to a specific location in the uploaded documents - the "5" likely indicates document or chapter number, and "0" could be the paragraph or section
@@ -14,7 +14,7 @@ OpenAI models (like GPT-4) use a notation like:`【5:0†source】` as a referen
 These citation markers appear when the model is pulling information from specific sources. It helps users understand where the information is coming from, though the actual sources aren't accessible to users.
 OpenAI models use these citations to show they're grounding their responses in specific documents rather than generating information without reference.
 
-The citation marker are **filtered out automatically from messages sent to WhatsApp**. For chat widgets on websites, the citation Markers can be removed using the `filterResponse` prop on the Agent embed code.
+The citation markers are **filtered out automatically from messages sent to WhatsApp**. For chat widgets on websites, the citation Markers can be removed using the `filterResponse` prop on the Agent embed code.
 
 Here is an example using the Standard embed
 

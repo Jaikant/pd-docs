@@ -4,7 +4,7 @@ In the PD chatbot, sessions control how conversations are maintained between the
 
 ## Default Behavior
 
-By default, PD chatbot opens a new session everytime it loads. 
+By default, PD chatbot opens a new session every time it loads. 
 
 ## Persisting *Sessions* Across Navigation
 

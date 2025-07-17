@@ -12,7 +12,7 @@ If you have not yet created your Assistant on the OpenAI Platform, then read thi
 
 ## Select agent type to create
 - Click on **OpenAI Assistant v2**
-- On clicking a new agent would be cloned and you will be redirected  to your unique agent ID.
+- On clickin, a new agent would be created and you will be redirected  to your unique agent ID.
 
 ### Add AI Resource to your agent
 - On current page, click the drop down input with the label **Select Assistant**

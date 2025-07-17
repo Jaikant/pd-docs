@@ -10,7 +10,7 @@ Predictable Dialogs will help you deploy an AI-powered interface swiftly.
 
 Building a custom tech stack is costly. Instead, focus on fine-tuning and perfecting your AI conversations while we handle the technology to seamlessly integrate it.
 
-Predictable Dialogs is a AI integration tool.
+Predictable Dialogs is an AI integration tool.
 
 
 ## Something missing? {#something-missing}
