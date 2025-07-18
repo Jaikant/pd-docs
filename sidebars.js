@@ -22,6 +22,11 @@ const sidebars = {
     },
     {
       type: 'doc',
+      id: 'concepts',
+      label: 'Concepts',
+    },
+    {
+      type: 'doc',
       id: 'pd-platforms',
       label: 'Platforms',
     },
@@ -37,11 +42,6 @@ const sidebars = {
           type: 'doc',
           id: 'getting-started/prerequisites',
           label: 'Prerequisites' 
-        },
-        {
-          type: 'doc',
-          id: 'getting-started/concepts',
-          label: 'Concepts' 
         },
         {
           type: 'doc',

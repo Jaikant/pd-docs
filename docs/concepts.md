@@ -1,5 +1,7 @@
 ---
+id: concepts
 title: 'Concepts'
+slug: /concepts
 hide_table_of_contents: true
 ---
 
