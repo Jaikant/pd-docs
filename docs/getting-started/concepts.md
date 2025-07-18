@@ -16,26 +16,23 @@ We currently provide Chatbot Agents. Chatbot Agents can be added to websites or 
 
 ## AI Resources
 
-An **AI Resource** is listed on the AI Resources page, and it maps to an **AI Model** (e.g., a model from OpenAI, Anthropic, Deepseek, xAI, etc.). Every AI Model needs:
+An **AI Resource** is an AI model with attached tools. Every AI resource needs:
 
 - A **unique name** within the app.
 - An **API key** to the external provider.
-- Potentially an **ID**, depending on the provider (e.g., an OpenAI Assistant might require an ID).
-
-You can have multiple AI Resources that point to the **same** AI Model, as long as each has a unique name within the app.
 
 For example:
 
 | **AI Resource**  | **Maps To**                            |
 |------------------|----------------------------------------|
-| AI Resource 1    | OpenAI Assistant with ID “xyz”         |
-| AI Resource 2    | OpenAI Assistant with ID “xyz”         |
+| AI Resource 1    | OpenAI gpt-4o with name “mygpt” |
+| AI Resource 2    | OpenAI gpt-4.1 with name “mygpt-4.1” |
+| AI Resource 3    | OpenAI Assistant with assistant ID “xyz” |
 
-Here, both AI Resource 1 and AI Resource 2 connect to the exact same AI model (the OpenAI Assistant with ID “xyz”), but they have different names in the app.
 
 ### Relationship between AI Resources & Agents
 
-Currently, each Agent can only be connected to **one** AI Resource at a time, although the underlying design supports multiple connections. 
+Currently, each Chatbot Agent can only be connected to **one** AI Resource at a time. 
 
 - If you change the AI Model an AI Resource points to, **all Agents** connected to that AI Resource automatically start using the new AI model. 
 - You can update an Agent to a different AI Resource at any time. 

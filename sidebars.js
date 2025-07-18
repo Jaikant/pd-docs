@@ -30,7 +30,7 @@ const sidebars = {
       label: 'Getting Started',
       link: {
         "type": "generated-index",
-        "description": "Connect your OpenAI Assistant to your website"
+        "description": "Embed Powerful AI Agents into Your Website"
       },   
       items: [
         {
@@ -68,11 +68,6 @@ const sidebars = {
           type: 'doc',
           id: 'getting-started/settings',
           label: 'Settings',
-        },
-        {
-          type: 'doc',
-          id: 'getting-started/results',
-          label: 'Results',
         },
         {
           type: 'doc',
