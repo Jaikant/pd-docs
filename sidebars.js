@@ -36,193 +36,138 @@ const sidebars = {
       link: {
         "type": "generated-index",
         "description": "Embed Powerful AI Agents into Your Website"
-      },   
+      },
       items: [
         {
           type: 'doc',
           id: 'getting-started/prerequisites',
-          label: 'Prerequisites' 
+          label: 'Prerequisites'
         },
         {
           type: 'doc',
-          id: 'getting-started/creating-an-openai-assistant-chatbot',
-          label: 'Creating an OpenAI Assistant Chatbot' 
-        },
-
-        {
-          type: 'doc',
-          id: 'getting-started/embedding-your-openai-assistant',
-          label: 'Embedding Your OpenAI Assistant' 
+          id: 'getting-started/create-agent',
+          label: 'Create Agent'
         },
         {
           type: 'doc',
-          id: 'getting-started/theme',
-          label: 'Theme' 
+          id: 'getting-started/connect-ai-resource',
+          label: 'Connect AI Resource'
         },
         {
           type: 'doc',
-          id: 'getting-started/custom-css',
-          label: 'Custom CSS',
+          id: 'getting-started/choose-channel',
+          label: 'Choose Channel'
         },
-        {
-          type: 'doc',
-          id: 'getting-started/settings',
-          label: 'Settings',
-        },
-        {
-          type: 'doc',
-          id: 'getting-started/add-whatsapp-to-predictable-dialogs',
-          label: 'Add WhatsApp' 
-        } 
       ],
-    },
-    {
-      type: 'doc',
-      id: 'quick-faq',
-      label: 'FAQs',  
     },
     {
       type: 'category',
-      label: 'Sessions & Reports',
+      label: 'Channels',
       link: {
         type: 'generated-index',
-        description:
-          'Understand chat sessions and set up automated email reports.',
+        description: 'Channels to connect your agents with users.',
       },
       items: [
         {
-          type: 'doc',
-          id: 'sessions/overview',          // existing overview
-          label: 'Sessions Overview',
+          type: 'category',
+          label: 'Web',
+          items: [
+            'channels/web/embed-widget',
+            {
+              type: 'category',
+              label: 'Widgets',
+              items: [
+                'channels/web/widgets/bubble',
+                'channels/web/widgets/popup',
+                'channels/web/widgets/standard',
+              ]
+            },
+            'channels/web/streaming',
+            'channels/web/theme',
+            'channels/web/custom-css'
+          ]
         },
         {
-          type: 'doc',
-          id: 'sessions/chat-activity-reports',
-          label: 'Chat Activity Reports',   // ← new page
-        },
-      ],
-    }, 
-     {
-      type: 'doc',
-      id: 'function-calling',
-      label: 'Function Calling',  
-    },
-    {
-      type: 'category',
-      label: 'How-to Guides',
-      link: {
-        type: 'generated-index',
-        description: 'Step‑by‑step recipes',
-      },
-      items: [
-        {
-          type: 'doc',
-          id: 'how-to/how-to-enable-disable-streaming',
-          label: 'Enabling & Disabling Streaming',
-        },
-        {
-          type: 'doc',
-          id: 'how-to/removing-openai-citations',
-          label: 'Removing OpenAI Citations',
+          type: 'category',
+          label: 'WhatsApp',
+          items: [
+            {
+              type: 'category',
+              label: 'Business Setup',
+              items: [
+                'channels/whatsapp/business-setup/create-a-business-account',
+                'channels/whatsapp/business-setup/create-a-meta-app',
+                'channels/whatsapp/business-setup/generate-whatsapp-token',
+                'channels/whatsapp/business-setup/add-phone-number',
+              ]
+            },
+            'channels/whatsapp/quick-start',
+          ]
         }
       ],
     },
     {
       type: 'category',
-      label: 'Reference',
+      label: 'Providers',
       link: {
         type: 'generated-index',
-        description: 'Explore widget types, props you can customize, API endpoints, and setup guide WhatsApp Business.',
+        description: 'Integrations with language‑model providers.',
       },
       items: [
         {
-          type: 'category',
-          label: 'Widgets',
-          link: {
-            "type": "generated-index",
-            "description": "Customize & style the different widgets"
-          },   
-          items: [
-            {
-              type: 'doc',
-              id: 'widgets/standard',
-              label: 'Standard' 
-            },
-            {
-              type: 'doc',
-              id: 'widgets/popup',
-              label: 'Popup' 
-            },
-            {
-              type: 'doc',
-              id: 'widgets/bubble',
-              label: 'Bubble' 
-            },
-            {
-              type: 'doc',
-              id: 'widgets/ai-button',
-              label: 'AI Topic Button' 
-            }
-          ],
+          type: 'autogenerated',
+          dirName: 'providers',
         },
-        {
-          type: 'category',
-          label: "WhatsApp Business Setup",
-          link: {
-            "type": "generated-index",
-            "description": "Setup your WhatsApp business account."
-          },   
-          items: [
-            'whatsapp/create-a-business-account',
-            {
-              type: 'doc',
-              id: 'whatsapp/create-a-meta-app',
-              label: 'Create a Meta App' 
-            },
-            {
-              type: 'doc',
-              id: 'whatsapp/generate-whatsapp-token',
-              label: 'Generate a WhatsApp Token' 
-            },
-            {
-              type: 'doc',
-              id: 'whatsapp/add-phone-number',
-              label: 'Add Phone Number to WhatsApp' 
-            }      ],
-        },
-        {
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Features',
+      link: {
+        type: 'generated-index',
+        description: 'Features of Predictable Dialogs.',
+      },
+      items: [
+        'features/settings',
+        'features/sessions',
+        'features/reports',
+      ],
+    },
+    {
           type: 'category',
           label: "API Reference (Beta)",
           link: {
             "type": "generated-index",
             "description": "Management API for agents"
-          },   
+          },
           items: [
             {
               type: 'doc',
               id: 'api-reference/introduction',
-              label: 'Introduction' 
+              label: 'Introduction'
             },
             {
               type: 'doc',
               id: 'api-reference/authentication',
-              label: 'Authentication' 
+              label: 'Authentication'
             },
             {
               type: 'doc',
               id: 'api-reference/making-requests',
-              label: 'Making Requests' 
+              label: 'Making Requests'
             },
             {
               type: 'doc',
               id: 'api-reference/endpoints',
-              label: 'Endpoints' 
-            }, 
+              label: 'Endpoints'
+            },
           ],
-        }
-    
-      ],
-    }
+        },
+    {
+      type: 'doc',
+      id: 'quick-faq',
+      label: 'FAQs',
+    },
   ],
 
 };
