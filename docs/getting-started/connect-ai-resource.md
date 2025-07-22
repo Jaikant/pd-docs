@@ -78,7 +78,7 @@ The new resource now appears in the dropdown and is **immediately active** for t
 
 **For OpenAI Assistant resources**:
 - File search and functions are managed on the OpenAI platform
-- See the [OpenAI Assistant guides](/docs/providers/openai-assistant/) for advanced configuration
+- See the [OpenAI Assistant guides](/docs/providers/openai-assistant/create-resource) for advanced configuration
 
 ---
 
