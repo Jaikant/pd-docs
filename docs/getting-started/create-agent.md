@@ -15,7 +15,9 @@
 ### Add AI Resource to your agent
 - On current page, click the drop down input with the label **Click to add or select AI resource**
 - If you are configuring for the first time you will not have any existing AI resource. So click **+ Add AI Resource**.
-- Select the type of resource.
-- Select the API key to use or add a new one.
-- Complete the remaining steps based on the type of resource.
-- Click *Next* to generate the embed code.
+- **Select the type of resource**:
+  - **OpenAI** (default): For fastest responses with file search managed in Predictable Dialogs
+  - **OpenAI Assistant**: For advanced features like functions, with setup on OpenAI platform
+- Enter your API key and configure the resource based on type selected
+- Complete the remaining steps based on the type of resource
+- Click *Next* to generate the embed code

@@ -27,4 +27,20 @@ If you change the AI Model on an AI Resource, **all Agents** connected to that A
 
 A Chatbot Agent can only be connected to **one** AI Resource at a time. 
 
-You can update an Agent to a different AI Resource at any time. 
+You can update an Agent to a different AI Resource at any time.
+
+### Resource Types
+
+We currently support two main types of AI resources:
+
+**OpenAI Resources**
+- Connect directly to OpenAI's Responses API
+- Fastest response times (~50ms)
+- File search managed within Predictable Dialogs
+- Functions coming soon
+
+**OpenAI Assistant Resources**  
+- Use OpenAI's Assistants API
+- Built-in tools and code interpreter (~2-3s response time)
+- File search configured on OpenAI platform
+- Full function calling support available now 
