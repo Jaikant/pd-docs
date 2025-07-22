@@ -23,24 +23,8 @@ An **AI Resource** is an AI model with attached tools. Every AI resource needs:
 - A **unique name** within the app.
 - An **API key** to the external provider.
 
-For example:
+If you change the AI Model on an AI Resource, **all Agents** connected to that AI Resource automatically start using the new AI model. 
 
-| **AI Resource**  | **Maps To**                            |
-|------------------|----------------------------------------|
-| AI Resource 1    | OpenAI gpt-4o with name “mygpt” |
-| AI Resource 2    | OpenAI gpt-4.1 with name “mygpt-4.1” |
-| AI Resource 3    | OpenAI Assistant with assistant ID “xyz” |
+A Chatbot Agent can only be connected to **one** AI Resource at a time. 
 
-
-### Relationship between AI Resources & Agents
-
-Currently, each Chatbot Agent can only be connected to **one** AI Resource at a time. 
-
-- If you change the AI Model an AI Resource points to, **all Agents** connected to that AI Resource automatically start using the new AI model. 
-- You can update an Agent to a different AI Resource at any time. 
-
-This setup gives you a lot of flexibility to switch AI models on the fly.
-
-<!-- ### Naming Edge Case
-
-If you have an AI Resource named **X** in the AI Resources page, and then on the Agents page you add a new OpenAI assistant (with an `assistantId` and `apiKey`) also named **X**, it will **replace** the existing AI Resource named **X**. -->
+You can update an Agent to a different AI Resource at any time. 

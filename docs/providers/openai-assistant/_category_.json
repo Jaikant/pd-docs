@@ -1,0 +1,8 @@
+{
+  "label": "OpenAI Assistant",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Guides for the OpenAI Assistant."
+  }
+}

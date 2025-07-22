@@ -1,0 +1,8 @@
+{
+  "label": "Web widgets",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Web widgets from Predictable Dialogs."
+  }
+}

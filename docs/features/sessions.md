@@ -1,10 +1,11 @@
-# Sessions
+#
+## Sessions
 
 In the PD chatbot, sessions control how conversations are maintained between the chatbot and users. Sessions can either persist until they naturally expire due to inactivity, or a new session can be initiated every time the chatbot is loaded.
 
 ## Default Behavior
 
-By default, PD chatbot opens a new session every time it loads. 
+By default, PD chatbot opens a new session every time it loads (persistSession: false). 
 
 ## Persisting *Sessions* Across Navigation
 
@@ -31,7 +32,7 @@ Example implementation (default behavior):
 
 ## Starting a New Session Every Time
 
-To explicitly start a new session every time the chatbot loads, set the `persistSession` property to `false` in your embed code or remove it completely as it is also the default behaviour.
+To explicitly start a new session every time the chatbot loads, set the `persistSession` property to `false` in your embed code or omit it entirely (this is the default behavior).
 
 Example implementation:
 

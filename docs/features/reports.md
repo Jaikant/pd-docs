@@ -1,7 +1,9 @@
 ---
-title: 'Setting Up Daily Chat Activity Reports'
+title: 'Reports'
 hide_table_of_contents: false
 ---
+# 
+## Setting Up Daily Chat Activity Reports
 
 **Estimated Time: 2 minutes**
 

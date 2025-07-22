@@ -59,7 +59,7 @@ const config = {
           lastmod: 'date',
           changefreq: 'weekly',
           priority: 0.5,
-          ignorePatterns: ['/tags/**'],
+          ignorePatterns: ['/tags/**', '/blog/**', '/markdown-page'],
           filename: 'sitemap-docs.xml',
         },
       }),

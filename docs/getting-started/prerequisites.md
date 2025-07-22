@@ -5,7 +5,7 @@ hide_table_of_contents: true
 
 ## OpenAI Account
 
-Signup for an an OpenAI Account [here](https://platform.openai.com/)
+Sign up for an OpenAI Account [here](https://platform.openai.com/)
 
 Go to your *Profile -> Billing* and add credit balance. When your credit balance reaches $0, your API requests will stop working. 
 

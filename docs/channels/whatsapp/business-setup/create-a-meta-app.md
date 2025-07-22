@@ -2,18 +2,8 @@
 sidebar_position: 2
 ---
 
-# Create a Meta app
-**Estimated Time: 3 minutes**
-
-- Go to [https://developers.facebook.com/apps](https://developers.facebook.com/apps)
-- Click on Create App
-- “What do you want your app to do?”, select **Other**.
-- Select **Business** type
-- Give it any name and select your newly created Business Portfolio
-- On the app page, look for **WhatsApp** product. Click setup and then enable it
-
 # Create a Meta App
-**Estimated Time: 2 minutes**
+**Estimated Time: 3 minutes**
 
 Follow these simple steps to create your Meta app:
 

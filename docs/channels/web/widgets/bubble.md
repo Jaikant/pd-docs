@@ -32,9 +32,9 @@ Here's the minimum code required to implement the Bubble Widget:
 | Property | Type | Description |
 |----------|------|-------------|
 | `stream` | boolean | Default is true. A flag that indicates whether messages should be streamed.|
-| `persistSession` | boolean | Default is false. A flag that indicates whether the seession persists, if set to false a new session is started every time the chatbot loads.  ([Read more](/docs/sessions/overview)) |
+| `persistSession` | boolean | Default is false. A flag that indicates whether the session persists, if set to false a new session is started every time the chatbot loads.  ([Read more](/docs/features/sessions)) |
 | `initialPrompt` | string | Initial message displayed when chat opens (only used when server's initial response is disabled) |
-| `filterResponse` | function | `(response: string) => string` - Function to process the AI's responses before display ([see example](/how-to/removing-openai-citations)). |
+| `filterResponse` | function | `(response: string) => string` - Function to process the AI's responses before display ([see example](/docs/providers/openai-assistant/removing-citations)). |
 | `onClose` | function | `() => void` - Function executed when the chat popup closes |
 | `onOpen` | function | `() => void` - Function executed when the chat popup opens |
 | `theme` | object | Contains customization properties for the widget's appearance |
@@ -46,7 +46,7 @@ Here's the minimum code required to implement the Bubble Widget:
 
 ## Internal Elements Styling
 
-To customize the appearance of elements within the chat interface itself (such as message bubbles, fonts, colors), use the ["Theme"](/docs/getting-started/theme) tab in the Predictable Dialogs app dashboard.
+To customize the appearance of elements within the chat interface itself (such as message bubbles, fonts, colors), use the ["Theme"](/docs/channels/web/theme) tab in the Predictable Dialogs app dashboard.
 
 ## External Styling
 

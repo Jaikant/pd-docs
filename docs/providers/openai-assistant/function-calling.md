@@ -1,7 +1,6 @@
 ---
-id: function-calling
-description: Function calling allows AI models to connect to external APIs
-slug: /function-calling
+title: Function Calling
+sidebar_position: 2
 ---
 
 # Function Calling

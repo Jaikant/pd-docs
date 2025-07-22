@@ -1,5 +1,5 @@
 ---
-title: 'Enabling & Disabling Streaming'
+title: 'Streaming'
 hide_table_of_contents: false
 ---
 

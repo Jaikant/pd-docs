@@ -3,12 +3,12 @@ title: 'Endpoints'
 hide_table_of_contents: false
 ---
 
-End point to interact with agent data
+Endpoint to interact with agent data
 
 
 ### Get Sessions
 ```
-GET https://app.predictabledialogs.com/v1/agents/{agentId}/sesions
+GET https://app.predictabledialogs.com/v1/agents/{agentId}/sessions
 ```
 
 Gets all sessions for agent
@@ -47,7 +47,7 @@ No request body required.
 ```
 
 #### Security
-This endpoint requires authentication using a access token.
+This endpoint requires authentication using an access token.
 
 
 ### Get Conversations 
@@ -96,4 +96,4 @@ No request body required.
 ```
 
 #### Security
-This endpoint requires authentication using a access token.
+This endpoint requires authentication using an access token.

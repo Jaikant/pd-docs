@@ -30,4 +30,5 @@ To complete this step you would need your **WhatsApp token** & **Phone Number Id
   - Scroll down on the meta page and locate the field with the name **"messages"**, click the toggle button so it is **"Subscribed"**.
 
 
-Now, send a message to your WhatsApp Business Phone Number configured and you should get a reply from the PD agent!
+Now, send a message to your WhatsApp Business Phone Number configured and you should get a reply from the PD agent! (Sometimes it takes a few hours for Meta to
+verify your details)
