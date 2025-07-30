@@ -128,6 +128,7 @@ const sidebars = {
         description: 'Features of Predictable Dialogs.',
       },
       items: [
+        'features/api-keys',
         'features/settings',
         'features/sessions',
         'features/reports',
