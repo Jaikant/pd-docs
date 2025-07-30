@@ -38,7 +38,6 @@ Once connected, every message your agent receives is forwarded to the selected r
 
 > 🚀 **Recommendation:**  
 > - **For speed and simplicity**: Choose **OpenAI**
-> - **For advanced functions**: Choose **OpenAI Assistant**  
 > You can always switch the agent to another resource later—no embed code changes needed.
 
 ---
