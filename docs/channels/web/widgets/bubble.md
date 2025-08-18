@@ -19,37 +19,10 @@ Here's the minimum code required to implement the Bubble Widget:
 </script>
 ```
 
-## Configuration Options
-
-### Required Properties
-
-| Property | Type | Description |
-|----------|------|-------------|
-| `agentName` | string | Specifies the Predictable Dialogs agent name or your custom agent name |
-
-### Optional Properties
-
-| Property | Type | Description |
-|----------|------|-------------|
-| `stream` | boolean | Default is true. A flag that indicates whether messages should be streamed.|
-| `persistSession` | boolean | Default is false. A flag that indicates whether the session persists, if set to false a new session is started every time the chatbot loads.  ([Read more](/docs/features/sessions)) |
-| `initialPrompt` | string | Initial message displayed when chat opens (only used when server's initial response is disabled) |
-| `filterResponse` | function | `(response: string) => string` - Function to process the AI's responses before display ([see example](/docs/providers/openai-assistant/removing-citations)). |
-| `onClose` | function | `() => void` - Function executed when the chat popup closes |
-| `onOpen` | function | `() => void` - Function executed when the chat popup opens |
-| `theme` | object | Contains customization properties for the widget's appearance |
-| `autoShowDelay` | number | Time in milliseconds after which the chat opens automatically |
-| `previewMessage` | object | Configuration for the preview message bubble |
-| `onPreviewMessageClick` | function | `() => void` - Function executed when preview message is clicked |
-| `apiHost` | string | Points to the Predictable Dialogs backend or your custom backend |
-
-
 ## Internal Elements Styling
-
 To customize the appearance of elements within the chat interface itself (such as message bubbles, fonts, colors), use the ["Theme"](/docs/channels/web/theme) tab in the Predictable Dialogs app dashboard.
 
 ## External Styling
-
 The widget's external appearance can be extensively customized using the `theme` property.
 
 ### Theme Property Structure
@@ -74,7 +47,7 @@ theme: {
 ```
 
 
-## Positioning the Bubble
+### Positioning the Bubble
 
 Control where the bubble appears on your page using the `placement` option:
 
@@ -91,9 +64,9 @@ Control where the bubble appears on your page using the `placement` option:
 ```
 
 
-## Customizing the Bubble Appearance
+### Customizing the Bubble Appearance
 
-### Changing Bubble Size
+#### Changing Bubble Size
 
 ```html
 <script type="module">
@@ -109,7 +82,7 @@ Control where the bubble appears on your page using the `placement` option:
 </script>
 ```
 
-### Changing Bubble Background Color
+#### Changing Bubble Button Background Color
 
 ```html
 <script type="module">
@@ -125,7 +98,7 @@ Control where the bubble appears on your page using the `placement` option:
 </script>
 ```
 
-### Customizing Bubble Icons
+#### Customizing Bubble Button Icons
 
 ```html
 <script type="module">
@@ -197,6 +170,20 @@ Here is an example styled preview message.
 </script>
 ```
 
+## Responsive Behavior
+
+The Bubble widget automatically adapts to different screen sizes:
+
+### Mobile Behavior (< 640px)
+- **Chat Window**: Full width with responsive height
+- **Button Position**: Fixed bottom positioning with appropriate margins
+- **Preview Message**: Adjusts to screen width with proper spacing
+
+### Desktop Behavior (≥ 640px)
+- **Chat Window**: Fixed 400px width, maximum 704px height
+- **Button Position**: 20px margin from screen edge (left or right based on placement)
+- **Preview Message**: Positioned relative to button with optimal spacing
+
 
 ## Programmatic Control
 
@@ -218,7 +205,31 @@ You can control the widget through JavaScript using the following methods:
 <button onclick="Agent.toggle()">Toggle Chat</button>
 ```
 
----
+
+## Configuration Options
+
+### Required Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `agentName` | string | Specifies the Predictable Dialogs agent name or your custom agent name |
+
+### Optional Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `persistSession` | boolean | Default is false. A flag that indicates whether the session persists, if set to false a new session is started every time the chatbot loads.  ([Read more](/docs/features/sessions)) |
+| `initialPrompt` | string | Initial message displayed when chat opens (only used when server's initial response is disabled) |
+| `filterResponse` | function | `(response: string) => string` - Function to process the AI's responses before display ([see example](/docs/providers/openai-assistant/removing-citations)). |
+| `onClose` | function | `() => void` - Function executed when the chat popup closes |
+| `onOpen` | function | `() => void` - Function executed when the chat popup opens |
+| `theme` | object | Contains customization properties for the widget's appearance |
+| `autoShowDelay` | number | Time in milliseconds after which the chat opens automatically |
+| `previewMessage` | object | Configuration for the preview message bubble |
+| `onPreviewMessageClick` | function | `() => void` - Function executed when preview message is clicked |
+| `apiHost` | string | Points to the Predictable Dialogs backend or your custom backend |
+
+
 
 ## Complete Configuration Example
 
@@ -266,3 +277,4 @@ Here's an example showing most customization options:
   });
 </script>
 ```
+
