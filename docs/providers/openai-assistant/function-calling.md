@@ -1,31 +1,28 @@
 ---
-title: Function Calling
+title: Function Calling Setup
 sidebar_position: 2
 ---
 
-# Function Calling
+# OpenAI Assistant Function Calling
 
 **Estimated Time: 4 minutes**
 
-Function calling lets you connect your AI models to external APIs.
+This guide covers the specific steps for setting up function calling with OpenAI Assistant resources. For an overview of function calling concepts and use cases, see our [Function Calling Guide →](/docs/tools/function-calling).
 
-There are three primary reasons you would configure function calling:
-
-1. **Data Collection** (e.g., lead generation)
-2. **Triggering an action** (e.g., sending an email)
-3. **Information Retrieval** (e.g., fetching order status)
-
-Learn more about the [use cases for function calling](https://predictabledialogs.com/learn/function-calling-use-cases).
+Function calling with OpenAI Assistants involves:
+1. Configuring functions on the OpenAI platform
+2. Importing those functions into Predictable Dialogs
+3. Setting up endpoints and authentication
 
 ## Configuring Function Calling
 
 ### Prerequisites
 
-1. Function configured in OpenAI - [Configuring Function Calling in OpenAI](https://predictabledialogs.com/learn/openai/configuring-function-calling)
-2. Implemented API endpoints, including HTTP method (`GET` or `POST`) and URL.
-3. *(Optional)* Bearer token for endpoints requiring authentication.
+1. **OpenAI Assistant** with functions configured - [Configuring Function Calling in OpenAI](https://predictabledialogs.com/learn/openai/configuring-function-calling)
+2. **API Endpoints** implemented with HTTP method (`GET` or `POST`) and URL
+3. **Authentication** (optional) - Bearer token for secure endpoints
 
-   * (*Note*: For other authentication mechanisms, please contact us.)
+For general endpoint design and authentication concepts, see our [Function Calling Guide →](/docs/tools/function-calling).
 
 ### Sign In
 
@@ -112,3 +109,9 @@ Bearer Token Authentication secures API calls like a secret key:
 * If authentication isn't needed, leave **Add Authentication** unchecked.
 
 Contact your developer or API provider if uncertain about authentication requirements.
+
+## Related Resources
+
+- **[Function Calling Overview →](/docs/tools/function-calling)** - Learn about function calling concepts, use cases, and best practices
+- **[Tools Overview →](/docs/tools/overview)** - Explore all available AI tool capabilities  
+- **[OpenAI Functions →](/docs/providers/openai/functions)** - Function calling for OpenAI Resources (coming soon)

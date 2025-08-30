@@ -122,6 +122,19 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Tools',
+      link: {
+        type: 'generated-index',
+        description: 'AI tool capabilities for enhancing your agents.',
+      },
+      items: [
+        'tools/overview',
+        'tools/function-calling',
+        'tools/file-search',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Features',
       link: {
         type: 'generated-index',

@@ -1,25 +1,23 @@
 ---
-title: File Search with OpenAI
+title: File Search Setup  
 sidebar_position: 2
 ---
 
-# File Search with OpenAI Resources
+# OpenAI File Search
 
-OpenAI resources support file search capabilities through vector stores managed within Predictable Dialogs. This allows your AI agent to search through uploaded documents to provide more accurate, context-aware responses.
+This guide covers the specific steps for setting up file search with OpenAI. For an overview of file search concepts, document preparation, and best practices, see our [File Search & RAG Guide →](/docs/tools/file-search).
 
-## How It Works
+When you use the OpenAI provider, you have direct control over:
 
-Unlike OpenAI Assistants where file search is configured on the OpenAI platform, OpenAI resources use Predictable Dialogs to manage file search:
-
-- **Vector Store Creation**: Files are uploaded to OpenAI vector stores via Predictable Dialogs
-- **Search Integration**: The AI automatically searches relevant documents when answering questions
-- **Flexible Configuration**: Control chunk size, overlap, and maximum returned chunks
+- **Vector Store Management**: Upload and manage files through Predictable Dialogs
+- **Chunk Configuration**: Control chunk size, overlap settings  
+- **Search Settings**: Adjust the number of chunks returned for each query
 
 ## Configuring File Search
 
 ### From the Agents Page (During Setup)
 
-After creating an OpenAI resource, you'll see an alert with an option to add files:
+After creating and adding an OpenAI resource, you'll see an alert with an option to add files:
 
 1. Click the **Add Files** button in the alert
 2. This opens the file upload modal (see "Upload Process" below)
@@ -81,7 +79,7 @@ vs_687f46de92d48191b887d82c86384921 • Max Chunks: 10 • Chunk size: 800 token
 ```
 
 ### Available Actions
-
+The available actions for the vector store on the AI resource are:
 - **Update Files**: Add new files or remove existing ones
 - **Settings** (gear icon): Adjust max number of chunks returned (1-20)
 - **Delete**: Remove the entire vector store
@@ -111,6 +109,12 @@ Control how many relevant chunks the AI receives for each search:
 
 ## Troubleshooting
 
-**Upload Fails**: Check that your API key has sufficient permissions and credits
-**Search Not Working**: Ensure file search is toggled ON and vector store shows as active
-**Poor Results**: Try adjusting chunk size or uploading more relevant documents
+**Upload Fails**: Check that your API key has sufficient permissions and credits<br/>
+**Search Not Working**: Ensure file search is toggled ON and vector store shows as active <br/>
+**Poor Results**: Try adjusting chunk size or uploading more relevant documents<br/>
+
+## Related Resources
+
+- **[File Search & RAG Overview →](/docs/tools/file-search)** - Learn about RAG concepts, document preparation, and optimization strategies
+- **[Tools Overview →](/docs/tools/overview)** - Explore all available AI tool capabilities
+- **[OpenAI Assistant File Search](https://platform.openai.com/docs/assistants/tools/file-search)** - OpenAI's official documentation for Assistant-based file search

@@ -35,3 +35,9 @@ If you need function calling capabilities right now, consider using an **OpenAI 
 ## Stay Updated
 
 We'll update this documentation once function calling for OpenAI resources becomes available. The interface will be similar to the OpenAI Assistant implementation but optimized for the faster OpenAI resource architecture.
+
+## Related Resources
+
+- **[Function Calling Overview →](/docs/tools/function-calling)** - Learn about function calling concepts, use cases, and best practices
+- **[Tools Overview →](/docs/tools/overview)** - Explore all available AI tool capabilities  
+- **[OpenAI Assistant Function Calling →](/docs/providers/openai-assistant/function-calling)** - Currently available function calling implementation
