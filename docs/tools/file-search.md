@@ -158,7 +158,7 @@ Start with default settings and adjust based on your content:
 
 ## Provider-Specific Implementation
 
-### OpenAI Resources
+### OpenAI
 File search is fully available with Predictable Dialogs managing the vector stores.
 
 **Features:**

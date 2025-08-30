@@ -3,9 +3,9 @@ title: Functions (Coming Soon)
 sidebar_position: 3
 ---
 
-# Functions for OpenAI Resources
+# Functions for OpenAI
 
-Function calling capabilities for OpenAI resources are currently in development and will be available soon.
+Function calling capabilities for OpenAI are currently in development and will be available soon.
 
 ## What's Coming
 

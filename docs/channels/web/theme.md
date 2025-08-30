@@ -91,6 +91,8 @@ You can also override the theme font directly in your widget configuration:
 - Click on the toggle button next to the Avatar label.
 - Click on the profile circle and paste the image url
 
+![Theme Customization Page with Avatar Settings](/img/theming/theme-page.webp)
+
 
 ### Customize Bubble Colors
 

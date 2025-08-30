@@ -35,10 +35,16 @@ After creating and adding an OpenAI resource, you'll see an alert with an option
 
 ### File Upload Modal
 
+The file upload modal provides a streamlined interface for attaching files to your AI resource:
+
+![File Upload Modal Interface](/img/ai-resources/file-upload-modal-1.webp)
+
 1. **Select API Key**: At the top, you'll see which OpenAI key will be used:
    - Default: Your default OpenAI key if set
    - Resource-specific: The key assigned to this AI resource
    - Click **Change** to select a different key
+
+![Change API Key Option](/img/ai-resources/file-upload-modal-3.webp)
 
 2. **Choose Files**: 
    - Drag and drop files into the modal
@@ -48,6 +54,12 @@ After creating and adding an OpenAI resource, you'll see an alert with an option
 3. **Advanced Options** (Optional):
    - **Chunk Size**: Default 800 tokens (how large each text chunk should be)
    - **Chunk Overlap**: Default 400 tokens (overlap between chunks for context)
+
+![Advanced Options for Chunking](/img/ai-resources/file-upload-modal-2.webp)
+
+Click to expand Advanced options to adjust chunk settings:
+
+![Expanded Advanced Options](/img/ai-resources/file-upload-modal-4.webp)
 
 4. **Upload**: Click **Upload** to create the vector store and process files
 
@@ -60,6 +72,8 @@ If you need to choose a different API key:
    - **Use default key** (if you have one set)
    - **Use resource key** (the key assigned to this AI resource)
    - **Add or select key** - Choose from existing keys or add a new one
+
+![API Key Selection Modal](/img/ai-resources/file-upload-modal-5.webp)
 
 ### Processing Status
 

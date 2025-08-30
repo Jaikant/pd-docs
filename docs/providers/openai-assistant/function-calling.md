@@ -114,4 +114,4 @@ Contact your developer or API provider if uncertain about authentication require
 
 - **[Function Calling Overview →](/docs/tools/function-calling)** - Learn about function calling concepts, use cases, and best practices
 - **[Tools Overview →](/docs/tools/overview)** - Explore all available AI tool capabilities  
-- **[OpenAI Functions →](/docs/providers/openai/functions)** - Function calling for OpenAI Resources (coming soon)
+- **[OpenAI Functions →](/docs/providers/openai/functions)** - Function calling for OpenAI (coming soon)

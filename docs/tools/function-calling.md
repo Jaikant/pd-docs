@@ -192,7 +192,7 @@ Function calling is fully supported and production-ready.
 
 **Learn more:** [OpenAI Assistant Function Calling →](/docs/providers/openai-assistant/function-calling)
 
-### OpenAI Resources
+### OpenAI
 Function calling capabilities are currently in development.
 - Coming soon with similar functionality
 - Will support custom function schemas

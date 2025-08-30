@@ -33,13 +33,13 @@ You can update an Agent to a different AI Resource at any time.
 
 We currently support two main types of AI resources:
 
-**OpenAI Resources**
+**OpenAI**
 - Connect directly to OpenAI's Responses API
 - Fastest response times (~50ms)
 - File search managed within Predictable Dialogs
 - Functions coming soon
 
-**OpenAI Assistant Resources**  
+**OpenAI Assistant**  
 - Use OpenAI's Assistants API
 - Built-in tools and code interpreter (~2-3s response time)
 - File search configured on OpenAI platform

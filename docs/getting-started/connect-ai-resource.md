@@ -44,7 +44,7 @@ Once connected, every message your agent receives is forwarded to the selected r
 
 ## 3&nbsp;· Enter provider‑specific details
 
-### For OpenAI Resources
+### For OpenAI
 
 Field | Description | Example
 ------|-------------|---------
@@ -56,7 +56,9 @@ After entering these details:
 2. Optionally update the resource name and add system instructions
 3. Click **Save**
 
-### For OpenAI Assistant Resources
+![AI Resource Successfully Created](/img/ai-resources/Add-AI-Resource-1.webp)
+
+### For OpenAI Assistant
 
 Field | Description | Example
 ------|-------------|---------
