@@ -129,7 +129,6 @@ const sidebars = {
       },
       items: [
         'features/api-keys',
-        'features/settings',
         'features/sessions',
         'features/reports',
       ],

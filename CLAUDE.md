@@ -10,7 +10,7 @@ This is a Docusaurus-based documentation website for Predictable Dialogs (predic
 - Channel integrations (Web widgets, WhatsApp)
 - AI provider integrations (OpenAI Assistant)
 - API reference documentation
-- Features like sessions, reports, and settings
+- Features like sessions, reports
 
 ## Development Commands
 
@@ -51,7 +51,7 @@ npm run deploy
 - **Getting Started**: Sequential guides for new users
 - **Channels**: Platform-specific integration guides (Web, WhatsApp)  
 - **Providers**: AI service integrations (OpenAI Assistant)
-- **Features**: Platform capabilities (sessions, reports, settings)
+- **Features**: Platform capabilities (sessions, reports )
 - **API Reference**: Beta management API documentation
 
 ## Documentation Patterns

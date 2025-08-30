@@ -7,6 +7,33 @@ title: 'Theme'
 ## Go to page which themes the widget
 - Sign in to [Predictable Dialogs](https://predictabledialogs.com/sign-in). Click your existing agent. Click "Theme" on menu.
 
+
+### Customize the initial response
+Select *Greeting* tab and enter or generate your greeting.
+
+The initial response is the first message your AI agent displays. Personalize it to set the tone for user interactions.
+
+- **Enable or Disable:**  
+  Go to the **Greeting** tab and use the toggle button to turn the initial response on or off.
+  :::tip initial response using a prompt
+  If you turn off the greeting, you can generate an greeting/initial response using your own prompt. This is [configured](http://predictabledialogs.com/docs/channels/web/widgets/bubble#widget-behaviour--styling-parameters-optional) using the `initialPrompt` prop on the widget.  
+  :::
+
+- **Add a Custom Response:**  
+  Enter your desired message in the input area. Use markdown for styling, such as:
+
+  ```
+  **Hi there**
+  ```
+  Basic HTML compatible with markdown is also supported:
+
+  ```
+  <strong> **Hi there** </strong>
+  ```
+  :::tip Generate greeting with OpenAI
+  Click the ✨ button to create an initial response using your OpenAI assistant and a custom prompt.
+  :::
+
 ### Customize Widget Background Color 
 
 #### Using the Theme Dashboard
