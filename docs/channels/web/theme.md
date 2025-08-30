@@ -8,10 +8,55 @@ title: 'Theme'
 - Sign in to [Predictable Dialogs](https://predictabledialogs.com/sign-in). Click your existing agent. Click "Theme" on menu.
 
 ### Customize Widget Background Color 
-Select *Background* tab and select color
 
-### Customize Widget Font & Brand 
-Select *Font & Brand* tab and select brand and font
+#### Using the Theme Dashboard
+Select *Background* tab and select color from the Predictable Dialogs app.
+
+#### Using Widget Props
+You can also override the theme background directly in your widget configuration:
+
+```js
+Agent.initStandard({
+  ...
+  background: {
+    type: "Color",
+    content: "#cbcbcd"
+  },
+});
+```
+
+Using the props you can also add an image background.
+```js
+Agent.initStandard({
+  ...
+  background: {
+    type: "Image",
+    content: "https://i.pravatar.cc/1000"
+  },
+});
+```
+
+**Note:** Widget props take precedence over theme settings.
+
+### Font Configuration
+
+#### Using the Theme Dashboard
+You can configure fonts through the Predictable Dialogs app by:
+1. Navigate to your agent theme
+2. Select the *Font & Brand* tab  
+3. Choose from available font options
+
+#### Using Widget Props
+You can also override the theme font directly in your widget configuration:
+
+```js
+    Agent.initStandard({
+      ...
+      font: 'Averia Libre',
+    });
+```
+
+**Note:** Widget props take precedence over theme settings. Fonts available on [fonts.bunny.net](https://fonts.bunny.net/) are supported.
 
 ### Update Avatars
 - Prerequisite: You need an image url to update the avatar.
@@ -21,16 +66,104 @@ Select *Font & Brand* tab and select brand and font
 
 
 ### Customize Bubble Colors
+
+#### Using the Theme Dashboard
 - Select *Bubbles* tab
 - Select background color for AI / User bubbles
 - Select text color for AI / User bubbles
 
+#### Using Widget Props
+You can also override bubble colors directly in your widget configuration:
+
+```js
+Agent.initStandard({
+  ...
+  bubble: {
+    hostBubbles: {
+      color: "#2b2c2b",
+      backgroundColor: "#ff6b35"
+    },
+    guestBubbles: {
+      color: "#f8faf4", 
+      backgroundColor: "#0066cc"
+    }
+  }
+});
+```
+
+**Note:** Widget props take precedence over theme settings.
+
+
+### Select Input Type
+Before customizing input appearance, choose your input type:
+
+#### Fixed Bottom Input
+<p align="center">
+  <img src={require('@site/static/img/fixed-bottom.webp').default} alt="Fixed bottom input" width="400" />
+</p>
+
+- Modern chat interface with input fixed at bottom
+- Similar to popular messaging apps
+- Clean, streamlined appearance
+
+#### Floating Input
+<p align="center">
+  <img src={require('@site/static/img/floating-single-line.webp').default} alt="Floating single line" width="400" />
+</p>
+<p align="center">
+  <img src={require('@site/static/img/floating-multi-line.webp').default} alt="Floating multi line" width="400" />
+</p>
+- Traditional floating input style
+- Supports single-line and multi-line options
+- More customizable positioning
+
 
 ### Customize Input Colors and Input roundness
+
+Input styling can be customized in two ways:
+
+#### Using the Theme Dashboard (Recommended for Global Settings)
 - Select *Inputs* tab
 - Click *Roundness* dropdown to select border radius of input element. You can select one of large, medium or none. If you want to enter your own border radius, then you can do that in the custom css.
 - Select background color for send button and input.
 - Select text color for send button, input text and input placeholder.
+
+#### Using Widget Props (Override Theme Settings)
+You can also override input styling directly in your widget configuration. Below an example using Standard widget. The same can be applied to the Bubble and Popup.
+
+```js
+Agent.initStandard({
+  ...
+  input: {
+    type: "text input",
+    styles: {
+      roundness: "medium",
+      inputs: {
+        color: "#e84117",
+        backgroundColor: "#f7f7f7",
+        placeholderColor: "#ababab"
+      },
+      buttons: {
+        color: "#ffffff", 
+        backgroundColor: "#050505"
+      }
+    },
+    options: {
+      type: "fixed-bottom",
+      labels: {
+        placeholder: "What's on your mind?",
+        button: "Send"
+      },
+      isLong: false
+    }
+  }
+});
+```
+
+**Note:** Widget props take precedence over theme settings. For complete prop documentation, see the widget-specific documentation:
+- [Standard Widget Props](/docs/channels/web/widgets/standard#chat-elements-styling-parameters-optional)
+- [Bubble Widget Props](/docs/channels/web/widgets/bubble#chat-elements-styling-parameters-optional)  
+- [Popup Widget Props](/docs/channels/web/widgets/popup#chat-elements-styling-parameters-optional)
 
 
 ### Custom CSS

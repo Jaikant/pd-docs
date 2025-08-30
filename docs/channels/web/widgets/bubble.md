@@ -19,9 +19,6 @@ Here's the minimum code required to implement the Bubble Widget:
 </script>
 ```
 
-## Internal Elements Styling
-To customize the appearance of elements within the chat interface itself (such as message bubbles, fonts, colors), use the ["Theme"](/docs/channels/web/theme) tab in the Predictable Dialogs app dashboard.
-
 ## External Styling
 The widget's external appearance can be extensively customized using the `theme` property.
 
@@ -214,11 +211,10 @@ You can control the widget through JavaScript using the following methods:
 |----------|------|-------------|
 | `agentName` | string | Specifies the Predictable Dialogs agent name or your custom agent name |
 
-### Optional Properties
+### Widget Behaviour & Styling Parameters (optional)
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `persistSession` | boolean | Default is false. A flag that indicates whether the session persists, if set to false a new session is started every time the chatbot loads.  ([Read more](/docs/features/sessions)) |
 | `initialPrompt` | string | Initial message displayed when chat opens (only used when server's initial response is disabled) |
 | `filterResponse` | function | `(response: string) => string` - Function to process the AI's responses before display ([see example](/docs/providers/openai-assistant/removing-citations)). |
 | `onClose` | function | `() => void` - Function executed when the chat popup closes |
@@ -227,11 +223,21 @@ You can control the widget through JavaScript using the following methods:
 | `autoShowDelay` | number | Time in milliseconds after which the chat opens automatically |
 | `previewMessage` | object | Configuration for the preview message bubble |
 | `onPreviewMessageClick` | function | `() => void` - Function executed when preview message is clicked |
-| `apiHost` | string | Points to the Predictable Dialogs backend or your custom backend |
+| `apiHost` / `apiStreamHost` | string | Points to the Predictable Dialogs backend or your custom backend |
+
+### Chat Elements Styling Parameters (optional)
+To customize the appearance of chat elements—such as message fonts, colors, and bubbles, input—you can use the "Theme" tab in the Predictable Dialogs app dashboard. This lets you make changes in real time, rather than updating code with the props listed below.
 
 
+| Property | Type | Description |
+|----------|------|-------------|
+| `font` | string | Font family name from fonts.bunny.net. Overrides theme font configuration. Example: `font="Roboto"` |
+| `background` | object | Background configuration object with `type` ("Color" \| "Image" \| "None") and `content` (color hex or image URL). Overrides theme background configuration. Example: `background={{type: "Color", content: "#f0f0f0"}}` |
+| `bubble` | object | Override bubble colors for host and guest messages. Contains optional `hostBubbles` and `guestBubbles` objects with `color` and `backgroundColor` properties. Overrides theme bubble configuration. |
+| `input` | object | Input styling configuration with `type`, `styles`, and `options` properties. The `styles` object contains `roundness`, `inputs` (color, backgroundColor, placeholderColor), and `buttons` (color, backgroundColor) properties. Overrides theme input configuration. |
 
-## Complete Configuration Example
+
+## Configuration Example
 
 Here's an example showing most customization options:
 
@@ -276,5 +282,93 @@ Here's an example showing most customization options:
     },
   });
 </script>
+```
+
+### bubble (optional)
+Override bubble colors for host and guest messages.
+
+**Type:** 
+```typescript
+{
+  hostBubbles?: {
+    color: string;
+    backgroundColor: string; 
+  };
+  guestBubbles?: {
+    color: string;
+    backgroundColor: string;
+  };
+}
+```
+
+**Example:**
+```js
+bubble: {
+  hostBubbles: {
+    color: "#2b2c2b",
+    backgroundColor: "#ff6b35" 
+  },
+  guestBubbles: {
+    color: "#f8faf4",
+    backgroundColor: "#0066cc"
+  }
+}
+```
+
+### input (optional)
+Override input styling and configuration.
+
+**Type:** 
+```typescript
+{
+  type: "text input";
+  styles?: {
+    roundness?: "none" | "medium" | "large";
+    inputs?: {
+      color?: string;
+      backgroundColor?: string;
+      placeholderColor?: string;
+    };
+    buttons?: {
+      color?: string;
+      backgroundColor?: string;
+    };
+  };
+  options: {
+    type: "fixed-bottom" | "floating";
+    labels: {
+      placeholder?: string;
+      button?: string;
+    };
+    isLong?: boolean;
+  };
+}
+```
+
+**Example:**
+```js
+input: {
+  type: "text input",
+  styles: {
+    roundness: "medium",
+    inputs: {
+      color: "#e84117",
+      backgroundColor: "#f7f7f7",
+      placeholderColor: "#ababab"
+    },
+    buttons: {
+      color: "#ffffff",
+      backgroundColor: "#050505"
+    }
+  },
+  options: {
+    type: "fixed-bottom",
+    labels: {
+      placeholder: "Whats on your mind?",
+      button: "Send me"
+    },
+    isLong: false
+  }
+}
 ```
 

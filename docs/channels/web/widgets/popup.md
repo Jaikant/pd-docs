@@ -50,9 +50,6 @@ theme: { width: "min(600px, 90vw)" }
 - **Default Width**: 512px on desktop, responsive on mobile
 - **Positioning**: Centered both horizontally and vertically
 
-## Internal Elements Styling
-To customize the appearance of elements within the chat interface itself (such as message bubbles, fonts, colors), use the ["Theme"](/docs/channels/web/theme) tab in the Predictable Dialogs app dashboard.
-
 ## Responsive Behavior
 
 The Popup widget automatically adapts to different screen sizes:
@@ -98,11 +95,10 @@ Control the popup widget with these JavaScript methods:
 | `agentName` | string | Name of the assistant that will appear in the widget. Uses the specified Predictable Dialogs agent or an agent from your custom backend. |
 | `autoShowDelay` | number | Time in milliseconds before the popup automatically appears after the page loads. |
 
-### Optional Parameters
+### Widget Behaviour & Styling Parameters (optional)
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `persistSession` | boolean | Default is false. A flag that indicates whether the session persists, if set to false a new session is started every time the chatbot loads.  ([Read more](/docs/features/sessions)) |
 | `initialPrompt` | string | Initial message sent to the AI when conversation starts. *Note: Only used when initial responses are disabled on the server.* |
 | `filterResponse` | function | Callback function that processes AI responses before displaying them. Takes the response string as input and returns the modified string. Useful for removing citations or modifying content([see example](/docs/providers/openai-assistant/removing-citations)). |
 | `defaultOpen` | boolean | When `true`, the popup will be open by default but can be closed by the user. |
@@ -110,9 +106,21 @@ Control the popup widget with these JavaScript methods:
 | `onClose` | function | Callback function that executes when the popup is closed. |
 | `onOpen` | function | Callback function that executes when the popup is opened. |
 | `theme` | object | Styling configuration object. Currently supports `width` property to set popup width (default: '512px' on laptop screens). |
-| `apiHost` | string | URL endpoint for the chat service. Points to Predictable Dialogs backend by default, but can be configured to use your own backend. |
+| `apiHost` / `apiStreamHost` | string | URL endpoint for the chat service. Points to Predictable Dialogs backend by default, but can be configured to use your own backend. |
 
-## Example with Optional Parameters
+### Chat Elements Styling Parameters (optional)
+To customize the appearance of chat elements—such as message fonts, colors, and bubbles, input—you can use the ["Theme"](/docs/channels/web/theme) tab in the Predictable Dialogs app dashboard. This lets you make changes in real time, rather than updating code with the props listed below.
+
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `font` | string | Font family name from fonts.bunny.net. Overrides theme font configuration. Example: `font="Roboto"` |
+| `background` | object | Background configuration object with `type` ("Color" \| "Image" \| "None") and `content` (color hex or image URL). Overrides theme background configuration. Example: `background={{type: "Color", content: "#f0f0f0"}}` |
+| `bubble` | object | Override bubble colors for host and guest messages. Contains optional `hostBubbles` and `guestBubbles` objects with `color` and `backgroundColor` properties. Overrides theme bubble configuration. |
+| `input` | object | Input styling configuration with `type`, `styles`, and `options` properties. The `styles` object contains `roundness`, `inputs` (color, backgroundColor, placeholderColor), and `buttons` (color, backgroundColor) properties. Overrides theme input configuration. |
+
+
+## Example with some Optional Parameters
 
 ```javascript
 Agent.initPopup({
@@ -129,4 +137,92 @@ Agent.initPopup({
     width: "400px"
   }
 });
+```
+
+### bubble (optional)
+Override bubble colors for host and guest messages.
+
+**Type:** 
+```typescript
+{
+  hostBubbles?: {
+    color: string;
+    backgroundColor: string; 
+  };
+  guestBubbles?: {
+    color: string;
+    backgroundColor: string;
+  };
+}
+```
+
+**Example:**
+```js
+bubble: {
+  hostBubbles: {
+    color: "#2b2c2b",
+    backgroundColor: "#ff6b35" 
+  },
+  guestBubbles: {
+    color: "#f8faf4",
+    backgroundColor: "#0066cc"
+  }
+}
+```
+
+### input (optional)
+Override input styling and configuration.
+
+**Type:** 
+```typescript
+{
+  type: "text input";
+  styles?: {
+    roundness?: "none" | "medium" | "large";
+    inputs?: {
+      color?: string;
+      backgroundColor?: string;
+      placeholderColor?: string;
+    };
+    buttons?: {
+      color?: string;
+      backgroundColor?: string;
+    };
+  };
+  options: {
+    type: "fixed-bottom" | "floating";
+    labels: {
+      placeholder?: string;
+      button?: string;
+    };
+    isLong?: boolean;
+  };
+}
+```
+
+**Example:**
+```js
+input: {
+  type: "text input",
+  styles: {
+    roundness: "medium",
+    inputs: {
+      color: "#e84117",
+      backgroundColor: "#f7f7f7",
+      placeholderColor: "#ababab"
+    },
+    buttons: {
+      color: "#ffffff",
+      backgroundColor: "#050505"
+    }
+  },
+  options: {
+    type: "fixed-bottom",
+    labels: {
+      placeholder: "Whats on your mind?",
+      button: "Send me"
+    },
+    isLong: false
+  }
+}
 ```

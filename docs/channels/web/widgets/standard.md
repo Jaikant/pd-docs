@@ -174,10 +174,8 @@ The Standard widget inherits the size of its container (`width: 100%; height: 10
 - **Tablet (768px - 1024px)**: Balanced width and height
 - **Desktop (> 1024px)**: Fixed maximum widths work well
 
-## Internal Elements Styling
-To customize the internal elements of the widget (chat bubbles, input field, buttons, etc.), use the [Theme](/docs/channels/web/theme) tab in the Predictable Dialogs application.
 
-## Properties
+## Configuration Options
 
 ### Required Properties
 
@@ -185,13 +183,110 @@ To customize the internal elements of the widget (chat bubbles, input field, but
 |----------|------|-------------|
 | `agentName` | string | Specifies the agent name from Predictable Dialogs or your custom backend. This identifies which AI agent will process the conversations. |
 
-### Optional Properties
+### Widget Behaviour & Styling Parameters (optional)
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `persistSession` | boolean | Default is false. A flag that indicates whether the session persists, if set to false a new session is started every time the chatbot loads.  ([Read more](/docs/features/sessions)) |
 | `initialPrompt` | string | Message sent to the agent when the chat first loads. Only used when initial response is disabled on the server. If server-side initial response is enabled, this property is ignored. |
 | `filterResponse` | function | A callback function that processes the AI's responses before displaying them. Takes the original response string as input and should return the modified response string. Useful for removing citations or formatting responses ([see example](/docs/providers/openai-assistant/removing-citations)). |
-| `apiHost` | string | Endpoint URL that connects to the backend. Can be configured to use your own backend if needed. |
+| `apiHost` / `apiStreamHost` | string | Endpoint URL that connects to the backend. Can be configured to use your own backend if needed. |
+
+### Chat Elements Styling Parameters (optional)
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `font` | string | Font family name from fonts.bunny.net. Overrides theme font configuration. Example: `font="Roboto"` |
+| `background` | object | Background configuration object with `type` ("Color" \| "Image" \| "None") and `content` (color hex or image URL). Overrides theme background configuration. Example: `background={{type: "Color", content: "#f0f0f0"}}` |
+| `bubble` | object | Override bubble colors for host and guest messages. Contains optional `hostBubbles` and `guestBubbles` objects with `color` and `backgroundColor` properties. Overrides theme bubble configuration. |
+| `input` | object | Input styling configuration with `type`, `styles`, and `options` properties. The `styles` object contains `roundness`, `inputs` (color, backgroundColor, placeholderColor), and `buttons` (color, backgroundColor) properties. Overrides theme input configuration. |
+
+
+### bubble (optional)
+Override bubble colors for host and guest messages.
+
+**Type:** 
+```typescript
+{
+  hostBubbles?: {
+    color: string;
+    backgroundColor: string; 
+  };
+  guestBubbles?: {
+    color: string;
+    backgroundColor: string;
+  };
+}
+```
+
+**Example:**
+```js
+bubble: {
+  hostBubbles: {
+    color: "#2b2c2b",
+    backgroundColor: "#ff6b35" 
+  },
+  guestBubbles: {
+    color: "#f8faf4",
+    backgroundColor: "#0066cc"
+  }
+}
+```
+
+### input (optional)
+Override input styling and configuration.
+
+**Type:** 
+```typescript
+{
+  type: "text input";
+  styles?: {
+    roundness?: "none" | "medium" | "large";
+    inputs?: {
+      color?: string;
+      backgroundColor?: string;
+      placeholderColor?: string;
+    };
+    buttons?: {
+      color?: string;
+      backgroundColor?: string;
+    };
+  };
+  options: {
+    type: "fixed-bottom" | "floating";
+    labels: {
+      placeholder?: string;
+      button?: string;
+    };
+    isLong?: boolean;
+  };
+}
+```
+
+**Example:**
+```js
+input: {
+  type: "text input",
+  styles: {
+    roundness: "medium",
+    inputs: {
+      color: "#e84117",
+      backgroundColor: "#f7f7f7",
+      placeholderColor: "#ababab"
+    },
+    buttons: {
+      color: "#ffffff",
+      backgroundColor: "#050505"
+    }
+  },
+  options: {
+    type: "fixed-bottom",
+    labels: {
+      placeholder: "Whats on your mind?",
+      button: "Send me"
+    },
+    isLong: false
+  }
+}
+```
 
 ---
