@@ -37,14 +37,18 @@ After creating and adding an OpenAI resource, you'll see an alert with an option
 
 The file upload modal provides a streamlined interface for attaching files to your AI resource:
 
-![File Upload Modal Interface](/img/ai-resources/file-upload-modal-1.webp)
+<p align="center">
+  <img src={require('@site/static/img/ai-resources/file-upload-modal-1.webp').default} alt="File upload modal for attaching files to file search" />
+</p>
 
 1. **Select API Key**: At the top, you'll see which OpenAI key will be used:
    - Default: Your default OpenAI key if set
    - Resource-specific: The key assigned to this AI resource
    - Click **Change** to select a different key
 
-![Change API Key Option](/img/ai-resources/file-upload-modal-3.webp)
+<p align="center">
+  <img src={require('@site/static/img/ai-resources/file-upload-modal-3.webp').default} alt="File upload modal with Change link highlighted for API key modification" />
+</p>
 
 2. **Choose Files**: 
    - Drag and drop files into the modal
@@ -55,11 +59,15 @@ The file upload modal provides a streamlined interface for attaching files to yo
    - **Chunk Size**: Default 800 tokens (how large each text chunk should be)
    - **Chunk Overlap**: Default 400 tokens (overlap between chunks for context)
 
-![Advanced Options for Chunking](/img/ai-resources/file-upload-modal-2.webp)
+<p align="center">
+  <img src={require('@site/static/img/ai-resources/file-upload-modal-2.webp').default} alt="File upload modal with Advanced options highlighted" />
+</p>
 
 Click to expand Advanced options to adjust chunk settings:
 
-![Expanded Advanced Options](/img/ai-resources/file-upload-modal-4.webp)
+<p align="center">
+  <img src={require('@site/static/img/ai-resources/file-upload-modal-4.webp').default} alt="File upload modal with expanded Advanced options showing chunk settings" />
+</p>
 
 4. **Upload**: Click **Upload** to create the vector store and process files
 
@@ -73,7 +81,9 @@ If you need to choose a different API key:
    - **Use resource key** (the key assigned to this AI resource)
    - **Add or select key** - Choose from existing keys or add a new one
 
-![API Key Selection Modal](/img/ai-resources/file-upload-modal-5.webp)
+<p align="center">
+  <img src={require('@site/static/img/ai-resources/file-upload-modal-5.webp').default} alt="API key selection modal for file upload process" />
+</p>
 
 ### Processing Status
 

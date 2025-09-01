@@ -38,5 +38,10 @@ done
 
 #### UPDATE DOCUMENTATION
     - Update the documentation carefully with the image. The format to refer to the img, example is - `![Meta App Image](/img/whatsapp/meta-app-success.png)`, not the path starts from /img .. 
-    - generate or use a proper alt text based on the context of the documentation.
-
+    - Generate or use a proper alt text based on the context of the documentation.
+    - Center the image, ONLY if needed. Here is an example of how to center an image: 
+  ```html
+    <p align="center">
+      <img src={require('@site/static/img/fixed-bottom.webp').default} alt="Fixed bottom input" width="400" />
+    </p>
+  ```
