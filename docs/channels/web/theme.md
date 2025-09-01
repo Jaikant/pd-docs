@@ -137,6 +137,7 @@ Before customizing input appearance, choose your input type:
 - Modern chat interface with input fixed at bottom
 - Similar to popular messaging apps
 - Clean, streamlined appearance
+- Supports custom keyboard shortcuts for advanced users
 
 #### Floating Input
 <p align="center">
@@ -148,6 +149,102 @@ Before customizing input appearance, choose your input type:
 - Traditional floating input style
 - Supports single-line and multi-line options
 - More customizable positioning
+
+#### Custom Keyboard Shortcuts (Fixed Bottom Only)
+
+:::info Advanced Feature
+Custom keyboard shortcuts are available only for the **fixed-bottom** input type and can only be configured via widget props (not through the theme dashboard).
+:::
+
+You can customize which keys send messages and create new lines using the `shortcuts` property. This feature supports three configuration modes:
+
+##### Default Behavior (Enter to Send)
+By default, Enter sends the message and Shift+Enter creates a new line:
+
+```js
+Agent.initStandard({
+  agentName: "...",
+  input: {
+    "type": "text input",
+    "options": {
+      "type": "fixed-bottom",
+      "labels": {
+        "placeholder": "What's on your mind?",
+        "button": "Send"
+      },
+      "isLong": true,
+      "shortcuts": {
+        "preset": "enterToSend",
+        "imeSafe": true
+      }
+    }
+  }
+});
+```
+
+##### Mod+Enter to Send
+Use Mod+Enter (Cmd+Enter on Mac, Ctrl+Enter on Windows/Linux) to send and Enter for new lines:
+
+```js
+Agent.initStandard({
+  agentName: "...",
+  input: {
+    "type": "text input",
+    "options": {
+      "type": "fixed-bottom",
+      "labels": {
+        "placeholder": "What's on your mind?",
+        "button": "Send"
+      },
+      "isLong": true,
+      "shortcuts": {
+        "preset": "modEnterToSend",
+        "imeSafe": true
+      }
+    }
+  }
+});
+```
+
+##### Custom Key Combinations
+Define your own key combinations for maximum flexibility:
+
+```js
+Agent.initStandard({
+  agentName: "...",
+  input: {
+    "type": "text input",
+    "options": {
+      "type": "fixed-bottom",
+      "labels": {
+        "placeholder": "What's on your mind?",
+        "button": "Send"
+      },
+      "isLong": true,
+      "shortcuts": {
+        "preset": "custom",
+        "keymap": {
+          "submit": [["Mod","Enter"], ["Shift","Enter"]],
+          "newline": [["Enter"]]
+        },
+        "imeSafe": true
+      }
+    }
+  }
+});
+```
+
+**Key Combinations:**
+- `"Enter"` - Enter key alone
+- `"Mod"` - Cmd key on Mac, Ctrl key on Windows/Linux  
+- `"Shift"` - Shift key
+- `"Alt"` - Alt key
+
+**Important Notes:**
+- `imeSafe: true` is recommended to prevent conflicts with input method editors (IME) for international keyboards
+- Multiple key combinations can be defined for each action
+- Only exact key matches trigger actions (no extra modifiers allowed)
+- If using `"preset": "custom"` without a valid keymap, the widget falls back to default behavior
 
 
 ### Customize Input Colors and Input roundness
