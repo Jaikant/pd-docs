@@ -72,6 +72,7 @@ const sidebars = {
           type: 'category',
           label: 'Web',
           items: [
+            'channels/web/index',
             'channels/web/embed-widget',
             {
               type: 'category',
