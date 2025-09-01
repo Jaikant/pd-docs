@@ -50,8 +50,9 @@ npm run deploy
 
 - **Getting Started**: Sequential guides for new users
 - **Channels**: Platform-specific integration guides (Web, WhatsApp)  
-- **Providers**: AI service integrations (OpenAI Assistant)
-- **Features**: Platform capabilities (sessions, reports )
+- **Providers**: AI service integrations (OpenAI, OpenAI Assistant)
+- **Tools**: AI Tools integrations
+- **Features**: Platform capabilities (sessions, reports, manage api keys )
 - **API Reference**: Beta management API documentation
 
 ## Documentation Patterns

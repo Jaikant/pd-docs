@@ -4,6 +4,9 @@ title: 'Theme'
 
 # Theme
 
+You can customize your chatbot agent’s colors, images, inputs, and borders using our live theming playground on the theme page. You can also add your own custom CSS and instantly preview how your chatbot agent will look.
+
+
 ## Go to page which themes the widget
 - Sign in to [Predictable Dialogs](https://predictabledialogs.com/sign-in). Click your existing agent. Click "Theme" on menu.
 
@@ -213,3 +216,7 @@ If you need some custom styling on the button you can target the .agent-button c
 ```
 
 More about custom css can be read in the [custom css section](/docs/channels/web/custom-css).
+
+:::tip For Technical Users
+You can also customize the theme using props directly on the agent embed widget. This is useful if you want to avoid visiting the PD app, hosting your own backend or you want to dynamically (at run time) update the theme.
+:::

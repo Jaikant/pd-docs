@@ -12,9 +12,11 @@ In the Predictable Dialogs app, you’ll see two main pages:
 
 ## Agents
 
-An **Agent** is the entity you configure on the Agents page. It uses the configured AI models to perform tasks. 
+An **Agent** is the entity you list and create from the Agents page. It uses the configured AI Resources to perform tasks. 
 
-We currently provide Chatbot Agents. Chatbot Agents can be added to websites or connected to WhatsApp. You can give each Chatbot Agent its own theme and setting.
+We currently provide Chatbot Agents. Chatbot Agents can be added to websites or connected to WhatsApp. 
+
+You can give each Chatbot Agent its own AI Resource, theme and settings.
 
 ## AI Resources
 
@@ -23,11 +25,14 @@ An **AI Resource** is an AI model with attached tools. Every AI resource needs:
 - A **unique name** within the app.
 - An **API key** to the external provider.
 
-If you change the AI Model on an AI Resource, **all Agents** connected to that AI Resource automatically start using the new AI model. 
+:::tip
+You can connect the same AI Resource to multiple chatbot agents. Each agent functioning independently using its own theme, sessions and reports. 
+:::
 
-A Chatbot Agent can only be connected to **one** AI Resource at a time. 
+:::tip
+You can update a chatbot agent to a different AI Resource at any time.
+:::
 
-You can update an Agent to a different AI Resource at any time.
 
 ### Resource Types
 

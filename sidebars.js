@@ -76,6 +76,10 @@ const sidebars = {
             {
               type: 'category',
               label: 'Widgets',
+              link: {
+                type: 'generated-index',
+                description: 'Different widget types for embedding your AI agent on websites.',
+              },
               items: [
                 'channels/web/widgets/bubble',
                 'channels/web/widgets/popup',

@@ -14,4 +14,4 @@ Predictable Dialogs is an AI integration tool.
 
 
 ## Something missing? {#something-missing}
-If you find issues with the documentation or have suggestions on how to improve the documentation or the project in general, please send a tweet mentioning the [@pdialogs](https://x.com/pdialogs) Twitter account.
+If you find issues with the documentation or have suggestions on how to improve the documentation or the project in general, please send an email to jai@predictabledialogs.com
