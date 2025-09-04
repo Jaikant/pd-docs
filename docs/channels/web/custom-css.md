@@ -4,7 +4,12 @@ title: 'Custom CSS'
 
 # Custom CSS
 
-Predictable Dialogs makes it easy to embed and style an AI agent on your website. With custom CSS, you can tailor the chatbot’s look and feel to match your brand—from colors and fonts to backgrounds and advanced layouts. This guide explains how to add and manage custom CSS for your chatbot.  
+Predictable Dialogs makes it easy to embed and style an AI agent on your website. With custom CSS, you can tailor the chatbot's look and feel to match your brand—from colors and fonts to backgrounds and advanced layouts. This guide explains how to add and manage custom CSS for your chatbot.
+
+:::tip Ready-to-Use Templates
+Looking for quick styling solutions? Check out our [AI Chatbot Templates blog](https://predictabledialogs.com/learn/ai-chatbot-templates) which contains **10 ready-to-use custom CSS examples** that you can copy and paste directly into your Custom CSS section.
+:::
+
 *Note*: Custom CSS helps style the contents within the chat container. 
 To style the bubble widget go [here](/docs/channels/web/widgets/bubble#external-styling).
 
@@ -17,10 +22,57 @@ To style the bubble widget go [here](/docs/channels/web/widgets/bubble#external-
 ### 2. Using Custom CSS
 
 1. **Paste** your CSS code into the **Custom CSS** field.
-2. **Click “Save”.**
+2. **Click "Save".**
 3. **Refresh** or **revisit** the page where your agent is embedded to see the changes applied.
 
-### 3. Custom CSS examples
+## How Custom CSS Works
+
+The chatbot can be customized using custom CSS by targeting existing classes on the chatbot. Here's a comprehensive example showing how multiple elements can be styled:
+
+```css
+.agent-input {
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.08),
+    0 1px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 0.75rem;
+}
+.agent-embed-container {
+  border-radius: 6px;
+}
+.agent-host-bubble {
+  border: 1px solid white;
+  border-radius: 6px;
+}
+.agent-guest-bubble {
+  border: 1px solid white;
+  border-radius: 6px;
+}
+```
+
+In the above CSS:
+- The **input element** gets a subtle box shadow and rounded corners
+- The **main container** hosting the chatbot gets a 6px border radius
+- Both **host bubble** (AI messages) and **guest bubble** (user messages) get white borders and rounded corners
+
+You can create a wide variety of custom CSS by targeting different classes in the code. The comprehensive class reference below will help you understand what each class controls and how to use them effectively.
+
+### 3. Understanding Class Targeting
+
+While you can easily inspect classes using your browser's developer tools, it's important to understand how different classes work together. For example, the host bubble requires special handling:
+
+```css
+/* ❌ This won't work for background color */
+.agent-host-bubble {
+  background-color: blue;
+}
+
+/* ✅ This is the correct way */
+.agent-host-bubble .bubble-typing {
+  background-color: blue;
+}
+```
+
+### 4. Custom CSS Examples
 
 Here are some examples of adding custom css. 
 
@@ -66,15 +118,17 @@ As demonstrated above, you can customize the dialog by targeting the classes.
 
 #### Example: Changing guest and host bubble styles
 Below is an example that changes the styles on the guest and host bubbles. It targets the `agent-host-bubble`, `.bubble-typing` and `.agent-guest-bubble` classes. 
-```
-.agent-host-bubble > .bubble-typing {
+
+```css
+.agent-host-bubble .bubble-typing {
   background-color: red;
 }
 .agent-guest-bubble {
   background-color: red;
 }
 ```
-In the above example, for the host bubble we need to apply the styles to the class `bubble-typing` that is a direct child of an element with the class `agent-host-bubble`. This is because of the [difference](https://github.com/Predictable-Dialogs/agent-embed/blob/main/js/src/assets/index.css) in the way we handle the host and guest bubbles.
+
+**Important:** For the host bubble, we need to target the `.bubble-typing` class that is inside an element with the `.agent-host-bubble` class. This is because of the [architectural difference](https://github.com/Predictable-Dialogs/agent-embed/blob/main/js/src/assets/index.css) in how host and guest bubbles are structured. The `.agent-host-bubble` class alone cannot override the background color.
 
 #### Example: Enabling Word Wrap in the `pre` Element  
 Below CSS enables text wrapping in `<pre>` tags, preventing horizontal overflow.
@@ -86,7 +140,7 @@ pre {
 }
 ```
 
-### 4. Finding Additional CSS Classes to Target
+### 5. Finding Additional CSS Classes to Target
 
 To further customize the agent, you’ll want to identify and target the correct CSS classes. Here’s how:
 
@@ -94,21 +148,95 @@ To further customize the agent, you’ll want to identify and target the correct
 2. Select **“Inspect”** (or **“Inspect Element”**) in your browser’s dev tools.
 3. Locate the relevant class in the HTML markup (e.g., .agent-button) and use it in your custom CSS.
 
-### 5. Frequently Used CSS Classes
+### 6. Available CSS Classes Reference
 
-Here are some commonly targeted classes and their default roles:
+You can target different classes in the chatbot to achieve various styling effects. While you can easily inspect classes using your browser's developer tools, here's a comprehensive reference of available classes:
 
-- `.agent-chat-view` – Main container for the chat area.
-- `.scrollable-container` – Manages scrollable chat content.
-- `.agent-button` – Styles the “Send” or action buttons.
-- `.agent-host-bubble` – Styles the bot’s chat bubble.
-- `.agent-guest-bubble` – Styles the user’s chat bubble.
-- `.agent-input` – Styles the input box where the user types messages.
+## Main Classes
+
+These are the primary classes you should use for most customization needs:
+
+#### `.agent-embed-container`
+- **Purpose:** Root-level theming container for the entire chatbot widget
+- **Scope:** Applied to the outermost Bot component container
+- **Responsibility:** Sets global theme variables (background, font-family, color) and establishes the main widget container
+- **Limitations:** Changing background here affects the entire widget. Font changes apply globally to all text
+
+#### `.agent-host-bubble`
+- **Purpose:** Container for AI/bot message bubbles
+- **Scope:** Applied to host message containers
+- **Responsibility:** Provides base styling for bot messages including typing animation container
+- **⚠️ Critical Limitation:** Cannot override the background color alone. To override background color, use `.agent-host-bubble .bubble-typing` class instead
+
+#### `.agent-host-bubble .bubble-typing`
+- **Purpose:** Use to override background color in AI/bot message bubbles
+- **Scope:** Applied to the AI/bot message & typing container inside host bubbles
+- **Responsibility:** Handles size transitions during typing animation and background styling
+- **Limitations:** Cannot be used to set the text color. To set text color, use the `agent-host-bubble` class
+
+#### `.agent-guest-bubble`
+- **Purpose:** Styling for user/guest message bubbles
+- **Scope:** Applied to user message containers
+- **Responsibility:** Provides background, text color, and border radius for user messages
+- **Limitations:** Single color scheme for all user messages
+
+#### `.agent-input`
+- **Purpose:** Base styling for all input containers
+- **Scope:** Applied to the text input containers
+- **Responsibility:** Provides background, text color, shadow, and border radius for input areas. Pseudo-classes like `.agent-input:focus-within` work very well with this
+- **Limitations:** Single input styling applies to all input types
+
+#### `.agent-button`
+- **Purpose:** Primary action buttons styling (send buttons, choice buttons)
+- **Scope:** Applied to the submit button
+- **Responsibility:** Provides consistent button styling with hover/active states. Pseudo-classes like `.agent-button:hover` work very well with this
+- **Limitations:** Changes affect all primary buttons
+
+#### `.bubble1`, `.bubble2`, `.bubble3`
+- **Purpose:** Individual typing indicator dots with staggered animation
+- **Scope:** Applied to typing indicator dots
+- **Best Practice:** Always match the background color to the text color of `.agent-host-bubble`:
+
+```css
+.agent-host-bubble {
+  color: #000000;
+}
+.bubble1, .bubble2, .bubble3 {
+  background-color: #000000;
+}
+```
+
+- **Responsibility:** Creates bouncing animation effect for typing indicators
+- **Limitations:** Animation timing and sequence is hardcoded
+
+## Secondary Classes
+
+:::caution Advanced Usage
+Avoid using these secondary classes unless the main classes don't meet your needs.
+:::
+
+#### `.agent-input-container`
+- **Purpose:** Layout constraint for input components
+- **CSS Variables:** Uses `--agent-input-max-width`
+- **Limitations:** Fixed maximum width constraint might not work for all designs
+
+#### `.agent-chat-view`
+- **Purpose:** Layout constraint for chat content area
+- **CSS Variables:** Uses `--agent-content-max-width`
+- **Limitations:** Fixed width constraint affects entire chat layout
+
+#### `.slate-html-container`
+- **Purpose:** Container class for markdown content within host bubbles
+- Setting background colors (creates border effects) or extra padding.
+
+#### `.scrollable-container`
+- **Purpose:** Removes scrollbars from scrollable areas while maintaining scroll functionality
+- **Limitations:** Might reduce accessibility for users who rely on visible scrollbars
 
 For an extensive list of classes and their definitions, view the [GitHub Agent Embed CSS](https://github.com/Predictable-Dialogs/agent-embed/blob/main/js/src/assets/index.css).
 
-### 6. Advanced CSS Customization Tips
-#### 6.1 Using Media Queries
+### 7. Advanced CSS Customization Tips
+#### 7.1 Using Media Queries
 For custom responsive styles on various screen sizes, consider adding media queries. Below an example of reducing the height of the container
 on smaller screens.
 
@@ -120,7 +248,7 @@ on smaller screens.
 }
 ```
 
-### 6.2 You can change the animations
+#### 7.2 You can change the animations
 Making the loading bubbles more energetic!
 ```
 @keyframes chatBubbles {
@@ -135,7 +263,7 @@ Making the loading bubbles more energetic!
   }
 }
 ```
-#### 6.3 Overriding CSS Variables
+#### 7.3 Overriding CSS Variables
 
 Many elements in the chatbot use CSS variables (e.g., var(--agent-button-color)). You can override these variables within your own CSS rules. For instance:
 ```
@@ -145,7 +273,7 @@ Many elements in the chatbot use CSS variables (e.g., var(--agent-button-color))
 ```
 To be able to do this, you would have to understand the [code](https://github.com/Predictable-Dialogs/agent-embed/blob/main/js/src/assets/index.css) structure.
 
-### 7. Example Full CSS Snippet
+### 8. Example Full CSS Snippet
 
 Below is a reference snippet showcasing various default classes and rules. Feel free to modify, or override what you need.
 
