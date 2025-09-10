@@ -295,8 +295,40 @@ Agent.initStandard({
 - [Popup Widget Props](/docs/channels/web/widgets/popup#chat-elements-styling-parameters-optional)
 
 
+### Theme Templates
+
+Before diving into custom CSS, you can get started quickly with our pre-designed theme templates. The theme section includes a **Theme Templates** accordion that provides 10 professionally designed themes you can apply instantly.
+
+#### Using Theme Templates
+1. Navigate to your agent's **Theme** page
+2. Expand the **Theme Templates** accordion (the first section)
+3. Browse through the available themes:
+   - **Modern Corporate** - Clean, professional design for business websites
+   - **Gaming Console** - Dark theme with neon accents for gaming sites
+   - **Medical Healthcare** - Trustworthy design for healthcare applications
+   - **E-commerce Shopping** - Vibrant, conversion-focused design for online stores
+   - **Educational Platform** - Knowledge-focused design for learning platforms
+   - **Vintage Paper** - Nostalgic, classic design inspired by vintage documents
+   - **Futuristic Hologram** - Sci-fi design with holographic effects
+   - **Nature Forest** - Peaceful, organic design with earth tones
+   - **Social Media** - Modern, trendy design inspired by social platforms
+   - **Comic Book** - Bold, playful design inspired by graphic novels
+
+4. Click on any theme to instantly apply it to your chatbot
+5. The theme automatically updates both the custom CSS and bubble colors
+
+#### Reset Functionality
+- Use the **Reset** button (🔄) at the top of the Theme Templates section to revert back to your saved theme settings
+- This is helpful when you want to undo theme template changes and return to your original customizations
+
+#### Theme Template Benefits
+- **Instant Application** - No need to write CSS code
+- **Professional Designs** - Each theme is carefully crafted for specific use cases
+- **Color Coordination** - Bubble colors are automatically updated to match the theme
+- **Customizable Base** - Use themes as starting points for further customization
+
 ### Custom CSS
-- If you need more specific styles, for example you need to add gradients or other complex styles, then you can do the below:
+- If you need more specific styles beyond the theme templates, or want to add gradients or other complex styles, you can use custom CSS:
 - Right-click on your bot and inspect the element you want to customize, For example, if you want a fancy gradient color in the chat background, you can target the `.agent-chat-view` class
 ```
 .agent-chat-view {
@@ -311,6 +343,8 @@ If you need some custom styling on the button you can target the .agent-button c
   background-image: linear-gradient(to right, #FFA500, #FF6347); 
 }
 ```
+
+**Pro Tip**: Start with a theme template that's close to your desired look, then add custom CSS for fine-tuning.
 
 More about custom css can be read in the [custom css section](/docs/channels/web/custom-css).
 

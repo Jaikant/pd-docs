@@ -77,6 +77,7 @@ Control the popup widget with these JavaScript methods:
 | `Agent.open()` | Opens the popup widget |
 | `Agent.close()` | Closes the popup widget |
 | `Agent.toggle()` | Toggles between open and closed states |
+| `Agent.reset()` | Clears all session data and reinitializes the chatbot for a fresh conversation |
 
 ### Example Usage
 
@@ -84,6 +85,7 @@ Control the popup widget with these JavaScript methods:
 <button onclick="Agent.open()">Contact us</button>
 <button onclick="Agent.close()">Close chat</button>
 <button onclick="Agent.toggle()">Toggle chat</button>
+<button onclick="Agent.reset()">Reset chat</button>
 ```
 
 ## Configuration Options

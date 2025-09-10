@@ -94,7 +94,7 @@ The Standard widget adapts to whatever size you give it through CSS. It fills 10
 <agent-standard style="width: 100%; height: 600px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;"></agent-standard>
 
 <!-- Prominent shadow -->
-<agent-standard style="width: 100%; height: 600px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); border-radius: 12px;"></agent-standard>
+<agent-standard style="width: 100%; height: 600px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); border-radius: 6px;"></agent-standard>
 
 <!-- Colored shadow -->
 <agent-standard style="width: 100%; height: 600px; box-shadow: 0 4px 20px rgba(0,123,255,0.15); border-radius: 10px;"></agent-standard>
@@ -174,6 +174,22 @@ The Standard widget inherits the size of its container (`width: 100%; height: 10
 - **Tablet (768px - 1024px)**: Balanced width and height
 - **Desktop (> 1024px)**: Fixed maximum widths work well
 
+
+## Programmatic Control
+
+Control the Standard widget with these JavaScript methods:
+
+| Method | Description |
+|--------|-------------|
+| `Agent.reset()` | Clears all session data and reinitializes the chatbot for a fresh conversation |
+
+### Example Usage
+
+```html
+<button onclick="Agent.reset()">Reset Chat</button>
+```
+
+The reset function works programmatically, clearing all session data and reinitializing the chatbot for a fresh conversation across all widget types.
 
 ## Configuration Options
 

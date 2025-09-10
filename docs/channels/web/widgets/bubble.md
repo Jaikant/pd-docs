@@ -191,6 +191,7 @@ You can control the widget through JavaScript using the following methods:
 | `Agent.open()` | Opens the chat popup or bubble |
 | `Agent.close()` | Closes the chat popup or bubble |
 | `Agent.toggle()` | Toggles between open and closed states |
+| `Agent.reset()` | Clears all session data and reinitializes the chatbot for a fresh conversation |
 | `Agent.showPreviewMessage()` | Shows the preview message |
 | `Agent.hidePreviewMessage()` | Hides the preview message |
 
@@ -200,6 +201,7 @@ You can control the widget through JavaScript using the following methods:
 <button onclick="Agent.open()">Chat Now</button>
 <button onclick="Agent.close()">Close Chat</button>
 <button onclick="Agent.toggle()">Toggle Chat</button>
+<button onclick="Agent.reset()">Reset Chat</button>
 ```
 
 

@@ -10,10 +10,8 @@ Parse the following arguments from "$ARGUMENTS":
 **FEATURE PLANNING**
 - Read the feature specification file at `feature_spec`. Then come up with a detailed implementation plan as below:  
   - The plan should follow all the rules specified in the `feature_spec`.
-  - The plan should present the changes needed across the entire code base.  It should first give the list of files which are being added/modified/deleted. And then for each file it should present the changes file by file.
+  - The plan should present the changes needed across the entire documentation base.  It should first give the list of files which are being added/modified/deleted. And then for each file it should present the changes file by file.
   - The plan should contain the rules to be followed for implementing and testing if specified in the `feature_spec`.
-  - The plan should specify which agent is responsible for the implementation if provided in the `feature_spec`.
-  - The plan should present the documentation changes proposed in the official documentation.
 
 
 # ULTRA-THINKING DIRECTIVE

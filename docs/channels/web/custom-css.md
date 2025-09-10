@@ -6,26 +6,54 @@ title: 'Custom CSS'
 
 Predictable Dialogs makes it easy to embed and style an AI agent on your website. With custom CSS, you can tailor the chatbot's look and feel to match your brand—from colors and fonts to backgrounds and advanced layouts. This guide explains how to add and manage custom CSS for your chatbot.
 
-:::tip Ready-to-Use Templates
-Looking for quick styling solutions? Check out our [AI Chatbot Templates blog](https://predictabledialogs.com/learn/ai-chatbot-templates) which contains **10 ready-to-use custom CSS examples** that you can copy and paste directly into your Custom CSS section.
+:::tip Ready-to-Use Theme Templates
+Looking for quick styling solutions? We now provide **10 built-in theme templates** directly in the Theme page that you can apply instantly without writing any CSS code. These themes automatically update both the visual styling and bubble colors. You can also check out our [AI Chatbot Templates blog](https://predictabledialogs.com/learn/ai-chatbot-templates) for additional examples.
 :::
 
 *Note*: Custom CSS helps style the contents within the chat container. 
 To style the bubble widget go [here](/docs/channels/web/widgets/bubble#external-styling).
 
-### 1. Go to page with Custom CSS Section
+### 1. Access Theme Templates and Custom CSS
 
 1. Sign in to [Predictable Dialogs](https://predictabledialogs.com/sign-in). 
 2. **Select** or **create** an agent, then click **Theme** in the top menu.
-3. **Scroll down** to find the **Custom CSS** section near the bottom of the page.
+3. **Scroll down** to find the **Theme Templates** section which includes both theme selection and custom CSS options.
 
-### 2. Using Custom CSS
+#### Theme Templates Section
+The Theme Templates section provides two main options:
+- **Theme Templates Accordion**: Choose from 10 pre-designed themes for instant styling
+- **Custom CSS Accordion**: Write your own CSS code for complete customization
 
-1. **Paste** your CSS code into the **Custom CSS** field.
-2. **Click "Save".**
-3. **Refresh** or **revisit** the page where your agent is embedded to see the changes applied.
+#### Using the Reset Button
+At the top of the Theme Templates section, you'll find a **Reset** button (🔄) that allows you to:
+- **Revert Changes**: Return to your previously saved theme settings
+- **Undo Theme Selection**: Remove any theme template you've applied
+- **Restore Original State**: Get back to your custom CSS before applying themes
 
-## How Custom CSS Works
+**When to Use Reset**: Click reset when you want to undo theme template changes and return to your original customizations. This restores both your custom CSS and bubble color settings to their saved state.
+
+### 2. Using Theme Templates as Starting Points
+
+**Recommended Approach**: Instead of starting from scratch, consider using a theme template as your foundation:
+
+1. **Browse Theme Templates**: Expand the Theme Templates accordion and review the 10 available themes
+2. **Apply Similar Theme**: Choose a theme that's closest to your desired design
+3. **Customize with CSS**: Expand the Custom CSS accordion and add your modifications
+4. **Save Changes**: Click "Save Custom CSS" to persist your customizations
+
+This approach gives you:
+- **Professional Foundation**: Start with a well-designed base
+- **Time Savings**: Avoid writing common CSS patterns from scratch  
+- **Color Coordination**: Automatic bubble color updates that you can further customize
+
+### 3. Writing Custom CSS
+
+1. **Expand Custom CSS Accordion**: Find the Custom CSS section within Theme Templates
+2. **Paste** your CSS code into the **Custom CSS** field.
+3. **Click "Save Custom CSS".**
+4. **Refresh** or **revisit** the page where your agent is embedded to see the changes applied.
+
+## 4. How Custom CSS Works
 
 The chatbot can be customized using custom CSS by targeting existing classes on the chatbot. Here's a comprehensive example showing how multiple elements can be styled:
 
@@ -56,7 +84,7 @@ In the above CSS:
 
 You can create a wide variety of custom CSS by targeting different classes in the code. The comprehensive class reference below will help you understand what each class controls and how to use them effectively.
 
-### 3. Understanding Class Targeting
+### 5. Understanding Class Targeting
 
 While you can easily inspect classes using your browser's developer tools, it's important to understand how different classes work together. For example, the host bubble requires special handling:
 
@@ -72,7 +100,7 @@ While you can easily inspect classes using your browser's developer tools, it's 
 }
 ```
 
-### 4. Custom CSS Examples
+### 6. Custom CSS Examples
 
 Here are some examples of adding custom css. 
 
@@ -140,7 +168,7 @@ pre {
 }
 ```
 
-### 5. Finding Additional CSS Classes to Target
+### 7. Finding Additional CSS Classes to Target
 
 To further customize the agent, you’ll want to identify and target the correct CSS classes. Here’s how:
 
@@ -148,7 +176,7 @@ To further customize the agent, you’ll want to identify and target the correct
 2. Select **“Inspect”** (or **“Inspect Element”**) in your browser’s dev tools.
 3. Locate the relevant class in the HTML markup (e.g., .agent-button) and use it in your custom CSS.
 
-### 6. Available CSS Classes Reference
+### 8. Available CSS Classes Reference
 
 You can target different classes in the chatbot to achieve various styling effects. While you can easily inspect classes using your browser's developer tools, here's a comprehensive reference of available classes:
 
@@ -235,8 +263,8 @@ Avoid using these secondary classes unless the main classes don't meet your need
 
 For an extensive list of classes and their definitions, view the [GitHub Agent Embed CSS](https://github.com/Predictable-Dialogs/agent-embed/blob/main/js/src/assets/index.css).
 
-### 7. Advanced CSS Customization Tips
-#### 7.1 Using Media Queries
+### 9. Advanced CSS Customization Tips
+#### 9.1 Using Media Queries
 For custom responsive styles on various screen sizes, consider adding media queries. Below an example of reducing the height of the container
 on smaller screens.
 
@@ -248,7 +276,7 @@ on smaller screens.
 }
 ```
 
-#### 7.2 You can change the animations
+#### 9.2 You can change the animations
 Making the loading bubbles more energetic!
 ```
 @keyframes chatBubbles {
@@ -263,7 +291,7 @@ Making the loading bubbles more energetic!
   }
 }
 ```
-#### 7.3 Overriding CSS Variables
+#### 9.3 Overriding CSS Variables
 
 Many elements in the chatbot use CSS variables (e.g., var(--agent-button-color)). You can override these variables within your own CSS rules. For instance:
 ```
@@ -273,7 +301,7 @@ Many elements in the chatbot use CSS variables (e.g., var(--agent-button-color))
 ```
 To be able to do this, you would have to understand the [code](https://github.com/Predictable-Dialogs/agent-embed/blob/main/js/src/assets/index.css) structure.
 
-### 8. Example Full CSS Snippet
+### 10. Example Full CSS Snippet
 
 Below is a reference snippet showcasing various default classes and rules. Feel free to modify, or override what you need.
 
