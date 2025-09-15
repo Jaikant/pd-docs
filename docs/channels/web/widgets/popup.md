@@ -131,6 +131,8 @@ Control the popup widget with these JavaScript methods:
 | `agentName` | Required | string | Name of the assistant that will appear in the widget. Uses the specified Predictable Dialogs agent or an agent from your custom backend. |
 | `autoShowDelay` | Required | number | Time in milliseconds before the popup automatically appears after the page loads. |
 | `user` | Optional | object | User information for session tracking. See [User Information](#user-optional) section below for details. |
+| `onSend` | Optional | function | Callback invoked when the user clicks Send (runs alongside the default send action). Useful for custom UI, analytics, or app logic. See [Advanced Usage: onSend Hook](/docs/channels/web/advanced-usage/onsend-callback) for detailed examples. |
+
 
 ### Widget Behaviour & Styling Parameters (optional)
 

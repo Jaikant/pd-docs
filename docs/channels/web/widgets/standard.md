@@ -233,6 +233,8 @@ The reset function works programmatically, clearing all session data and reiniti
 |----------|------------------|------|-------------|
 | `agentName` | Required | string | Specifies the agent name from Predictable Dialogs or your custom backend. This identifies which AI agent will process the conversations. |
 | `user` | Optional | object | User information for session tracking. See [User Information](#user-optional) section below for details. |
+| `onSend` | Optional | function | Callback invoked when the user clicks Send (runs alongside the default send action). Useful for custom UI, analytics, or app logic. See [Advanced Usage: onSend Hook](/docs/channels/web/advanced-usage/onsend-callback) for detailed examples.|
+
 
 ### Widget Behaviour & Styling Parameters (optional)
 

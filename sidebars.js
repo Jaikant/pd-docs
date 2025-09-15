@@ -89,7 +89,18 @@ const sidebars = {
             },
             'channels/web/streaming',
             'channels/web/theme',
-            'channels/web/custom-css'
+            'channels/web/custom-css',
+            {
+              type: 'category',
+              label: 'Advanced Usage',
+              link: {
+                type: 'generated-index',
+                description: 'This section covers advanced features and programmatic control options available across the web widget types (Standard, Bubble, and Popup).',
+              },
+              items: [
+                'channels/web/advanced-usage/onsend-callback',
+              ]
+            }
           ]
         },
         {
