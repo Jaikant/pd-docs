@@ -18,6 +18,40 @@ Add the following code to your HTML to create a basic popup widget:
   });
 </script>
 ```
+
+## User Information Capture
+
+Capture user information for enhanced session tracking and personalization. All collected data appears in your session logs.
+
+### Basic Usage with User Information
+
+```html
+<script type="module">
+  import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@latest/dist/web.js'
+  Agent.initPopup({
+    agentName: "your assistant name",
+    autoShowDelay: 3000,
+    user: {
+      user_id: "ab123",
+      user_name: "Abc Def", 
+      user_email: "abc@example.com",
+      user_segments: ["sports", "ott"]
+    }
+  });
+</script>
+```
+
+**Default Captured Information:**
+- IP address (automatic)
+- Country (automatic)
+
+**Optional User Fields:**
+- `user_id` - Unique identifier for the user
+- `user_name` - Display name of the user  
+- `user_email` - User's email address
+- `user_segments` - Array of tags for user categorization
+
+For complete session tracking details, see the [Sessions documentation](/docs/features/sessions).
 ## Size & Positioning
 
 ### Modal Width Control
@@ -90,12 +124,13 @@ Control the popup widget with these JavaScript methods:
 
 ## Configuration Options
 
-### Required Parameters
+### General Parameters
 
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `agentName` | string | Name of the assistant that will appear in the widget. Uses the specified Predictable Dialogs agent or an agent from your custom backend. |
-| `autoShowDelay` | number | Time in milliseconds before the popup automatically appears after the page loads. |
+| Parameter | Required/Optional | Type | Description |
+|-----------|------------------|------|-------------|
+| `agentName` | Required | string | Name of the assistant that will appear in the widget. Uses the specified Predictable Dialogs agent or an agent from your custom backend. |
+| `autoShowDelay` | Required | number | Time in milliseconds before the popup automatically appears after the page loads. |
+| `user` | Optional | object | User information for session tracking. See [User Information](#user-optional) section below for details. |
 
 ### Widget Behaviour & Styling Parameters (optional)
 
@@ -129,6 +164,12 @@ Agent.initPopup({
   agentName: "Customer Support", //Generated on the predictable dialogs app
   autoShowDelay: 5000,
   initialPrompt: 'Tell me a joke',
+  user: {
+    user_id: "ab123",
+    user_name: "Abc Def",
+    user_email: "abc@example.com",
+    user_segments: ["sports", "ott"]
+  },
   filterResponse: function(response) {
     const citationRegex = /【\d+:\d+†[^【】]+】/g;
     return response.replace(citationRegex, "");
@@ -171,6 +212,41 @@ bubble: {
   }
 }
 ```
+
+### user (optional)
+Capture user information for enhanced session tracking. All data appears in session logs.
+
+**Type:** 
+```typescript
+{
+  user_id?: string;
+  user_name?: string;
+  user_email?: string;
+  user_segments?: string[];
+}
+```
+
+**Example:**
+```js
+user: {
+  user_id: "ab123",
+  user_name: "Abc Def",
+  user_email: "abc@example.com", 
+  user_segments: ["sports", "ott"]
+}
+```
+
+**Field Descriptions:**
+- `user_id` - Unique identifier for the user
+- `user_name` - Display name of the user
+- `user_email` - User's email address  
+- `user_segments` - Array of tags for user categorization
+
+**Default Information Captured:**
+- IP address (automatic)
+- Country (automatic)
+
+For complete session documentation, see the [Sessions documentation](/docs/features/sessions).
 
 ### input (optional)
 Override input styling and configuration.

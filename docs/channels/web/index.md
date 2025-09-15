@@ -41,20 +41,23 @@ Predictable Dialogs offers three distinct widget types, each designed for differ
 
 All web widgets support these essential features:
 
-### 🚀 **Real-time Streaming**
+### **Real-time Streaming**
 See AI responses appear in real-time for a more engaging conversation experience. [Learn more](/docs/channels/web/streaming)
 
-### 🎨 **Advanced Theming**
+### **Advanced Theming**
 Customize colors, fonts, backgrounds, and styling through our visual theme editor or with custom CSS. [Learn more](/docs/channels/web/theme)
 
-### 📱 **Responsive Design**
+### **Responsive Design**
 All widgets automatically adapt to different screen sizes and devices for optimal user experience.
 
-### ⚙️ **Custom CSS Support**
+### **Custom CSS Support**
 Apply advanced styling and branding with full CSS customization capabilities. [Learn more](/docs/channels/web/custom-css)
 
-### 🔧 **Programmatic Control**
+### **Programmatic Control**
 Control widget behavior through JavaScript APIs for dynamic interactions.
+
+### **User Information Capture**
+Automatically capture user data including IP address and country, with optional custom fields like user ID, name, email, and segments for enhanced session tracking. [Learn more](/docs/features/sessions#user-information-capture)
 
 ## Getting Started
 
@@ -74,7 +77,7 @@ Here's a minimal example to get you started with each widget type:
 <script type="module">
   import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@latest/dist/web.js'
   Agent.initStandard({
-    agentName: "your-agent-name"
+    agentName: "your-agent-name",
   });
 </script>
 <agent-standard style="width: 100%; height: 600px;"></agent-standard>
@@ -85,7 +88,7 @@ Here's a minimal example to get you started with each widget type:
 <script type="module">
   import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@latest/dist/web.js'
   Agent.initBubble({
-    agentName: "your-agent-name"
+    agentName: "your-agent-name",
   });
 </script>
 ```
@@ -96,7 +99,7 @@ Here's a minimal example to get you started with each widget type:
   import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@latest/dist/web.js'
   Agent.initPopup({
     agentName: "your-agent-name",
-    autoShowDelay: 3000
+    autoShowDelay: 3000,
   });
 </script>
 ```

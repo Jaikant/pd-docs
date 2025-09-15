@@ -20,6 +20,40 @@ Here's the minimum code required to implement the Standard Widget:
 <agent-standard style="width: 100%; height: 600px; "></agent-standard>
 ```
 
+## User Information Capture
+
+Capture user information for enhanced session tracking and personalization. All collected data appears in your session logs.
+
+### Basic Usage with User Information
+
+```html
+<script type="module">
+  import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@latest/dist/web.js'
+  Agent.initStandard({
+    agentName: "your assistant name",
+    user: {
+      user_id: "ab123",
+      user_name: "Abc Def", 
+      user_email: "abc@example.com",
+      user_segments: ["sports", "ott"]
+    }
+  });
+</script>
+<agent-standard style="width: 100%; height: 600px;"></agent-standard>
+```
+
+**Default Captured Information:**
+- IP address (automatic)
+- Country (automatic)
+
+**Optional User Fields:**
+- `user_id` - Unique identifier for the user
+- `user_name` - Display name of the user  
+- `user_email` - User's email address
+- `user_segments` - Array of tags for user categorization
+
+For complete session tracking details, see the [Sessions documentation](/docs/features/sessions).
+
 ## Quick Styling Guide
 
 Here are the most popular styling combinations for the Standard widget:
@@ -193,11 +227,12 @@ The reset function works programmatically, clearing all session data and reiniti
 
 ## Configuration Options
 
-### Required Properties
+### General Properties
 
-| Property | Type | Description |
-|----------|------|-------------|
-| `agentName` | string | Specifies the agent name from Predictable Dialogs or your custom backend. This identifies which AI agent will process the conversations. |
+| Property | Required/Optional | Type | Description |
+|----------|------------------|------|-------------|
+| `agentName` | Required | string | Specifies the agent name from Predictable Dialogs or your custom backend. This identifies which AI agent will process the conversations. |
+| `user` | Optional | object | User information for session tracking. See [User Information](#user-optional) section below for details. |
 
 ### Widget Behaviour & Styling Parameters (optional)
 
@@ -247,6 +282,41 @@ bubble: {
   }
 }
 ```
+
+### user (optional)
+Capture user information for enhanced session tracking. All data appears in session logs.
+
+**Type:** 
+```typescript
+{
+  user_id?: string;
+  user_name?: string;
+  user_email?: string;
+  user_segments?: string[];
+}
+```
+
+**Example:**
+```js
+user: {
+  user_id: "ab123",
+  user_name: "Abc Def",
+  user_email: "abc@example.com", 
+  user_segments: ["sports", "ott"]
+}
+```
+
+**Field Descriptions:**
+- `user_id` - Unique identifier for the user
+- `user_name` - Display name of the user
+- `user_email` - User's email address  
+- `user_segments` - Array of tags for user categorization
+
+**Default Information Captured:**
+- IP address (automatic)
+- Country (automatic)
+
+For complete session documentation, see the [Sessions documentation](/docs/features/sessions).
 
 ### input (optional)
 Override input styling and configuration.

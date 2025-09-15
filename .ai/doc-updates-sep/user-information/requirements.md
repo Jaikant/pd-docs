@@ -28,7 +28,7 @@ Here is example embed code using Standard widget:
       user: {
         user_id: "ab123",
         user_name: "Jaikant Kumaran",
-        user_email: "jai@example.com",
+        user_email: "abc@example.com",
         user_segments: ["sports", "ott"]
       },
     });
