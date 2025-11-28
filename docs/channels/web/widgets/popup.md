@@ -55,7 +55,7 @@ For complete session tracking details, see the [Sessions documentation](/docs/fe
 ## Size & Positioning
 
 ### Modal Width Control
-The popup's width can be customized while height is automatically managed:
+The popup's width can be customized while height is automatically managed at 80% of viewport height.
 
 ```javascript
 Agent.initPopup({
@@ -80,7 +80,7 @@ theme: { width: "min(600px, 90vw)" }
 ```
 
 ### Modal Sizing Details
-- **Height**: Fixed at 80% of viewport height (`h-[80vh]`)
+- **Height**: Always Fixed at 80% of viewport height
 - **Default Width**: 512px on desktop, responsive on mobile
 - **Positioning**: Centered both horizontally and vertically
 
@@ -90,13 +90,13 @@ The Popup widget automatically adapts to different screen sizes:
 
 ### Mobile Behavior (< 640px)
 - **Width**: Responsive to screen size with padding
-- **Height**: 80% of viewport height
+- **Height**: Always fixed at 80% of viewport height
 - **Positioning**: Centered with appropriate margins
 - **Overlay**: Full-screen semi-transparent background
 
 ### Desktop Behavior (≥ 640px)
 - **Width**: Uses theme.width value (default: 512px)
-- **Height**: 80% of viewport height
+- **Height**: Always fixed at 80% of viewport height
 - **Positioning**: Centered both horizontally and vertically
 
 ### Responsive Considerations
