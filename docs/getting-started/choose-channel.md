@@ -8,13 +8,13 @@ sidebar_position: 40
 # Choose a Channel  
 **Estimated time: 1 minute**
 
-With an AI&nbsp;Resource in place, pick the **channel** - where users will chat.
+With an AI&nbsp;Chatbot in place, pick the **channel** - where users will chat.
 
 ---
 
 ## Open the “Install” tab
 
-1. Click your agent, click **Install** (On the top nav bar of the agent).  
+1. Click your agent, click **Install** (On the side nav bar of the agent).  
 2. On the Platform tab, you can choose from WhatsApp or Web platforms.
 
 ---
@@ -26,8 +26,7 @@ With an AI&nbsp;Resource in place, pick the **channel** - where users will chat.
 | **Web Widget** | Websites, web apps, docs sites | • Multiple widget styles (Standard, Bubble, Popup) <br/>• Full Theme & **Custom CSS** control <br/>• Real‑time streaming | Requires adding a small `<script>` tag to your site |
 | **WhatsApp** | Mobile‑first audiences, existing WhatsApp followers | • Direct messaging inside users’ favourite app <br/>• Automatic citation removal | WhatsApp controls UI & experience |
 
-> 🎨 **Want brand colours, fonts, gradients?**  
-> Select **Web Widget** and see the [Theme & Custom CSS](/docs/channels/web/theme) guide.
+> Select **Web Widget** and see the [Theme & Custom CSS](/docs/channels/web/theme) guide for brand colours, fonts, gradients etc
 
 ---
 

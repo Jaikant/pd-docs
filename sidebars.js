@@ -22,11 +22,6 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id: 'concepts',
-      label: 'Concepts',
-    },
-    {
-      type: 'doc',
       id: 'pd-platforms',
       label: 'Platforms',
     },
@@ -40,18 +35,8 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'getting-started/prerequisites',
-          label: 'Prerequisites'
-        },
-        {
-          type: 'doc',
           id: 'getting-started/create-agent',
-          label: 'Create Agent'
-        },
-        {
-          type: 'doc',
-          id: 'getting-started/connect-ai-resource',
-          label: 'Connect AI Resource'
+          label: 'Create Chatbot Agent'
         },
         {
           type: 'doc',
