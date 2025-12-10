@@ -233,6 +233,7 @@ The reset function works programmatically, clearing all session data and reiniti
 |----------|------------------|------|-------------|
 | `agentName` | Required | string | Specifies the agent name from Predictable Dialogs or your custom backend. This identifies which AI agent will process the conversations. |
 | `user` | Optional | object | User information for session tracking. See [User Information](#user-optional) section below for details. |
+| `contextVariables` | Optional | object | Key-value pairs that replace `{{variable}}` placeholders in your agent's system instructions. Any property name is accepted and the values persist for the session. |
 | `onSend` | Optional | function | Callback invoked when the user clicks Send (runs alongside the default send action). Useful for custom UI, analytics, or app logic. See [Advanced Usage: onSend Hook](/docs/channels/web/advanced-usage/onsend-callback) for detailed examples.|
 
 
@@ -246,12 +247,16 @@ The reset function works programmatically, clearing all session data and reiniti
 
 ### Chat Elements Styling Parameters (optional)
 
+These props override both your saved theme and any styling coming from the API, so you can live-theme widgets directly from the Predictable Dialogs app.
+
 | Property | Type | Description |
 |----------|------|-------------|
 | `font` | string | Font family name from fonts.bunny.net. Overrides theme font configuration. Example: `font="Roboto"` |
 | `background` | object | Background configuration object with `type` ("Color" \| "Image" \| "None") and `content` (color hex or image URL). Overrides theme background configuration. Example: `background={{type: "Color", content: "#f0f0f0"}}` |
 | `bubble` | object | Override bubble colors for host and guest messages. Contains optional `hostBubbles` and `guestBubbles` objects with `color` and `backgroundColor` properties. Overrides theme bubble configuration. |
+| `avatar` | object | Override the host and guest avatar images shown in the chat header and message bubbles. Each avatar supports `isEnabled` and `url` properties. |
 | `input` | object | Input styling configuration with `type`, `styles`, and `options` properties. The `styles` object contains `roundness`, `inputs` (color, backgroundColor, placeholderColor), and `buttons` (color, backgroundColor) properties. Overrides theme input configuration. |
+| `customCss` | string | Raw CSS string that gets injected into the widget for live theming. Use this to override theme/app-supplied styles directly from your embed script. |
 
 
 ### bubble (optional)
@@ -285,6 +290,37 @@ bubble: {
 }
 ```
 
+### avatar (optional)
+Override the host (agent) and guest (user) avatar images shown in the chat header and alongside messages. These settings override both theme-level choices and anything coming from the API, which is useful for live theming or A/B tests.
+
+**Type:**
+```typescript
+{
+  hostAvatar?: {
+    isEnabled?: boolean;
+    url?: string;
+  };
+  guestAvatar?: {
+    isEnabled?: boolean;
+    url?: string;
+  };
+}
+```
+
+**Example:**
+```js
+avatar: {
+  hostAvatar: {
+    isEnabled: true,
+    url: "https://i.pravatar.cc/300"
+  },
+  guestAvatar: {
+    isEnabled: true,
+    url: "https://i.pravatar.cc/300"
+  }
+}
+```
+
 ### user (optional)
 Capture user information for enhanced session tracking. All data appears in session logs.
 
@@ -314,11 +350,35 @@ user: {
 - `user_email` - User's email address  
 - `user_segments` - Array of tags for user categorization
 
+Only these four properties are accepted—any additional keys you pass inside `user` are ignored. The captured values are stored alongside the session transcript so you can identify individual visitors, while `user_segments` is ideal for attaching metadata like `["pricing-page", "betaUser"]`.
+
 **Default Information Captured:**
 - IP address (automatic)
 - Country (automatic)
 
 For complete session documentation, see the [Sessions documentation](/docs/features/sessions).
+
+### contextVariables (optional)
+Pass dynamic values that can be referenced inside your agent's system instructions using `{{variableName}}` placeholders. This is useful for injecting page metadata, logged-in state, or any other per-session context.
+
+**Type:**
+```typescript
+Record<string, string | number | boolean>;
+```
+
+**Example:**
+```js
+contextVariables: {
+  name: "Jai",
+  plan: "Pro",
+  currentPage: "pricing"
+}
+```
+
+**Usage:**
+- System instruction text like `"The user name is: {{name}}"` automatically becomes `"The user name is: Jai"`.
+- You can send any property names; the entire object is stored with the session for auditing.
+- If a placeholder does not have a corresponding property, it is left as-is.
 
 ### input (optional)
 Override input styling and configuration.
@@ -346,6 +406,14 @@ Override input styling and configuration.
       button?: string;
     };
     isLong?: boolean;
+    shortcuts?: {
+      preset?: "enterToSend" | "modEnterToSend" | "custom";
+      keymap?: {
+        submit?: string[][];
+        newline?: string[][];
+      };
+      imeSafe?: boolean;
+    };
   };
 }
 ```
@@ -372,9 +440,37 @@ input: {
       placeholder: "Whats on your mind?",
       button: "Send me"
     },
-    isLong: false
+    isLong: false,
+    shortcuts: {
+      preset: "custom",
+      keymap: {
+        submit: [["Mod", "Enter"], ["Shift", "Enter"]],
+        newline: [["Enter"]]
+      },
+      imeSafe: true
+    }
   }
 }
+```
+
+> **Note:** `shortcuts` only affects the `"fixed-bottom"` input type. If you omit `keymap` while using `"preset": "custom"`, the widget falls back to the default shortcut behavior.
+
+### customCss (optional)
+Inject CSS rules directly into the widget from your code.
+
+**Type:** `string`
+
+**Example:**
+```js
+customCss: `
+  .agent-chat-view {
+    background: green;
+    width: 400px;
+  }
+  .agent-chat-view .agent-input button {
+    text-transform: uppercase;
+  }
+`
 ```
 
 ---

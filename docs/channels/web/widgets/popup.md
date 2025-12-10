@@ -131,6 +131,7 @@ Control the popup widget with these JavaScript methods:
 | `agentName` | Required | string | Name of the assistant that will appear in the widget. Uses the specified Predictable Dialogs agent or an agent from your custom backend. |
 | `autoShowDelay` | Required | number | Time in milliseconds before the popup automatically appears after the page loads. |
 | `user` | Optional | object | User information for session tracking. See [User Information](#user-optional) section below for details. |
+| `contextVariables` | Optional | object | Key-value pairs that replace `{{variable}}` placeholders inside the agent's system instructions. Accepts any property names and persists per session. |
 | `onSend` | Optional | function | Callback invoked when the user clicks Send (runs alongside the default send action). Useful for custom UI, analytics, or app logic. See [Advanced Usage: onSend Hook](/docs/channels/web/advanced-usage/onsend-callback) for detailed examples. |
 
 
@@ -150,13 +151,17 @@ Control the popup widget with these JavaScript methods:
 ### Chat Elements Styling Parameters (optional)
 To customize the appearance of chat elements—such as message fonts, colors, and bubbles, input—you can use the ["Theme"](/docs/channels/web/theme) tab in the Predictable Dialogs app dashboard. This lets you make changes in real time, rather than updating code with the props listed below.
 
+The props listed below override both the saved theme and any styling delivered via the API, which makes them ideal for live theming straight from your embed script.
+
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `font` | string | Font family name from fonts.bunny.net. Overrides theme font configuration. Example: `font="Roboto"` |
 | `background` | object | Background configuration object with `type` ("Color" \| "Image" \| "None") and `content` (color hex or image URL). Overrides theme background configuration. Example: `background={{type: "Color", content: "#f0f0f0"}}` |
 | `bubble` | object | Override bubble colors for host and guest messages. Contains optional `hostBubbles` and `guestBubbles` objects with `color` and `backgroundColor` properties. Overrides theme bubble configuration. |
+| `avatar` | object | Override the host and guest avatar images shown in the popup. Each avatar supports `isEnabled` and `url` properties. |
 | `input` | object | Input styling configuration with `type`, `styles`, and `options` properties. The `styles` object contains `roundness`, `inputs` (color, backgroundColor, placeholderColor), and `buttons` (color, backgroundColor) properties. Overrides theme input configuration. |
+| `customCss` | string | Raw CSS that gets injected into the widget container for advanced overrides. |
 
 
 ## Example with some Optional Parameters
@@ -201,6 +206,23 @@ Override bubble colors for host and guest messages.
 }
 ```
 
+### customCss (optional)
+Inject additional CSS directly into the popup widget. This lets you override theme/app styling for live theming scenarios.
+
+**Type:** `string`
+
+**Example:**
+```js
+customCss: `
+  agent-popup {
+    border-radius: 24px;
+  }
+  .agent-chat-view {
+    background: #0f172a;
+  }
+`
+```
+
 **Example:**
 ```js
 bubble: {
@@ -211,6 +233,37 @@ bubble: {
   guestBubbles: {
     color: "#f8faf4",
     backgroundColor: "#0066cc"
+  }
+}
+```
+
+### avatar (optional)
+Override the host (agent) and guest (user) avatars displayed in the popup header and conversation bubbles. This is handy when you want to live-theme avatars without touching the saved theme.
+
+**Type:**
+```typescript
+{
+  hostAvatar?: {
+    isEnabled?: boolean;
+    url?: string;
+  };
+  guestAvatar?: {
+    isEnabled?: boolean;
+    url?: string;
+  };
+}
+```
+
+**Example:**
+```js
+avatar: {
+  hostAvatar: {
+    isEnabled: true,
+    url: "https://i.pravatar.cc/300"
+  },
+  guestAvatar: {
+    isEnabled: true,
+    url: "https://i.pravatar.cc/300"
   }
 }
 ```
@@ -244,11 +297,35 @@ user: {
 - `user_email` - User's email address  
 - `user_segments` - Array of tags for user categorization
 
+Only these fields are supported. Any additional properties included inside the `user` object are ignored. The stored values appear in the session timeline so you can quickly see who the conversation belonged to, and `user_segments` is perfect for tagging metadata such as `["pricing-page", "beta"]`.
+
 **Default Information Captured:**
 - IP address (automatic)
 - Country (automatic)
 
 For complete session documentation, see the [Sessions documentation](/docs/features/sessions).
+
+### contextVariables (optional)
+Send arbitrary key-value pairs that can be referenced inside your agent's system instructions via `{{variableName}}` placeholders. This lets you personalize instructions with metadata such as page name, user plan, or locale.
+
+**Type:**
+```typescript
+Record<string, string | number | boolean>;
+```
+
+**Example:**
+```js
+contextVariables: {
+  name: "Jai",
+  currentPage: "pricing",
+  locale: "en-US"
+}
+```
+
+**Usage notes:**
+- Use the same `{{key}}` syntax inside your Predictable Dialogs system instructions.
+- You can pass as many properties as you need; they are stored with the session.
+- Missing properties simply leave the placeholder untouched.
 
 ### input (optional)
 Override input styling and configuration.
@@ -276,6 +353,14 @@ Override input styling and configuration.
       button?: string;
     };
     isLong?: boolean;
+    shortcuts?: {
+      preset?: "enterToSend" | "modEnterToSend" | "custom";
+      keymap?: {
+        submit?: string[][];
+        newline?: string[][];
+      };
+      imeSafe?: boolean;
+    };
   };
 }
 ```
@@ -302,7 +387,17 @@ input: {
       placeholder: "Whats on your mind?",
       button: "Send me"
     },
-    isLong: false
+    isLong: false,
+    shortcuts: {
+      preset: "custom",
+      keymap: {
+        submit: [["Mod", "Enter"], ["Shift", "Enter"]],
+        newline: [["Enter"]]
+      },
+      imeSafe: true
+    }
   }
 }
 ```
+
+> **Note:** `shortcuts` applies only when `options.type` is `"fixed-bottom"`. If `"preset": "custom"` is provided without a valid `keymap`, the widget reverts to its default shortcut behavior.

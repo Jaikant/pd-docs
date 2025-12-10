@@ -76,7 +76,6 @@ theme: {
 }
 ```
 
-
 ### Positioning the Bubble
 
 Control where the bubble appears on your page using the `placement` option:
@@ -246,6 +245,7 @@ You can control the widget through JavaScript using the following methods:
 |----------|------------------|------|-------------|
 | `agentName` | Required | string | Specifies the Predictable Dialogs agent name or your custom agent name |
 | `user` | Optional | object | User information for session tracking. See [User Information](#user-optional) section below for details. |
+| `contextVariables` | Optional | object | Key-value pairs for `{{variable}}` placeholders in your agent's system instructions. Accepts any property names. |
 | `onSend` | Optional | function | Callback invoked when the user clicks Send (runs alongside the default send action). Useful for custom UI, analytics, or app logic. See [Advanced Usage: onSend Hook](/docs/channels/web/advanced-usage/onsend-callback) for detailed examples. |
 
 
@@ -266,13 +266,17 @@ You can control the widget through JavaScript using the following methods:
 ### Chat Elements Styling Parameters (optional)
 To customize the appearance of chat elements—such as message fonts, colors, and bubbles, input—you can use the "Theme" tab in the Predictable Dialogs app dashboard. This lets you make changes in real time, rather than updating code with the props listed below.
 
+All of the following props override your saved theme plus any styling coming from the API, enabling theming straight from your code.
+
 
 | Property | Type | Description |
 |----------|------|-------------|
 | `font` | string | Font family name from fonts.bunny.net. Overrides theme font configuration. Example: `font="Roboto"` |
 | `background` | object | Background configuration object with `type` ("Color" \| "Image" \| "None") and `content` (color hex or image URL). Overrides theme background configuration. Example: `background={{type: "Color", content: "#f0f0f0"}}` |
 | `bubble` | object | Override bubble colors for host and guest messages. Contains optional `hostBubbles` and `guestBubbles` objects with `color` and `backgroundColor` properties. Overrides theme bubble configuration. |
+| `avatar` | object | Override the host and guest avatar images shown inside the chat. Supports `isEnabled` and `url`. |
 | `input` | object | Input styling configuration with `type`, `styles`, and `options` properties. The `styles` object contains `roundness`, `inputs` (color, backgroundColor, placeholderColor), and `buttons` (color, backgroundColor) properties. Overrides theme input configuration. |
+| `customCss` | string | Raw CSS injected inside the widget for extra styling control. |
 
 
 ## Configuration Example
@@ -361,6 +365,37 @@ bubble: {
 }
 ```
 
+### avatar (optional)
+Override the avatars shown for both the host and guest inside the bubble widget. This is useful for live theming scenarios where you want different persona imagery per page or campaign.
+
+**Type:**
+```typescript
+{
+  hostAvatar?: {
+    isEnabled?: boolean;
+    url?: string;
+  };
+  guestAvatar?: {
+    isEnabled?: boolean;
+    url?: string;
+  };
+}
+```
+
+**Example:**
+```js
+avatar: {
+  hostAvatar: {
+    isEnabled: true,
+    url: "https://i.pravatar.cc/300"
+  },
+  guestAvatar: {
+    isEnabled: true,
+    url: "https://i.pravatar.cc/300"
+  }
+}
+```
+
 ### user (optional)
 Capture user information for enhanced session tracking. All data appears in session logs.
 
@@ -390,11 +425,35 @@ user: {
 - `user_email` - User's email address  
 - `user_segments` - Array of tags for user categorization
 
+Additional keys placed inside `user` are ignored. The accepted fields are stored along with the chat transcript so you can see who each session belongs to, and `user_segments` is perfect for metadata like `["landing-page", "enterprise"]`.
+
 **Default Information Captured:**
 - IP address (automatic)
 - Country (automatic)
 
 For complete session documentation, see the [Sessions documentation](/docs/features/sessions).
+
+### contextVariables (optional)
+Provide arbitrary key-value pairs that can be referenced in your agent's system instructions using `{{variableName}}` placeholders. This allows you to personalize assistant behavior per page or user segment.
+
+**Type:**
+```typescript
+Record<string, string | number | boolean>;
+```
+
+**Example:**
+```js
+contextVariables: {
+  name: "Jai",
+  subscription: "Enterprise",
+  currentPage: "docs"
+}
+```
+
+**Usage tips:**
+- Reference the same keys in your Predictable Dialogs instructions, e.g., `"The current page is {{currentPage}}"`.
+- Every property is stored with the session for auditing.
+- Missing properties simply leave the placeholder as-is.
 
 ### input (optional)
 Override input styling and configuration.
@@ -422,6 +481,14 @@ Override input styling and configuration.
       button?: string;
     };
     isLong?: boolean;
+    shortcuts?: {
+      preset?: "enterToSend" | "modEnterToSend" | "custom";
+      keymap?: {
+        submit?: string[][];
+        newline?: string[][];
+      };
+      imeSafe?: boolean;
+    };
   };
 }
 ```
@@ -448,8 +515,17 @@ input: {
       placeholder: "Whats on your mind?",
       button: "Send me"
     },
-    isLong: false
+    isLong: false,
+    shortcuts: {
+      preset: "custom",
+      keymap: {
+        submit: [["Mod", "Enter"], ["Shift", "Enter"]],
+        newline: [["Enter"]]
+      },
+      imeSafe: true
+    }
   }
 }
 ```
 
+> **Note:** Shortcut configuration is only available when `options.type` is `"fixed-bottom"`. Providing `"preset": "custom"` without a `keymap` falls back to the default shortcut behavior.
