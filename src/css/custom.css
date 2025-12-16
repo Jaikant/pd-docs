@@ -50,3 +50,11 @@
   --ifm-alert-background-color: ##606770;
   /* leave background as‑is or pick a darker shade */
 }
+
+.theme-doc-markdown img {
+  max-height: 420px;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+}

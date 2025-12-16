@@ -16,25 +16,31 @@ Follow these steps to generate a token for WhatsApp API access:
    - Enter a name for the system user and assign them the **Admin** role.
 
 ## Assign Assets
-   - Click on **Assign assets**. As shown in the image below.
-   
-   ![Meta App Image](/img/whatsapp/meta-app-success.png)
+   - Click on **Assign assets**. 
 
+   ![Meta App Manage](/img/whatsapp/meta-assign-assets.png)
    - Under the **Apps** section, find and select your app. (Image below)
    - Ensure you check the **Manage app** option. (Image below)
 
-   ![Meta App Manage](/img/whatsapp/meta-app-manage.png)
 
    - **Save Changes**
 
 ## Generate the Token
+   - Go to the "System users" tab
    - Click on **Generate token**.
+
+   ![WhatsApp System User Token](/img/whatsapp/meta-generate-token.webp)
+
    - Choose your app from the list and click next.
    - Set the token expiration to **Never**. Click next.
+
+   ![WhatsApp System User Token](/img/whatsapp/whatsapp-token-expiration-never.webp)
+
    - Select the following permissions:
      - **whatsapp_business_messaging**
      - **whatsapp_business_management**
    - Click **Generate Token** to generate the token.
+
 
 ## Copy Your Token
    - Copy the token that appears on the screen.
