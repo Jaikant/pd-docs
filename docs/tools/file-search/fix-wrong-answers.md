@@ -41,7 +41,7 @@ The image below, shows a session in which fileSearch happened.
 
 **Symptom:** The chatbot answers, but the answer is irrelevant. This is because the parts of the document used to answer is incorrect.
 
-**Solution:** Increase **Max chunks per answer**. This returns more results to the model. To change this, click the gear icon (See arrow pointing to icon in image below)
+**Solution:** Increase *Max chunks per answer*. This returns more results to the model. To change this, click the gear icon (See arrow pointing to icon in image below).
 
 ![change top-k rag chatbot](/img/tools/use-knowledge-arrow.webp)
 
