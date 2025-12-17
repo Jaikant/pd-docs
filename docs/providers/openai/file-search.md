@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # OpenAI File Search
 
-This guide covers the specific steps for setting up file search with OpenAI. For an overview of file search concepts, document preparation, and best practices, see our [File Search & RAG Guide →](/docs/tools/file-search).
+This guide covers the specific steps for setting up file search with OpenAI. For an overview of file search concepts, document preparation, and best practices, see our [How File Search Works guide →](/docs/tools/file-search/how-file-search-works).
 
 When you use the OpenAI provider, you have direct control over:
 
@@ -139,6 +139,5 @@ Control how many relevant chunks the AI receives for each search:
 
 ## Related Resources
 
-- **[File Search & RAG Overview →](/docs/tools/file-search)** - Learn about RAG concepts, document preparation, and optimization strategies
+- **[How File Search Works →](/docs/tools/file-search/how-file-search-works)** - Learn about RAG concepts, document preparation, and optimization strategies
 - **[Tools Overview →](/docs/tools/overview)** - Explore all available AI tool capabilities
-- **[OpenAI Assistant File Search](https://platform.openai.com/docs/assistants/tools/file-search)** - OpenAI's official documentation for Assistant-based file search

@@ -45,7 +45,7 @@ Enable your agents to search through uploaded documents and knowledge bases.
 
 **How it works:** Documents are processed into searchable chunks using vector embeddings, allowing semantic search.
 
-**Learn more:** [File Search Guide →](/docs/tools/file-search)
+**Learn more:** [How File Search Works →](/docs/tools/file-search/how-file-search-works)
 
 ## Provider Compatibility
 
@@ -72,5 +72,5 @@ Enable your agents to search through uploaded documents and knowledge bases.
 ## Next Steps
 
 - [Function Calling Guide →](/docs/tools/function-calling) - Learn to connect external APIs
-- [File Search Guide →](/docs/tools/file-search) - Set up document search capabilities
+- [How File Search Works →](/docs/tools/file-search/how-file-search-works) - Set up document search capabilities
 - [OpenAI →](/docs/providers/openai/create-resource) - Get started with OpenAI provider

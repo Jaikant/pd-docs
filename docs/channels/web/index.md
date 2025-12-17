@@ -64,7 +64,7 @@ Automatically capture user data including IP address and country, with optional 
 Ready to add a chatbot to your website? Follow these steps:
 
 1. **[Create your agent](/docs/getting-started/create-agent)** in the Predictable Dialogs dashboard
-2. **[Connect an AI resource](/docs/getting-started/connect-ai-resource)** like OpenAI Assistant
+2. **Connect an AI resource** like [OpenAI](/docs/providers/openai/create-resource) or [OpenAI Assistant](/docs/providers/openai-assistant/create-resource)
 3. **[Choose and embed your widget](/docs/channels/web/embed-widget)** using our step-by-step guide
 4. **[Customize your widget](/docs/channels/web/theme)** with themes and styling to match your brand
 
