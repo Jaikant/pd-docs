@@ -37,7 +37,7 @@ The image below, shows a session in which fileSearch happened.
 
 ---
 
-### Step 2: Problem — Irrelevant answers
+### Step 2: Chatbot gives irrelevant answers
 
 **Symptom:** The chatbot answers, but the answer is irrelevant. This is because the parts of the document used to answer is incorrect.
 
@@ -58,7 +58,7 @@ The image below, shows a session in which fileSearch happened.
 
 ---
 
-### Step 3: Problem — Incomplete answers
+### Step 3: Chatbot gives incomplete answers
 
 **Symptom A (cut off):** The answer is incomplete. This is because, the part of the document which was used to answer got truncated. So it starts the right answer, but misses the rest.
 
@@ -84,7 +84,7 @@ Click **+ ADD KNOWLEDGE** again. Click the **Advance options** in the modal. See
 
 ---
 
-### Step 4: Problem — Agent can’t find information that exists in documents
+### Step 4: Chatbot can’t find information that exists in documents
 
 **Symptom:** You know the info is in the document, but the chatbot keeps answering “generally” instead of using your content.
 
@@ -94,7 +94,7 @@ Click **+ ADD KNOWLEDGE** again. Click the **Advance options** in the modal. See
 
 ---
 
-### Step 5: Problem — Different answers to similar questions
+### Step 5: Chatbot gives different answers to similar questions
 
 **Symptom:** Asking the “same” question in slightly different wording gives noticeably different answers.
 
