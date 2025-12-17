@@ -60,7 +60,7 @@ The image below, shows a session in which fileSearch happened.
 
 ### Step 3: Chatbot gives incomplete answers
 
-**Symptom A (cut off):** The answer is incomplete. This is because, the part of the document which was used to answer got truncated. So it starts the right answer, but misses the rest.
+**Symptom:** The answer is incomplete. This is because, the part of the document which was used to answer got truncated. So it starts the right answer, but misses the rest.
 
 **Solution:** Increase Chunk size when uploading documents.
 
@@ -74,7 +74,7 @@ Click **+ ADD KNOWLEDGE** again. Click the **Advance options** in the modal. See
 ![change chunk size rag chatbot](/img/tools/chunk-size.webp)
 
 
-*Note*: Preferable to keep the chunk size under *800*, if at this chunk size the answers are still incomplete then the chunk overlap can be increased. The chunk overlap can be set to *10–20% of your chunk size*. If chunk size 400 then overlap can be between 40–80.
+*Note*: It is preferable to keep the chunk size under 800, if at this chunk size the answers are still incomplete then the chunk overlap can be increased. The chunk overlap can be set to 10–20% of your chunk size. That is, if chunk size is 400 then overlap can be between 40–80.
 
 ---
 
