@@ -5,6 +5,11 @@ slug: /faqs
 ---
 
 # Frequently Asked Questions
+<details>
+  <summary>I uploaded my docs, but some answers are incorrect.</summary>
+
+   This can happen because document structure varies. You can tune the chatbot so it answers correctly by changing some settings. See the [Fix wrong answers guide](/docs/tools/file-search/fix-wrong-answers) for the full troubleshooting checklist.
+</details>
 
 <details>
   <summary>How can I make the AI greet users by their name?</summary>

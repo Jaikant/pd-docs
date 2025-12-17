@@ -1,0 +1,9 @@
+{
+  "label": "File Search & RAG",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "title": "File Search & RAG",
+    "description": "Design, tune, and deploy Retrieval-Augmented Generation in Predictable Dialogs."
+  }
+}
