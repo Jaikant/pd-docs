@@ -5,10 +5,10 @@ sidebar_position: 4
 ---
 
 Your chatbot answers by:
-- searching your uploaded documents for the most relevant “snippets” (called chunks), then
-- using those chunks to write the final reply.
+- searching your uploaded documents for the most relevant parts, then
+- using those parts to write the final reply.
 
-If the answer is wrong, it’s usually because document search didn’t run or the right chunk(s) weren’t retrieved. 
+If the answer is wrong, it’s usually because document search didn’t run or the right part(s) weren’t retrieved. 
 
 Follow the steps below in order.
 
@@ -25,18 +25,23 @@ If Knowledge is OFF, the agent can’t use your documents.
 
 Open the *Sessions tab* for your chatbot agent, then open the conversation where the answer was wrong.
 
-**What you’re looking for:** evidence that the agent retrieved *chunks/snippets* from your documents for that user message.
+**What you’re looking for:** evidence that the agent retrieved *chunks/parts* from your documents for that user message.
+The image below, shows a session in which fileSearch happened.
 
-* If you see chunks/snippets: document search ran → go to Step 2 or Step 3.
-* If you do NOT see chunks/snippets (and it should have used the docs): turn ON **Use knowledge on every reply** so retrieval always runs. (See the check box at the bottom of the image above)
+![evidence and trace of rag chatbot](/img/tools/rag-file-search-traces.webp)
+
+* If you see parts of your document in the session: document search ran → go to Step 2 or Step 3.
+* If you do NOT see parts of your document in the session and it should have used the docs: turn ON **Use knowledge on every reply** so retrieval always runs. See the check box at the bottom of the image below.
+
+![Use knowledge](/img/tools/use-knowledge-every-reply.webp)
 
 ---
 
 ### Step 2: Problem — Irrelevant answers
 
-**Symptom:** The chatbot answers, but the retrieved chunks are unrelated (wrong topic, wrong section, wrong doc).
+**Symptom:** The chatbot answers, but the answer is irrelevant. This is because the parts of the document used to answer is incorrect.
 
-**Solution:** Increase **Max chunks per answer** (this returns more results to the model). To change this, click the gear icon (See arrow pointing to icon in image below)
+**Solution:** Increase **Max chunks per answer**. This returns more results to the model. To change this, click the gear icon (See arrow pointing to icon in image below)
 
 ![change top-k rag chatbot](/img/tools/use-knowledge-arrow.webp)
 
@@ -55,7 +60,7 @@ Open the *Sessions tab* for your chatbot agent, then open the conversation where
 
 ### Step 3: Problem — Incomplete answers
 
-**Symptom A (cut off):** The chunk starts the right answer, but it stops mid-thought or misses the rest.
+**Symptom A (cut off):** The answer is incomplete. This is because, the part of the document which was used to answer got truncated. So it starts the right answer, but misses the rest.
 
 **Solution:** Increase Chunk size when uploading documents.
 
@@ -81,10 +86,7 @@ Click **+ ADD KNOWLEDGE** again. Click the **Advance options** in the modal. See
 
 ### Step 4: Problem — Agent can’t find information that exists in documents
 
-**Symptom:** You know the info is in the document, but:
-
-* the Sessions tab shows **no chunks retrieved**, or
-* the agent keeps answering “generally” instead of using your content
+**Symptom:** You know the info is in the document, but the chatbot keeps answering “generally” instead of using your content.
 
 **Solution:** Turn ON **Use knowledge on every reply**, this forces retrieval every time. 
 
