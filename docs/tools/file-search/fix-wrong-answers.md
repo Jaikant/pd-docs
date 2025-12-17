@@ -10,7 +10,7 @@ Your chatbot answers by:
 
 If the answer is wrong, it’s usually because document search didn’t run or the right part(s) weren’t retrieved. 
 
-Follow the steps below in order.
+Follow the steps below in order or [contact support](mailto:jai@predictabledialogs.com).
 
 ### Step 0: Is Knowledge turned on?
 
@@ -73,14 +73,8 @@ Click **+ ADD KNOWLEDGE** again. Click the **Advance options** in the modal. See
 
 ![change chunk size rag chatbot](/img/tools/chunk-size.webp)
 
-**Symptom B (missing “in between” info):** The answer seems to sit between two chunks, neither chunk contains the full idea.
 
-**Solution:** Increase Chunk overlap when uploading documents. See picture above.
-
-* Default Chunk overlap is *20*
-* Easy rule: set overlap to *10–20% of your chunk size*
-
-  * Example: chunk size 400 → overlap 40–80
+*Note*: Preferable to keep the chunk size under *800*, if at this chunk size the answers are still incomplete then the chunk overlap can be increased. The chunk overlap can be set to *10–20% of your chunk size*. If chunk size 400 then overlap can be between 40–80.
 
 ---
 
