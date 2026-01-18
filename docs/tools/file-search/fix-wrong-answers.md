@@ -33,7 +33,7 @@ The image below, shows a session in which fileSearch happened.
 * If you see parts of your document in the session: document search ran → go to Step 2 or Step 3.
 * If you do NOT see parts of your document in the session and it should have used the docs: turn ON **Use knowledge on every reply** so retrieval always runs. See the check box at the bottom of the image below.
 
-![Use knowledge](/img/tools/use-knowledge-every-reply.webp)
+![Use knowledge](/img/tools/use-knowledge-reply.webp)
 
 ---
 
@@ -80,11 +80,10 @@ Click **+ ADD KNOWLEDGE** again. Click the **Advance options** in the modal. See
 
 ### Step 4: Chatbot can’t find information that exists in documents
 
-**Symptom:** You know the info is in the document, but the chatbot keeps answering “generally” instead of using your content.
+**Symptom:** You know the info is in the document, but the chatbot keeps answering “generally” instead of using your content. File search runs, but doesn't return any result.
 
-**Solution:** Turn ON **Use knowledge on every reply**, this forces retrieval every time. 
-
-![Use knowledge](/img/tools/use-knowledge-every-reply.webp)
+**Solution:** Reduce the RAG relevance threshold. To do so, click on the gear icon. You will see a slider with the title **Relevance threshold**, reduce this value. Refer the image below.
+![Use knowledge](/img/tools/relevance-threshold-rag.webp)
 
 ---
 
@@ -103,7 +102,7 @@ Click **+ ADD KNOWLEDGE** again. Click the **Advance options** in the modal. See
 
 ###### Notes to keep in mind
 
-* *Max chunks per answer* can usually be changed any time.
+* *Relevance threshold* & *Max chunks per answer* can usually be changed any time.
 * *Chunk size / chunk overlap* require re-uploading documents to take effect as it changes how your docs are stored.
 
 ###### Search Result Tuning
