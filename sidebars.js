@@ -73,7 +73,23 @@ const sidebars = {
               ]
             },
             'channels/web/streaming',
-            'channels/web/theme',
+            {
+              type: 'category',
+              label: 'Theme',
+              link: {
+                type: 'doc',
+                id: 'channels/web/theme',
+              },
+              items: [
+                'channels/web/theme/greeting-message',
+                'channels/web/theme/background',
+                'channels/web/theme/font',
+                'channels/web/theme/avatars',
+                'channels/web/theme/bubble',
+                'channels/web/theme/input-styling',
+                'channels/web/theme/theme-templates',
+              ],
+            },
             'channels/web/custom-css',
             {
               type: 'category',
