@@ -14,9 +14,9 @@ Below is a list of platforms supported by Predictable Dialogs with relevant inte
 | React           | [React Integration Guide](https://predictabledialogs.com/learn/openai/react-chatbot-integration)     |
 | Next.js         | [Next.js Integration Guide](https://predictabledialogs.com/learn/openai/nextjs-chatbot-integration)  |
 | HTML            | [HTML Integration Guide](https://predictabledialogs.com/learn/openai/add-chatbot-html)               |
+| Wix             | [Wix Integration Guide](https://predictabledialogs.com/learn/ai-chatbot-for-wix).                |
 | WooCommerce     | Supported. If any issue, please [contact us](https://predictabledialogs.com/contact).                |
 | Shopify         | Supported. If any issue, please [contact us](https://predictabledialogs.com/contact).                |
-| Wix             | Supported. If any issue, please [contact us](https://predictabledialogs.com/contact).                |
 | Squarespace     | Supported. If any issue, please [contact us](https://predictabledialogs.com/contact).                |
 | Joomla          | Supported. If any issue, please [contact us](https://predictabledialogs.com/contact).                |
 | Drupal          | Supported. If any issue, please [contact us](https://predictabledialogs.com/contact).                |
