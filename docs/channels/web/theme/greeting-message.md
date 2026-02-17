@@ -1,50 +1,114 @@
 ---
-title: 'Greeting Message'
+title: 'Start Experience'
 ---
 
-# Greeting Message
+# Start Experience
 
-The greeting (initial response) is the first message your AI agent displays when the widget loads. Use it to set the tone for user interactions and guide visitors on how to use the chatbot.
+Start Experience controls what users see before they send their first message.
 
-## Configure in the Theme Dashboard
+Use it to choose between a static greeting or a welcome panel with clickable starter prompts.
 
-1. Go to your agent in the Predictable Dialogs app.
-2. Open the **Theme** page.
-3. Select the **Greeting** tab.
+## Where to configure
 
-From here you can:
+1. Go to your agent in Predictable Dialogs.
+2. Open **Theme** (Live Theming).
+3. Select **Start Experience**.
 
-- Turn the greeting on or off using the toggle.
-- Enter or edit the greeting text.
-- Use markdown or basic HTML for formatting.
+## Start modes
 
-### Enable or disable the greeting
+Choose one mode:
 
-Use the toggle in the **Greeting** tab to enable a custom static greeting text. 
+- **Greeting message:** Show one welcome message when chat opens.
+- **Starter prompts:** Show a welcome header with clickable starter prompts.
 
-:::tip Initial response using a prompt
-If you turn off the greeting, you can generate a greeting/initial response using your own prompt. This is configured using the `initialPrompt` prop on the widget. See the [Bubble widget docs](/docs/channels/web/widgets/bubble#widget-behaviour--styling-parameters-optional) for details.
+Click ↻ on the widget to preview change.
 
-If the `initialPrompt` is not set, the user would have to initiate the conversation.
-:::
+Switching modes does not delete existing content. Your greeting and prompts are preserved.
 
-### Formatting the greeting
+### Greeting message mode
 
-You can format the greeting using markdown:
+Use this when you want a single opening message from the AI.
+
+Greeting text supports markdown (and basic HTML compatible with markdown), for example:
 
 ```md
 **Hi there**
 ```
 
-Basic HTML compatible with markdown is also supported:
-
 ```html
 <strong>Hi there</strong>
 ```
 
-### Generate a greeting with OpenAI
+### Starter prompts mode
 
-:::tip Generate greeting with OpenAI
-Click the ✨ button to create an initial response using your OpenAI assistant and a custom prompt.
-:::
+Use this when you want users to quickly choose a first question.
 
+- Up to 8 prompts
+- Each prompt supports:
+  - `text` (required)
+  - optional emoji/icon or image URL
+
+You can also configure a welcome section shown above prompts:
+
+- Welcome icon/image
+- Welcome title
+- Welcome subtitle
+
+If you configure only the welcome section and leave prompts empty, the welcome header still appears and vice versa.
+
+## Pick an Icon  
+
+You can upload images or use emojis for welcome title and starter prompts.
+
+### Upload tab
+
+- Click **Choose an image**
+- Upload starts immediately after you select a file
+
+Accepted formats:
+
+- SVG
+- PNG
+- JPG/JPEG
+- WebP
+- GIF
+
+File size limit:
+
+- 2 MB maximum
+
+### Emoji tab
+
+- Emojis are grouped by category:
+  - PEOPLE
+  - ANIMALS and NATURE
+  - FOOD and DRINK
+  - TRAVEL and PLACES
+  - ACTIVITIES
+  - OBJECTS
+  - SYMBOLS
+  - FLAGS
+- Clicking an emoji saves immediately
+
+### Link tab
+
+- Paste a public image URL
+- URL edits follow the normal save flow, so click the page **Save** button (or Save FAB) to persist typed URL changes
+- Upload and Emoji selections are already saved immediately, so no extra save click is needed for those actions
+
+## What users see in the widget
+
+Before the first user message, the widget can show:
+
+- A greeting message, or
+- A welcome header plus starter prompts
+
+If starter prompts are enabled, clicking a prompt sends it as the first user message and continues normal conversation flow.
+
+The starter prompt panel is hidden once the user clicks a prompt or starts typing, and it is not shown for persisted sessions.
+
+## Quick troubleshooting
+
+- **"File size must be 2 MB or less":** Use a smaller image
+- **"Unsupported format":** Use SVG, PNG, JPG/JPEG, WebP, or GIF
+- **Image URL does not render:** Verify the URL is public and points directly to an image

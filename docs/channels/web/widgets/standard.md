@@ -241,9 +241,41 @@ The reset function works programmatically, clearing all session data and reiniti
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `initialPrompt` | string | Message sent to the agent when the chat first loads. Only used when initial response is disabled on the server. If server-side initial response is enabled, this property is ignored. |
+| `initialPrompts` | `Array<{ text: string; icon?: string; iconUrl?: string; id?: string }>` | Clickable starter prompts shown before the first user message. Supports up to 8 prompts. Clicking one sends that prompt text as the user's first message. |
+| `welcome` | `{ title?: string; subtitle?: string; icon?: string; iconUrl?: string }` | Optional welcome header shown above starter prompts. If `welcome` is provided without `initialPrompts`, the header still appears. |
 | `filterResponse` | function | A callback function that processes the AI's responses before displaying them. Takes the original response string as input and should return the modified response string. Useful for removing citations or formatting responses ([see example](/docs/providers/openai-assistant/removing-citations)). |
 | `apiHost` / `apiStreamHost` | string | Endpoint URL that connects to the backend. Can be configured to use your own backend if needed. |
+
+### Initial Prompts and Welcome Behavior
+
+- The starter panel is shown only before the first user message.
+- Once the user clicks a starter prompt or starts typing, the panel is hidden.
+- If a persisted session already exists, the panel is not shown.
+- Prompt card colors follow your guest bubble theme settings.
+
+### Icon Tip for Starter Prompts
+
+- Use `icon` for Unicode emoji/text icons.
+- Use `iconUrl` for public image/SVG URLs.
+- Feather icon catalog: `https://app.unpkg.com/feather-icons@4.29.2/files/dist/icons`
+- Feather icon URL format: `https://unpkg.com/feather-icons@4.29.2/dist/icons/<name>.svg`
+
+### Example: Starter Prompts with Welcome
+
+```javascript
+Agent.initStandard({
+  agentName: "Customer Support",
+  welcome: {
+    icon: "👋",
+    title: "Welcome to support",
+    subtitle: "Choose a starter question or type your own."
+  },
+  initialPrompts: [
+    { text: "How does onboarding work?", icon: "🧭" },
+    { text: "Show pricing plans", iconUrl: "https://unpkg.com/feather-icons@4.29.2/dist/icons/dollar-sign.svg" }
+  ]
+});
+```
 
 ### Chat Elements Styling Parameters (optional)
 

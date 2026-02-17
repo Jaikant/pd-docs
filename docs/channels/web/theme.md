@@ -4,11 +4,11 @@ title: 'Theme'
 
 # Theme
 
-You can customize your chatbot agent’s greeting, colors, images, inputs, and borders using our live theming playground on the theme page. You can also add your own custom CSS and instantly preview how your chatbot agent will look.
+You can customize your chatbot agent’s start experience, colors, images, inputs, and borders using our live theming playground on the theme page. You can also add your own custom CSS and instantly preview how your chatbot agent will look.
 
 The Theme page in the Predictable Dialogs app lets you control all visual aspects of your web widget, including:
 
-- [Greeting Message](/docs/channels/web/theme/greeting-message)
+- [Start Experience](/docs/channels/web/theme/greeting-message)
 - [Background](/docs/channels/web/theme/background)
 - [Font](/docs/channels/web/theme/font)
 - [Avatars](/docs/channels/web/theme/avatars)

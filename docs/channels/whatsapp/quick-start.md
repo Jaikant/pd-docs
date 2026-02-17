@@ -35,15 +35,13 @@ verify your details)
 
 
 ### Customize the initial response
-Select *Greeting* tab and enter or generate your greeting.
+Select **Start Experience** tab and select **Greeting message**.
+The **Starter prompts** are not supported on WhatsApp.
 
-The initial response is the first message your AI agent displays. Personalize it to set the tone for user interactions.
+The initial message is the first message your AI agent displays. Personalize it to set the tone for user interactions.
 
 - **Enable or Disable:**  
-  Go to the **Greeting** tab and use the toggle button to turn the initial response on or off.
-  :::tip initial response using a prompt
-  If you turn off the greeting, you can generate an greeting/initial response using your own prompt. This is [configured](http://predictabledialogs.com/docs/channels/web/widgets/bubble#widget-behaviour--styling-parameters-optional) using the `initialPrompt` prop on the widget.  
-  :::
+  Go to the **Start Experience** tab and use the toggle button to turn the initial response on or off.
 
 - **Add a Custom Response:**  
   Enter your desired message in the input area. 

@@ -139,7 +139,8 @@ Control the popup widget with these JavaScript methods:
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `initialPrompt` | string | Initial message sent to the AI when conversation starts. *Note: Only used when initial responses are disabled on the server.* |
+| `initialPrompts` | `Array<{ text: string; icon?: string; iconUrl?: string; id?: string }>` | Clickable starter prompts shown before the first user message. Supports up to 8 prompts. Clicking one sends that prompt text as the user's first message. |
+| `welcome` | `{ title?: string; subtitle?: string; icon?: string; iconUrl?: string }` | Optional welcome header shown above starter prompts. If `welcome` is provided without `initialPrompts`, the header still appears. |
 | `filterResponse` | function | Callback function that processes AI responses before displaying them. Takes the response string as input and returns the modified string. Useful for removing citations or modifying content([see example](/docs/providers/openai-assistant/removing-citations)). |
 | `defaultOpen` | boolean | When `true`, the popup will be open by default but can be closed by the user. |
 | `isOpen` | boolean | When `true`, the popup will be open by default and cannot be closed by the user. |
@@ -147,6 +148,20 @@ Control the popup widget with these JavaScript methods:
 | `onOpen` | function | Callback function that executes when the popup is opened. |
 | `theme` | object | Styling configuration object. Currently supports `width` property to set popup width (default: '512px' on laptop screens). |
 | `apiHost` / `apiStreamHost` | string | URL endpoint for the chat service. Points to Predictable Dialogs backend by default, but can be configured to use your own backend. |
+
+### Initial Prompts and Welcome Behavior
+
+- The starter panel is shown only before the first user message.
+- Once the user clicks a starter prompt or starts typing, the panel is hidden.
+- If a persisted session already exists, the panel is not shown.
+- Prompt card colors follow your guest bubble theme settings.
+
+### Icon Tip for Starter Prompts
+
+- Use `icon` for Unicode emoji/text icons.
+- Use `iconUrl` for public image/SVG URLs.
+- Feather icon catalog: `https://app.unpkg.com/feather-icons@4.29.2/files/dist/icons`
+- Feather icon URL format: `https://unpkg.com/feather-icons@4.29.2/dist/icons/<name>.svg`
 
 ### Chat Elements Styling Parameters (optional)
 To customize the appearance of chat elements—such as message fonts, colors, and bubbles, input—you can use the ["Theme"](/docs/channels/web/theme) tab in the Predictable Dialogs app dashboard. This lets you make changes in real time, rather than updating code with the props listed below.
@@ -170,7 +185,15 @@ The props listed below override both the saved theme and any styling delivered v
 Agent.initPopup({
   agentName: "Customer Support", //Generated on the predictable dialogs app
   autoShowDelay: 5000,
-  initialPrompt: 'Tell me a joke',
+  welcome: {
+    icon: "👋",
+    title: "Welcome to support",
+    subtitle: "Choose a starter question or type your own."
+  },
+  initialPrompts: [
+    { text: "How does onboarding work?", icon: "🧭" },
+    { text: "Show pricing plans", iconUrl: "https://unpkg.com/feather-icons@4.29.2/dist/icons/dollar-sign.svg" }
+  ],
   user: {
     user_id: "ab123",
     user_name: "Abc Def",
