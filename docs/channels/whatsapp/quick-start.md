@@ -29,6 +29,9 @@ To complete this step you would need your **WhatsApp token** & **Phone Number Id
   - On the meta page click **Verify and save** to save the webhook and token.
   - Scroll down on the meta page and locate the field with the name **"messages"**, click the toggle button so it is **"Subscribed"**.
 
+:::danger Final Step Required
+Before you start sending live WhatsApp messages, complete **[Publish Meta App](/docs/channels/whatsapp/business-setup/publish-meta-app)**.
+:::
 
 Now, send a message to your WhatsApp Business Phone Number configured and you should get a reply from the PD agent! (Sometimes it takes a few hours for Meta to
 verify your details)
