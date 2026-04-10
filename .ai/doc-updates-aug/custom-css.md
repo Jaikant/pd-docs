@@ -56,17 +56,14 @@ While a user can easily inspect the classes by using the browser, here are some 
 **Limitations:** Changing background here affects the entire widget. Font changes apply globally to all text.
 
 ## .agent-host-bubble
-**Purpose:** Container for AI/bot message bubbles.
-**Scope:** Applied to host message containers.
-**Responsibility:** Provides base styling for bot messages including typing animation container.
-**Limitations:** Works in conjunction with .bubble-typing class for background color as shown below.
-**CRITICAL LIMITATION:**  Cannot override the background color alone, to override background color use `.agent-host-bubble .bubble-typing` class.
-
-## .agent-host-bubble .bubble-typing
-**Purpose:** Use to override background color in AI/bot message bubbles.
-**Scope:** Applied to the AI/bot message & typing container inside host bubbles.
+**Purpose:** Styling for AI/bot message bubbles.
+**Scope:** Applied to the AI/bot message & typing container.
 **Responsibility:** Handles size transitions during typing animation and background styling.
-**Limitations:** Cannot be used to set the text color, to set the text color use the `agent-host-bubble` class.
+
+## .agent-guest-bubble
+**Purpose:** Styling for user/guest message bubbles.
+**Scope:** Applied to user message containers.
+**Responsibility:** Provides background, text color, and border radius for user messages.
 
 ## .bubble1, .bubble2, .bubble3
 **Purpose:** Individual typing indicator dots with staggered animation.
@@ -92,11 +89,6 @@ then also set the `background-color` in .bubble1, .bubble2 and .bubble3
 **Limitations:** Animation timing and sequence is hardcoded. background-color looks good when matches color of `.agent-host-bubble`
 
 
-## .agent-guest-bubble
-**Purpose:** Styling for user/guest message bubbles.
-**Scope:** Applied to user message containers.
-**Responsibility:** Provides background, text color, and border radius for user messages.
-**Limitations:** Single color scheme for all user messages.
 
 ## .agent-input
 **Purpose:** Base styling for all input containers.
@@ -167,7 +159,6 @@ Avoid using these secondary classes, unless nothing else works out.
 **Scope:** Applied to typing indicator containers (TextBubble.tsx:95, LoadingBubble.tsx:8).
 **Responsibility:** Smooth size transitions during typing animation.
 **CSS Variables:** None.
-**Limitations:** Hardcoded timing (400ms ease-out for width/height).
 
 
 ## .text-input

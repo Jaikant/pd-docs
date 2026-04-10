@@ -84,23 +84,7 @@ In the above CSS:
 
 You can create a wide variety of custom CSS by targeting different classes in the code. The comprehensive class reference below will help you understand what each class controls and how to use them effectively.
 
-### 5. Understanding Class Targeting
-
-While you can easily inspect classes using your browser's developer tools, it's important to understand how different classes work together. For example, the host bubble requires special handling:
-
-```css
-/* ❌ This won't work for background color */
-.agent-host-bubble {
-  background-color: blue;
-}
-
-/* ✅ This is the correct way */
-.agent-host-bubble .bubble-typing {
-  background-color: blue;
-}
-```
-
-### 6. Custom CSS Examples
+### 5. Custom CSS Examples
 
 Here are some examples of adding custom css. 
 
@@ -148,15 +132,13 @@ As demonstrated above, you can customize the dialog by targeting the classes.
 Below is an example that changes the styles on the guest and host bubbles. It targets the `agent-host-bubble`, `.bubble-typing` and `.agent-guest-bubble` classes. 
 
 ```css
-.agent-host-bubble .bubble-typing {
+.agent-host-bubble {
   background-color: red;
 }
 .agent-guest-bubble {
   background-color: red;
 }
 ```
-
-**Important:** For the host bubble, we need to target the `.bubble-typing` class that is inside an element with the `.agent-host-bubble` class. This is because of the [architectural difference](https://github.com/Predictable-Dialogs/agent-embed/blob/main/js/src/assets/index.css) in how host and guest bubbles are structured. The `.agent-host-bubble` class alone cannot override the background color.
 
 #### Example: Enabling Word Wrap in the `pre` Element  
 Below CSS enables text wrapping in `<pre>` tags, preventing horizontal overflow.
@@ -194,13 +176,7 @@ These are the primary classes you should use for most customization needs:
 - **Purpose:** Container for AI/bot message bubbles
 - **Scope:** Applied to host message containers
 - **Responsibility:** Provides base styling for bot messages including typing animation container
-- **⚠️ Critical Limitation:** Cannot override the background color alone. To override background color, use `.agent-host-bubble .bubble-typing` class instead
 
-#### `.agent-host-bubble .bubble-typing`
-- **Purpose:** Use to override background color in AI/bot message bubbles
-- **Scope:** Applied to the AI/bot message & typing container inside host bubbles
-- **Responsibility:** Handles size transitions during typing animation and background styling
-- **Limitations:** Cannot be used to set the text color. To set text color, use the `agent-host-bubble` class
 
 #### `.agent-guest-bubble`
 - **Purpose:** Styling for user/guest message bubbles
@@ -381,11 +357,8 @@ textarea {
 }
 
 .agent-host-bubble {
-  color: var(--agent-host-bubble-color);
-}
-
-.agent-host-bubble > .bubble-typing {
   background-color: var(--agent-host-bubble-bg-color);
+  color: var(--agent-host-bubble-color);
   border: var(--agent-host-bubble-border);
   border-radius: 6px;
 }
