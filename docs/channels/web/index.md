@@ -44,6 +44,9 @@ All web widgets support these essential features:
 ### **Real-time Streaming**
 See AI responses appear in real-time for a more engaging conversation experience. [Learn more](/docs/channels/web/streaming)
 
+### **Feedback Collection**
+Collect message-level thumbs up/down feedback and optional corrective answers to improve chatbot quality. [Learn more](/docs/channels/web/feedback)
+
 ### **Advanced Theming**
 Customize colors, fonts, backgrounds, and styling through our visual theme editor or with custom CSS. [Learn more](/docs/channels/web/theme)
 
@@ -107,6 +110,7 @@ Here's a minimal example to get you started with each widget type:
 ## Next Steps
 
 - **[Embed Your Widget](/docs/channels/web/embed-widget)** - Step-by-step embedding guide
+- **[Feedback](/docs/channels/web/feedback)** - Understand thumbs up/down and corrective answers
 - **[Customize with Themes](/docs/channels/web/theme)** - Visual customization options
 - **[Advanced Styling](/docs/channels/web/custom-css)** - Custom CSS techniques
 - **[Widget Documentation](/docs/category/widgets)** - Different widget options

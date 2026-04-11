@@ -73,6 +73,7 @@ const sidebars = {
               ]
             },
             'channels/web/streaming',
+            'channels/web/feedback',
             {
               type: 'category',
               label: 'Theme',
