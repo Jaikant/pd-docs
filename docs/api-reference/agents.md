@@ -5,6 +5,8 @@ hide_table_of_contents: false
 
 Use these endpoints to create and manage agents.
 
+Agent endpoints manage the agent record. To create AI resources and configure which AI resource an agent uses, see [AI Resources](./ai-resources).
+
 All endpoints require:
 
 - `Authorization: Bearer $PD_ACCESS_TOKEN`

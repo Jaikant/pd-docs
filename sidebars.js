@@ -208,6 +208,11 @@ const sidebars = {
             },
             {
               type: 'doc',
+              id: 'api-reference/ai-resources',
+              label: 'AI Resources'
+            },
+            {
+              type: 'doc',
               id: 'api-reference/endpoints',
               label: 'Sessions'
             },
