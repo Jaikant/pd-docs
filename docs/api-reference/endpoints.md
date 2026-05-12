@@ -1,9 +1,9 @@
 ---
-title: 'Endpoints'
+title: 'Sessions'
 hide_table_of_contents: false
 ---
 
-Endpoint to interact with agent data
+Endpoint to interact with session data
 
 
 ### Get Sessions
@@ -12,8 +12,6 @@ GET https://app.predictabledialogs.com/v1/agents/{agentId}/sessions
 ```
 
 Gets all sessions for agent
-
-You can get the agentId by looking at the url bar of your agent it will be something like : cluut0qmh0306ltbnrmpktciw
 
 #### Example Request
 ```

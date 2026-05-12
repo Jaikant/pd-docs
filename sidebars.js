@@ -203,8 +203,13 @@ const sidebars = {
             },
             {
               type: 'doc',
+              id: 'api-reference/agents',
+              label: 'Agents'
+            },
+            {
+              type: 'doc',
               id: 'api-reference/endpoints',
-              label: 'Endpoints'
+              label: 'Sessions'
             },
           ],
         },

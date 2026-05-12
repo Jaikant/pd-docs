@@ -3,24 +3,37 @@ title: 'Making Requests'
 hide_table_of_contents: false
 ---
 
-You can paste the command below into your terminal to run your first API request. Make sure to replace $PD_ACCESS_TOKEN with your secret access token. And agentId with your agent id. 
-You can get the agent id from the url in the app.
+You can paste the command below into your terminal to run your first API request.
 
-```
-curl https://app.predictabledialogs.com/v1/agents/{agentId}/sessions \
+Replace `$PD_ACCESS_TOKEN` with your secret access token.
+
+```bash
+curl https://app.predictabledialogs.com/v1/agents \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $PD_ACCESS_TOKEN" \
+  -H "Authorization: Bearer $PD_ACCESS_TOKEN"
 ```
 
-This request queries the agent for all sessions. You should get a response back that resembles the following:
-```
-[
-  {
-    "id": "cm11w01ye01ruopn73dtfonf0",
-    "createdAt": "2024-09-14T08:30:08.871Z",
-    "updatedAt": "2024-09-14T08:30:08.871Z",
-    "sessionId": "a49nba"
-  }
-]
+This request returns your agents and identifiers.
 
+```json
+{
+  "data": [
+    {
+      "id": "cmabc123agent",
+      "webId": "cluut0qmh0306ltbnrmpktciw",
+      "name": "My Website Chatbot",
+      "createdAt": "2026-05-02T10:00:00.000Z",
+      "updatedAt": "2026-05-02T10:00:00.000Z",
+      "isPublic": false,
+      "publicSlug": null
+    }
+  ]
+}
 ```
+
+Use:
+
+- `id` for `/v1/agents` lifecycle endpoints.
+- `webId` for current sessions endpoints (`/v1/agents/{agentId}/sessions...`).
+
+The `webId` is the identifier used to open an agent on the webapp.
