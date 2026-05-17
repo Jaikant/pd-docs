@@ -3,37 +3,37 @@ title: 'Sessions'
 hide_table_of_contents: false
 ---
 
-Endpoint to interact with session data
+Use these endpoints to read session and conversation data for an agent.
 
+All endpoints require:
 
-### Get Sessions
+- `Authorization: Bearer $PD_ACCESS_TOKEN`
+
+## Get Sessions
+
 ```
 GET https://app.predictabledialogs.com/v1/agents/{agentId}/sessions
 ```
 
-Gets all sessions for agent
+Gets all sessions for an agent.
 
-#### Example Request
-```
-GET https://app.predictabledialogs.com/v1/agents/cm11onfgu01n1opn7g7ar5ktm/sessions
-```
-Ensure to put the correct agent id, else you would get a 500 Error
+### Example Request
 
-Or using curl
-```
+```bash
 curl https://app.predictabledialogs.com/v1/agents/cm11onfgu01n1opn7g7ar5ktm/sessions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $PD_ACCESS_TOKEN"
 ```
 
-Ensure to add your access token.
+### Request Body
 
-#### Request body
 No request body required.
 
-#### Returns
-- 200: Successful response. Returns the list of sessions for the specified agent.
-```
+### Returns
+
+Returns a list of sessions for the specified agent.
+
+```json
 [
   {
     "id": "cm11w01ye01ruopn73dtfonf0",
@@ -44,39 +44,33 @@ No request body required.
 ]
 ```
 
-#### Security
-This endpoint requires authentication using an access token.
+## Get Conversations
 
-
-### Get Conversations 
 ```
 GET https://app.predictabledialogs.com/v1/agents/{agentId}/sessions/{sessionId}/conversations
 ```
 
-Gets all conversations for agent id and session id.
+Gets all conversations for a session.
 
-You can get the session id from the endpoint `/v1/agents/{agentId}/sessions`
+You can get the `sessionId` from `GET /v1/agents/{agentId}/sessions`.
 
-#### Example Request
-```
-GET https://app.predictabledialogs.com/v1/agents/cluut0qmh0306ltbnrmpktciw/sessions/session123/conversations
-```
+### Example Request
 
-Or using curl
-```
+```bash
 curl https://app.predictabledialogs.com/v1/agents/cm11onfgu01n1opn7g7ar5ktn/sessions/a49nbb/conversations \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $PD_ACCESS_TOKEN"
 ```
-Note: *Currently we are not validating the agent id, in this endpoint as session ids are unique.
-but it is best to use the agent id to future proof the request.*
 
-#### Request body
+### Request Body
+
 No request body required.
 
-#### Returns
-200: Successful response. Returns the list of conversations for the specified agent and session.
-```
+### Returns
+
+Returns a list of conversations for the specified session.
+
+```json
 [
   {
     "id": "cm11w01yw01rvopn7dkrrqxmv",
@@ -92,6 +86,3 @@ No request body required.
   }
 ]
 ```
-
-#### Security
-This endpoint requires authentication using an access token.

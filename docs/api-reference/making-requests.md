@@ -34,6 +34,5 @@ This request returns your agents and identifiers.
 Use:
 
 - `id` for `/v1/agents` lifecycle endpoints.
-- `webId` for current sessions endpoints (`/v1/agents/{agentId}/sessions...`).
 
 The `webId` is the identifier used to open an agent on the webapp.

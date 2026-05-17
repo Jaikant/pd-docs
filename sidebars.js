@@ -213,7 +213,12 @@ const sidebars = {
             },
             {
               type: 'doc',
-              id: 'api-reference/endpoints',
+              id: 'api-reference/agent-theme',
+              label: 'Agent Theme'
+            },
+            {
+              type: 'doc',
+              id: 'api-reference/sessions',
               label: 'Sessions'
             },
           ],
