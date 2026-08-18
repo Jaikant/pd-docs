@@ -15,16 +15,23 @@ Below are the steps to add your phone number:
 - Select the app you wish to configure.
 
 ## Navigate to WhatsApp Configuration
-- Click on "Customize the connect with customers through WhatsApp use case"
+- Click on "Connect with customers through WhatsApp"
 ![Start API Image](/img/whatsapp/connect-whatsapp.webp)
 
 
-- Click on "Start using the API"
-![Start API Image](/img/whatsapp/start-using-api.webp)
+- In **Basic setup**, click **Step 2. Production setup**. In Production setup, we will first add the phone number. We will add the webhook later.
+![Production Setup Image](/img/whatsapp/production-setup-register-number.webp)
 
 
-- Scroll down to the section **Send and receive messages**. Click on the **From** number and select **+ Add phone number** (Image below)
-![Start API Image](/img/whatsapp/send-receive-messages.webp)
+- Go to **Register your WhatsApp phone number**.
+
+- Click **Add new number**.
+
+- Setting the PIN here may or may not work.
+
+- It is preferable to enter the PIN directly in the Predictable Dialogs app. Predictable Dialogs registers the PIN using the API and does not retain the PIN.
+
+- If you have already set the PIN here or from another app, you do not need to enter the PIN in Predictable Dialogs again because the number is already registered with the WhatsApp Cloud API.
 
 
 - Add the "WhatsApp Business display name", Category and Description 
@@ -34,5 +41,8 @@ Below are the steps to add your phone number:
   ![Start API Image](/img/whatsapp/add-phone.webp)
 
 ## Copy Your Phone Number ID
-- Once the number is added, ensure to copy the “Phone Number ID” associated with the newly added phone number. You’ll need this ID for API calls.
-  To get the phone number id, select the newly added number from the "From" drop down. The "Phone number id" will be displayed below the input once selected.
+- Once the number is added, ensure to copy the “Phone Number ID” associated with the newly added phone number.
+- The phone number is the WhatsApp number your customers will message.
+- The Phone Number ID is a Meta ID for that phone number. In the Meta Console, it appears below the phone number.
+
+![Phone Number ID Image](/img/whatsapp/phone-number-id.webp)

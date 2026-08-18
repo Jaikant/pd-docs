@@ -117,7 +117,7 @@ const sidebars = {
                 'channels/whatsapp/business-setup/create-a-meta-app',
                 'channels/whatsapp/business-setup/generate-whatsapp-token',
                 'channels/whatsapp/business-setup/add-phone-number',
-                'channels/whatsapp/business-setup/publish-meta-app',
+                'channels/whatsapp/business-setup/update-webhooks-in-meta',
               ]
             },
             'channels/whatsapp/quick-start',
