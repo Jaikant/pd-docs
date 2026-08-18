@@ -28,11 +28,14 @@ Follow these simple steps to create your Meta app:
       :::
 
 6. **Publishing requirements**
-   - Click **Next**
+   - To publish the app, Meta requires a privacy policy URL.
+   - Click **Next**.
 
-You have completed the meta app creation. You can now go to the Dashboard, by clicking the button **Go to dashboard**. The Dashboard looks something like this (keeps changing)
+You have completed the Meta app creation. You can now go to the Dashboard by clicking the **Go to dashboard** button.
 
+After creating the app, you will be in the Dashboard and can see that the app is not published. Click **Publish** in the left-hand sidebar, then add a link to your privacy policy. After adding the privacy policy link, you will be able to publish the app.
 
+The Dashboard looks something like this (keeps changing).
 ![Meta App Image](/img/whatsapp/meta-app-success.png)
 
 
