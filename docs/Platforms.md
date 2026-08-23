@@ -10,7 +10,7 @@ Below is a list of platforms supported by Predictable Dialogs with relevant inte
 
 | Platform        | Integration Guide                                        |
 |-----------------|----------------------------------------------------------|
-| WordPress       | [WordPress Integration Guide](https://predictabledialogs.com/learn/openai/wordpress-openai-chatbot) |
+| WordPress       | [Predictable Dialogs WordPress Plugin](https://wordpress.org/plugins/predictable-dialogs-ai-assistant/) |
 | React           | [React Integration Guide](https://predictabledialogs.com/learn/openai/react-chatbot-integration)     |
 | Next.js         | [Next.js Integration Guide](https://predictabledialogs.com/learn/openai/nextjs-chatbot-integration)  |
 | HTML            | [HTML Integration Guide](https://predictabledialogs.com/learn/openai/add-chatbot-html)               |
