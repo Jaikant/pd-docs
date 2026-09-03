@@ -101,6 +101,7 @@ const sidebars = {
               },
               items: [
                 'channels/web/advanced-usage/onsend-callback',
+                'channels/web/advanced-usage/tool-result-callback',
                 'channels/web/advanced-usage/pass-through-auth',
               ]
             }

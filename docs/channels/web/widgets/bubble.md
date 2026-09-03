@@ -247,6 +247,7 @@ You can control the widget through JavaScript using the following methods:
 | `user` | Optional | object | User information for session tracking. See [User Information](#user-optional) section below for details. |
 | `contextVariables` | Optional | object | Key-value pairs for `{{variable}}` placeholders in your agent's system instructions. Accepts any property names. |
 | `onSend` | Optional | function | Callback invoked when the user clicks Send (runs alongside the default send action). Useful for custom UI, analytics, or app logic. See [Advanced Usage: onSend Hook](/docs/channels/web/advanced-usage/onsend-callback) for detailed examples. |
+| `onToolResult` | Optional | function | Callback invoked once for each completed tool invocation after an assistant response finishes. Useful for updating page UI or rendering custom webapp UI from tool outputs. See [Advanced Usage: onToolResult Callback](/docs/channels/web/advanced-usage/tool-result-callback) for detailed examples. |
 
 
 ### Widget Behaviour & Styling Parameters (optional)
