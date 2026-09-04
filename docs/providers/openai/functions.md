@@ -1,43 +1,24 @@
 ---
-title: Functions (Coming Soon)
+title: HTTP Tools
 sidebar_position: 3
 ---
 
-# Functions for OpenAI
+# HTTP Tools For OpenAI
 
-Function calling capabilities for OpenAI are currently in development and will be available soon.
+HTTP tools are configured on the chatbot agent skill, not inside the OpenAI provider resource page.
 
-## What's Coming
+Use the **HTTP Tool** when a skill needs to call your own API with `GET`, `POST`, `PUT`, `PATCH`, or `DELETE`. The tool supports endpoint placeholders, input schemas, bearer token authentication, saved API connections, and pass-through auth from the web widget.
 
-OpenAI resources will support:
-- **Custom Functions**: Define your own function schemas
-- **API Integrations**: Connect to external services and databases  
-- **Dynamic Responses**: Generate responses based on real-time data
-- **Tool Management**: Easy function configuration through the Predictable Dialogs interface
+## Where To Configure It
 
-## Current Status
-
-Functions are **not yet available** for OpenAI resources. In the Tools section of your OpenAI resource, you'll see:
-
-```
-Functions: Coming Soon
-```
-
-## Alternative: OpenAI Assistant
-
-If you need function calling capabilities right now, consider using an **OpenAI Assistant** resource instead:
-
-- Functions are fully supported for OpenAI Assistant resources
-- Configure functions on the OpenAI platform  
-- Import and manage them through Predictable Dialogs
-- See the [OpenAI Assistant Function Calling](/docs/providers/openai-assistant/function-calling) guide
-
-## Stay Updated
-
-We'll update this documentation once function calling for OpenAI resources becomes available. The interface will be similar to the OpenAI Assistant implementation but optimized for the faster OpenAI resource architecture.
+1. Open your chatbot agent.
+2. Go to **Knowledge and actions**.
+3. Add an **Action**.
+4. Choose **Custom API**.
+5. Configure the method, endpoint, authentication, and input schema.
 
 ## Related Resources
 
-- **[Function Calling Overview →](/docs/tools/function-calling)** - Learn about function calling concepts, use cases, and best practices
-- **[Tools Overview →](/docs/tools/overview)** - Explore all available AI tool capabilities  
-- **[OpenAI Assistant Function Calling →](/docs/providers/openai-assistant/function-calling)** - Currently available function calling implementation
+- **[HTTP Tool](/docs/tools/http-tool)** - Configure custom API actions.
+- **[Tools Overview](/docs/tools/overview)** - Explore all tool types available inside skills.
+- **[Pass-through auth](/docs/channels/web/advanced-usage/pass-through-auth)** - Use the signed-in website user's token for API actions.

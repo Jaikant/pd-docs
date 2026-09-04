@@ -1,15 +1,15 @@
 ---
-title: How File Search Works
+title: How Knowledge Base & RAG Works
 sidebar_position: 1
 ---
 
-# How File Search Works
+# How Knowledge Base & RAG Works
 
 **Estimated Time: 4 minutes**
 
-File Search, also known as Retrieval-Augmented Generation (RAG), enables your AI agents to find and reference information from uploaded documents. This allows your agents to provide accurate, context-specific answers based on your own content.
+The Knowledge Base tool, also known as File Search or Retrieval-Augmented Generation (RAG), lets a skill find and reference information from uploaded documents. This allows the chatbot to provide accurate, context-specific answers based on your own content.
 
-## How File Search Works
+## How Knowledge Base & RAG Works
 
 1. **Document Processing** - Your files are broken into smaller chunks and converted to vector embeddings
 2. **Vector Storage** - These embeddings are stored in a searchable vector database

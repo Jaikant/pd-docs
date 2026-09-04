@@ -142,21 +142,25 @@ const sidebars = {
       ],
     },
     {
+      type: 'doc',
+      id: 'skills',
+      label: 'Skills',
+    },
+    {
       type: 'category',
       label: 'Tools',
       link: {
         type: 'generated-index',
-        description: 'AI tool capabilities for enhancing your agents.',
+        description: 'Tools that skills use for knowledge, APIs, apps, and website payloads.',
       },
       items: [
         'tools/overview',
-        'tools/function-calling',
         {
           type: 'category',
-          label: 'File Search & RAG',
+          label: 'Knowledge Base & RAG',
           link: {
             type: 'generated-index',
-            description: 'Design, tune, and deploy Retrieval-Augmented Generation in Predictable Dialogs.',
+            description: 'Use uploaded knowledge sources with Retrieval-Augmented Generation in Predictable Dialogs.',
           },
           items: [
             {
@@ -165,6 +169,9 @@ const sidebars = {
             },
           ],
         },
+        'tools/http-tool',
+        'tools/app-connection-tool',
+        'tools/website-payload-tool',
       ],
     },
     {

@@ -3,74 +3,65 @@ title: Tools Overview
 sidebar_position: 1
 ---
 
-# AI Tools Overview
+# Tools
 
 **Estimated Time: 2 minutes**
 
-Tools extend your AI agents with powerful capabilities to interact with external systems, retrieve information, and perform actions beyond generating text responses.
+Tools are capabilities used inside a skill. They let a skill search your knowledge base, call your HTTP endpoints, connect to supported apps, or send structured JSON back to the website where the chatbot is embedded.
 
-## What Are AI Tools?
-
-AI tools allow your agents to:
-
-- **Connect to External APIs** - Make HTTP requests to fetch real-time data or trigger actions
-- **Search Through Documents** - Find relevant information from uploaded files using vector search
-- **Perform Complex Operations** - Execute multi-step workflows combining data retrieval and processing
-
-Think of tools as giving your AI agent "superpowers" to access information and perform tasks that go beyond its training data.
+You add tools from **Knowledge and actions** in the chatbot agent builder. Each tool has a name, a short description that helps the assistant know when to use it, and the configuration needed to run it.
 
 ## Available Tool Types
 
-### Function Calling
+### Knowledge Base & RAG
 
-Connect your AI agents to external APIs and services.
+Use uploaded documents, FAQs, policies, product information, or other files as a searchable knowledge base. Predictable Dialogs processes the files into chunks, stores them in a vector store, and retrieves relevant chunks when the skill needs document-backed answers.
 
-**Use Cases:**
-- **Data Collection** - Capture leads, survey responses, or user feedback
-- **Action Triggers** - Send emails, create tickets, or update databases  
-- **Information Retrieval** - Fetch order status, weather data, or account details
+**Learn more:** [How Knowledge Base & RAG works](/docs/tools/file-search/how-file-search-works)
 
-**How it works:** Your agent calls predefined functions with parameters, which make HTTP requests to your endpoints.
+### HTTP Tool
 
-**Learn more:** [Function Calling Guide →](/docs/tools/function-calling)
+Call your own API endpoints with `GET`, `POST`, `PUT`, `PATCH`, or `DELETE`. Use HTTP tools to look up live data, create records, update systems, or trigger workflows through your backend.
 
-### File Search (RAG)
+**Learn more:** [HTTP Tool](/docs/tools/http-tool)
 
-Enable your agents to search through uploaded documents and knowledge bases.
+### App Connection Tool
 
-**Use Cases:**
-- **Knowledge Base Queries** - Search company documentation, policies, or FAQs
-- **Document Analysis** - Extract information from reports, contracts, or manuals
-- **Contextual Responses** - Provide answers based on your specific content
+Connect a supported app account and choose which app actions the skill can use. Google Calendar is currently supported for searching available slots and booking appointments.
 
-**How it works:** Documents are processed into searchable chunks using vector embeddings, allowing semantic search.
+**Learn more:** [App Connection Tool](/docs/tools/app-connection-tool)
 
-**Learn more:** [How File Search Works →](/docs/tools/file-search/how-file-search-works)
+### Website Payload Tool
 
-## Provider Compatibility
+Send structured JSON from the assistant to your website. Your website can receive the completed payload through the widget `onToolResult` callback and use it to update UI, call JavaScript, or trigger application workflows.
 
-| Tool Type | OpenAI Assistant | OpenAI |
-|-----------|:----------------:|:------:|
-| Function Calling | ✅ Available | 🚧 Coming Soon |
-| File Search | ✅ Available | ✅ Available |
+**Learn more:** [Website Payload Tool](/docs/tools/website-payload-tool)
+
+## How Tools Run
+
+The assistant decides when to use a tool based on the skill instructions, the tool name, and the tool description. You can also configure advanced rules for when a tool is eligible, whether it should run after another item, or whether it should be skipped for some messages.
+
+Tool results are visible in Sessions so you can inspect what ran, what inputs were sent, and what output came back.
 
 ## Getting Started
 
-1. **Choose Your Provider** - Select an AI provider that supports the tools you need
-2. **Configure Tools** - Set up function calling endpoints or upload documents for search
-3. **Test Your Agent** - Verify tools work correctly in chat interactions
-4. **Monitor Performance** - Review tool usage in session logs
+1. Open your chatbot agent.
+2. Go to **Knowledge and actions**.
+3. Add a Knowledge item or an Action item.
+4. Name the tool and describe when the assistant should use it.
+5. Configure the tool, test it when testing is available, and review tool usage in Sessions.
 
 ## Best Practices
 
-- **Start Simple** - Begin with one tool type and expand gradually
-- **Test Thoroughly** - Verify tool behavior with various inputs before going live
-- **Monitor Costs** - Tool usage affects token consumption and API costs
-- **Secure Endpoints** - Use proper authentication for external API connections
-- **Optimize Performance** - Configure tools for your specific use case and response time needs
+- Keep each tool focused on one job.
+- Use clear tool names and usage descriptions.
+- Keep input schemas as small as practical.
+- Use pass-through auth for user-specific app actions whenever the action should run with the signed-in user's permissions.
+- Review Sessions after testing so you can see the exact tool inputs and outputs.
 
 ## Next Steps
 
-- [Function Calling Guide →](/docs/tools/function-calling) - Learn to connect external APIs
-- [How File Search Works →](/docs/tools/file-search/how-file-search-works) - Set up document search capabilities
-- [OpenAI →](/docs/providers/openai/create-resource) - Get started with OpenAI provider
+- [Skills](/docs/skills)
+- [HTTP Tool](/docs/tools/http-tool)
+- [Knowledge Base & RAG](/docs/tools/file-search/how-file-search-works)
+- [Pass-through auth](/docs/channels/web/advanced-usage/pass-through-auth)

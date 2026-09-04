@@ -1,11 +1,11 @@
 ---
-title: File Search Setup  
+title: Knowledge Base & RAG Setup
 sidebar_position: 2
 ---
 
-# OpenAI File Search
+# OpenAI Knowledge Base & RAG
 
-This guide covers the specific steps for setting up file search with OpenAI. For an overview of file search concepts, document preparation, and best practices, see our [How File Search Works guide →](/docs/tools/file-search/how-file-search-works).
+This guide covers the specific steps for setting up searchable files with OpenAI. For an overview of knowledge base and RAG concepts, document preparation, and best practices, see [How Knowledge Base & RAG works](/docs/tools/file-search/how-file-search-works).
 
 When you use the OpenAI provider, you have direct control over:
 
@@ -139,5 +139,5 @@ Control how many relevant chunks the AI receives for each search:
 
 ## Related Resources
 
-- **[How File Search Works →](/docs/tools/file-search/how-file-search-works)** - Learn about RAG concepts, document preparation, and optimization strategies
+- **[How Knowledge Base & RAG works](/docs/tools/file-search/how-file-search-works)** - Learn about RAG concepts, document preparation, and optimization strategies
 - **[Tools Overview →](/docs/tools/overview)** - Explore all available AI tool capabilities

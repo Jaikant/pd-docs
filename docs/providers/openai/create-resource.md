@@ -37,11 +37,11 @@ An OpenAI resource connects directly to OpenAI's Responses API, providing fast r
    - Add **System Instructions** to customize the AI's behavior (optional)
 3. Click **Save** to create the resource and connect it to your agent
 
-### Step 5: Optional File Search Setup
+### Step 5: Optional Knowledge Base Setup
 After creating the resource, you'll see an alert: **"AI resource [name] created."** with an optional button to add files for search capabilities.
 
-- Click the button to immediately configure file search
-- Or skip this step and configure file search later from the AI Resources page
+- Click the button to immediately add searchable files
+- Or skip this step and add knowledge later from **Knowledge and actions** on the agent
 
 ## Creating from AI Resources Page
 
@@ -51,7 +51,7 @@ After creating the resource, you'll see an alert: **"AI resource [name] created.
 
 ## Next Steps
 
-- **Configure File Search**: Set up document search capabilities for your AI resource
+- **Configure Knowledge Base & RAG**: Add searchable documents to the agent skill
 - **Choose Channel**: Embed your agent on your website or connect to WhatsApp
 - **Test Your Agent**: Send test messages to verify everything works correctly
 
@@ -60,6 +60,6 @@ After creating the resource, you'll see an alert: **"AI resource [name] created.
 | Feature | OpenAI | OpenAI Assistant |
 |---------|---------|------------------|
 | **Response Time** | ~50ms | ~2-3s |
-| **File Search** | Configured in Predictable Dialogs | Configured on OpenAI Platform |
-| **Functions** | Coming soon | Available now |
+| **Knowledge Base & RAG** | Configured in Predictable Dialogs | Configured on OpenAI Platform |
+| **Tools** | Configured in agent skills | Configured in agent skills where supported |
 | **Setup Complexity** | Simple API key + model | Requires Assistant ID |
