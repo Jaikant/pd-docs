@@ -245,7 +245,7 @@ You can control the widget through JavaScript using the following methods:
 |----------|------------------|------|-------------|
 | `agentName` | Required | string | Specifies the Predictable Dialogs agent name or your custom agent name |
 | `user` | Optional | object | User information for session tracking. See [User Information](#user-optional) section below for details. |
-| `contextVariables` | Optional | object | Key-value pairs for `{{variable}}` placeholders in your agent's system instructions. Accepts any property names. |
+| `contextVariables` | Optional | object | Key-value pairs for `{{variable}}` placeholders in your agent's system instructions and for guiding custom API tool inputs. Accepts any property names. See [Advanced Usage: Context Variables](/docs/channels/web/advanced-usage/context-variables). |
 | `getAuthToken` | Optional | function | `() => Promise<string>` - Callback invoked before chat requests to return the signed-in user's raw token for API actions that use pass-through auth. See [Advanced Usage: Pass-through Auth](/docs/channels/web/advanced-usage/pass-through-auth). |
 | `onSend` | Optional | function | Callback invoked when the user clicks Send (runs alongside the default send action). Useful for custom UI, analytics, or app logic. See [Advanced Usage: onSend Hook](/docs/channels/web/advanced-usage/onsend-callback) for detailed examples. |
 | `onToolResult` | Optional | function | Callback invoked once for each completed tool invocation after an assistant response finishes. Useful for updating page UI or rendering custom webapp UI from tool outputs. See [Advanced Usage: onToolResult Callback](/docs/channels/web/advanced-usage/tool-result-callback) for detailed examples. |
@@ -460,6 +460,8 @@ For complete session documentation, see the [Sessions documentation](/docs/featu
 
 ### contextVariables (optional)
 Provide arbitrary key-value pairs that can be referenced in your agent's system instructions using `{{variableName}}` placeholders. This allows you to personalize assistant behavior per page or user segment.
+
+For detailed examples, including custom API tool path and query parameter usage, see [Advanced Usage: Context Variables](/docs/channels/web/advanced-usage/context-variables).
 
 **Type:**
 ```typescript

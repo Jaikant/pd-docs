@@ -233,7 +233,7 @@ The reset function works programmatically, clearing all session data and reiniti
 |----------|------------------|------|-------------|
 | `agentName` | Required | string | Specifies the agent name from Predictable Dialogs or your custom backend. This identifies which AI agent will process the conversations. |
 | `user` | Optional | object | User information for session tracking. See [User Information](#user-optional) section below for details. |
-| `contextVariables` | Optional | object | Key-value pairs that replace `{{variable}}` placeholders in your agent's system instructions. Any property name is accepted and the values persist for the session. |
+| `contextVariables` | Optional | object | Key-value pairs that replace `{{variable}}` placeholders in your agent's system instructions and can guide custom API tool inputs. Any property name is accepted and the values persist for the session. See [Advanced Usage: Context Variables](/docs/channels/web/advanced-usage/context-variables). |
 | `getAuthToken` | Optional | function | `() => Promise<string>` - Callback invoked before chat requests to return the signed-in user's raw token for API actions that use pass-through auth. See [Advanced Usage: Pass-through Auth](/docs/channels/web/advanced-usage/pass-through-auth). |
 | `onSend` | Optional | function | Callback invoked when the user clicks Send (runs alongside the default send action). Useful for custom UI, analytics, or app logic. See [Advanced Usage: onSend Hook](/docs/channels/web/advanced-usage/onsend-callback) for detailed examples.|
 | `onToolResult` | Optional | function | Callback invoked once for each completed tool invocation after an assistant response finishes. Useful for updating page UI or rendering custom webapp UI from tool outputs. See [Advanced Usage: onToolResult Callback](/docs/channels/web/advanced-usage/tool-result-callback) for detailed examples. |
@@ -394,6 +394,8 @@ For complete session documentation, see the [Sessions documentation](/docs/featu
 
 ### contextVariables (optional)
 Pass dynamic values that can be referenced inside your agent's system instructions using `{{variableName}}` placeholders. This is useful for injecting page metadata, logged-in state, or any other per-session context.
+
+For detailed examples, including custom API tool path and query parameter usage, see [Advanced Usage: Context Variables](/docs/channels/web/advanced-usage/context-variables).
 
 **Type:**
 ```typescript

@@ -100,6 +100,7 @@ const sidebars = {
                 description: 'This section covers advanced features and programmatic control options available across the web widget types (Standard, Bubble, and Popup).',
               },
               items: [
+                'channels/web/advanced-usage/context-variables',
                 'channels/web/advanced-usage/onsend-callback',
                 'channels/web/advanced-usage/tool-result-callback',
                 'channels/web/advanced-usage/pass-through-auth',
