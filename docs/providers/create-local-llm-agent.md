@@ -1,9 +1,10 @@
 ---
-title: Creating a Local LLM Resource
+title: Creating a Local LLM Agent
+sidebar_label: Local LLM
 sidebar_position: 1
 ---
 
-# Creating a Local LLM Resource
+# Creating a Local LLM Agent
 **Estimated Time: 5 minutes**
 
 A Local LLM resource connects your agent to a self-hosted or cloud-hosted model through an OpenAI-compatible API endpoint. Use this option when you run your own model server, such as Ollama, vLLM, or another OpenAI-compatible gateway.

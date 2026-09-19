@@ -1,9 +1,10 @@
 ---
-title: Creating an OpenAI Resource
+title: Creating an OpenAI Agent
+sidebar_label: OpenAI
 sidebar_position: 1
 ---
 
-# Creating an OpenAI Resource
+# Creating an OpenAI Agent
 **Estimated Time: 2 minutes**
 
 An OpenAI resource connects your agent to OpenAI models using your own OpenAI API key or using the Predictable Dialogs platform key. Predictable Dialogs supports the latest OpenAI models exposed in the model selector.

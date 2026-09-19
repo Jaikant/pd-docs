@@ -1,9 +1,10 @@
 ---
-title: Creating a Gemini Resource
+title: Creating a Gemini Agent
+sidebar_label: Gemini
 sidebar_position: 1
 ---
 
-# Creating a Gemini Resource
+# Creating a Gemini Agent
 **Estimated Time: 2 minutes**
 
 A Gemini resource connects your agent to Google Gemini models using your own Gemini API key. Predictable Dialogs supports the latest Gemini models exposed in the model selector.

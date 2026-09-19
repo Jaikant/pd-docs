@@ -1,9 +1,10 @@
 ---
-title: Creating an Anthropic Resource
+title: Creating an Anthropic Agent
+sidebar_label: Anthropic
 sidebar_position: 1
 ---
 
-# Creating an Anthropic Resource
+# Creating an Anthropic Agent
 **Estimated Time: 2 minutes**
 
 An Anthropic resource connects your agent to Claude models using your own Anthropic API key. Predictable Dialogs supports the latest Anthropic models exposed in the model selector.

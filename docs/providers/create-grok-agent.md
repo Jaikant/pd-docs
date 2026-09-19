@@ -1,9 +1,10 @@
 ---
-title: Creating a Grok Resource
+title: Creating a Grok Agent
+sidebar_label: Grok
 sidebar_position: 1
 ---
 
-# Creating a Grok Resource
+# Creating a Grok Agent
 **Estimated Time: 2 minutes**
 
 A Grok resource connects your agent to xAI Grok models using your own xAI API key. Predictable Dialogs supports the latest Grok models exposed in the model selector.
