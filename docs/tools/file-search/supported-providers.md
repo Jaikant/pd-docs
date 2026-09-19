@@ -1,24 +1,23 @@
 ---
 title: Supported Providers
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Supported Providers
 
+Knowledge Base & RAG is configured in Predictable Dialogs from **Knowledge and actions** on the chatbot agent. It can be used with AI resources that support the current agent workflow.
+
 ## OpenAI
-Knowledge Base & RAG is fully available with Predictable Dialogs managing the vector stores.
+
+OpenAI resources support Knowledge Base & RAG with Predictable Dialogs managing vector stores and retrieval settings.
 
 **Features:**
 - Direct file upload through Predictable Dialogs
 - Configurable chunk settings
+- Retrieval configured on the agent skill
 
-**Learn more:** [OpenAI File Search Setup](/docs/providers/openai/file-search)
+**Learn more:** [Knowledge Base & RAG Setup](/docs/tools/file-search/setup)
 
-## OpenAI Assistant
-Knowledge Base & RAG is supported using OpenAI's vector store system.
+## Other Providers
 
-**Features:**
-- Integration with OpenAI's file management
-- Assistant-level file search configuration
-
-**Learn more:** [OpenAI Assistant Documentation](https://platform.openai.com/docs/assistants/tools/file-search)
+Anthropic, Gemini, Grok, and Local LLM resources can be connected as the agent's model provider. If you use Knowledge Base & RAG with these providers, configure files and retrieval from **Knowledge and actions** in Predictable Dialogs.

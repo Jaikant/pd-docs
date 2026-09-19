@@ -1,11 +1,11 @@
 ---
 title: 'Web Channel Overview'
-description: 'Embed AI chatbot widgets on your website with customizable interfaces and advanced features'
+description: 'Embed agent widgets on your website with customizable interfaces and advanced features'
 ---
 
 # Web Channel
 
-The Web channel allows you to embed AI chatbot widgets directly into your website, providing interactive AI assistance to your visitors. Choose from three different widget types and customize them to match your brand.
+The Web channel allows you to embed agent widgets directly into your website, providing interactive AI assistance to your visitors. Choose from three different widget types and customize them to match your brand.
 
 ## Widget Types
 
@@ -67,7 +67,7 @@ Automatically capture user data including IP address and country, with optional 
 Ready to add a chatbot to your website? Follow these steps:
 
 1. **[Create your agent](/docs/getting-started/create-agent)** in the Predictable Dialogs dashboard
-2. **Connect an AI resource** like [OpenAI](/docs/providers/openai/create-resource) or [OpenAI Assistant](/docs/providers/openai-assistant/create-resource)
+2. **Connect an AI resource** like [OpenAI](/docs/providers/openai/create-resource), [Anthropic](/docs/providers/anthropic/create-resource), [Gemini](/docs/providers/gemini/create-resource), [Grok](/docs/providers/grok/create-resource), or [Local LLM](/docs/providers/local-llm/create-resource)
 3. **[Choose and embed your widget](/docs/channels/web/embed-widget)** using our step-by-step guide
 4. **[Customize your widget](/docs/channels/web/theme)** with themes and styling to match your brand
 

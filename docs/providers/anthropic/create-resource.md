@@ -1,19 +1,19 @@
 ---
-title: Creating an OpenAI Resource
+title: Creating an Anthropic Resource
 sidebar_position: 1
 ---
 
-# Creating an OpenAI Resource
+# Creating an Anthropic Resource
 **Estimated Time: 2 minutes**
 
-An OpenAI resource connects your agent to OpenAI models using your own OpenAI API key or using the Predictable Dialogs platform key. Predictable Dialogs supports the latest OpenAI models exposed in the model selector.
+An Anthropic resource connects your agent to Claude models using your own Anthropic API key. Predictable Dialogs supports the latest Anthropic models exposed in the model selector.
 
-## Before You Start (Optional)
+## Before You Start
 
-You can bring your own OpenAI API key if you want to use your own OpenAI account.
+You need an Anthropic API key.
 
-1. Open the [OpenAI API keys page](https://platform.openai.com/api-keys).
-2. Create or copy an API key. OpenAI only shows the full secret key when it is created, so store it securely.
+1. Open the [Anthropic Console](https://console.anthropic.com/).
+2. Go to **API Keys** and create or copy a key.
 3. Make sure the account has billing and model access for the model you want to use.
 
 ## Create From The Agents Page
@@ -23,11 +23,11 @@ You can bring your own OpenAI API key if you want to use your own OpenAI account
 2. Click **+ Create agent**.
 3. Give a name to your agent.
 
-### Step 2: Configure OpenAI Settings
+### Step 2: Configure Anthropic Settings
 1. Click **ADD AI**.
-2. Select **OpenAI** as the provider.
-3. Select an existing OpenAI API key, enter a new API key, or use platform defaults if available.
-4. Select the OpenAI model you want to use. The latest supported OpenAI models are listed in the model dropdown.
+2. Select **Anthropic** as the provider.
+3. Select an existing Anthropic API key or enter a new API key.
+4. Select the Claude model you want to use. The latest supported Anthropic models are listed in the model dropdown.
 5. Click **Next** to validate the key and model.
 
 ### Step 3: Add The Instructions

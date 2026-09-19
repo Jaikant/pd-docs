@@ -143,7 +143,7 @@ Control the popup widget with these JavaScript methods:
 |-----------|------|-------------|
 | `initialPrompts` | `Array<{ text: string; icon?: string; iconUrl?: string; id?: string }>` | Clickable starter prompts shown before the first user message. Supports up to 8 prompts. Clicking one sends that prompt text as the user's first message. |
 | `welcome` | `{ title?: string; subtitle?: string; icon?: string; iconUrl?: string }` | Optional welcome header shown above starter prompts. If `welcome` is provided without `initialPrompts`, the header still appears. |
-| `filterResponse` | function | Callback function that processes AI responses before displaying them. Takes the response string as input and returns the modified string. Useful for removing citations or modifying content([see example](/docs/providers/openai-assistant/removing-citations)). |
+| `filterResponse` | function | Callback function that processes AI responses before displaying them. Takes the response string as input and returns the modified string. Useful for removing citations, provider-specific markers, or modifying content. |
 | `defaultOpen` | boolean | When `true`, the popup will be open by default but can be closed by the user. |
 | `isOpen` | boolean | When `true`, the popup will be open by default and cannot be closed by the user. |
 | `onClose` | function | Callback function that executes when the popup is closed. |

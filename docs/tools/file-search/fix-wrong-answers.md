@@ -1,7 +1,7 @@
 ---
 title: Fix wrong answers
 description: "Common problems and solutions for tuning file search on your docs"
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 Your chatbot answers by:

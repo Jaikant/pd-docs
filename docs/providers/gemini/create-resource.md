@@ -1,20 +1,20 @@
 ---
-title: Creating an OpenAI Resource
+title: Creating a Gemini Resource
 sidebar_position: 1
 ---
 
-# Creating an OpenAI Resource
+# Creating a Gemini Resource
 **Estimated Time: 2 minutes**
 
-An OpenAI resource connects your agent to OpenAI models using your own OpenAI API key or using the Predictable Dialogs platform key. Predictable Dialogs supports the latest OpenAI models exposed in the model selector.
+A Gemini resource connects your agent to Google Gemini models using your own Gemini API key. Predictable Dialogs supports the latest Gemini models exposed in the model selector.
 
-## Before You Start (Optional)
+## Before You Start
 
-You can bring your own OpenAI API key if you want to use your own OpenAI account.
+You need a Gemini API key.
 
-1. Open the [OpenAI API keys page](https://platform.openai.com/api-keys).
-2. Create or copy an API key. OpenAI only shows the full secret key when it is created, so store it securely.
-3. Make sure the account has billing and model access for the model you want to use.
+1. Open the [Google AI Studio API keys page](https://aistudio.google.com/apikey).
+2. Create or copy an API key.
+3. Make sure the Google project has billing and model access for the model you want to use.
 
 ## Create From The Agents Page
 
@@ -23,11 +23,11 @@ You can bring your own OpenAI API key if you want to use your own OpenAI account
 2. Click **+ Create agent**.
 3. Give a name to your agent.
 
-### Step 2: Configure OpenAI Settings
+### Step 2: Configure Gemini Settings
 1. Click **ADD AI**.
-2. Select **OpenAI** as the provider.
-3. Select an existing OpenAI API key, enter a new API key, or use platform defaults if available.
-4. Select the OpenAI model you want to use. The latest supported OpenAI models are listed in the model dropdown.
+2. Select **Gemini** as the provider.
+3. Select an existing Gemini API key or enter a new API key.
+4. Select the Gemini model you want to use. The latest supported Gemini models are listed in the model dropdown.
 5. Click **Next** to validate the key and model.
 
 ### Step 3: Add The Instructions

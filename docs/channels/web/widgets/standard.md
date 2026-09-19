@@ -245,7 +245,7 @@ The reset function works programmatically, clearing all session data and reiniti
 |----------|------|-------------|
 | `initialPrompts` | `Array<{ text: string; icon?: string; iconUrl?: string; id?: string }>` | Clickable starter prompts shown before the first user message. Supports up to 8 prompts. Clicking one sends that prompt text as the user's first message. |
 | `welcome` | `{ title?: string; subtitle?: string; icon?: string; iconUrl?: string }` | Optional welcome header shown above starter prompts. If `welcome` is provided without `initialPrompts`, the header still appears. |
-| `filterResponse` | function | A callback function that processes the AI's responses before displaying them. Takes the original response string as input and should return the modified response string. Useful for removing citations or formatting responses ([see example](/docs/providers/openai-assistant/removing-citations)). |
+| `filterResponse` | function | A callback function that processes the AI's responses before displaying them. Takes the original response string as input and should return the modified response string. Useful for removing citations, provider-specific markers, or formatting responses. |
 | `apiHost` / `apiStreamHost` | string | Endpoint URL that connects to the backend. Can be configured to use your own backend if needed. |
 
 ### Initial Prompts and Welcome Behavior

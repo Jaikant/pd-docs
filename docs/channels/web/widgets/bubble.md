@@ -257,7 +257,7 @@ You can control the widget through JavaScript using the following methods:
 |----------|------|-------------|
 | `initialPrompts` | `Array<{ text: string; icon?: string; iconUrl?: string; id?: string }>` | Clickable starter prompts shown before the first user message. Supports up to 8 prompts. Clicking one sends that prompt text as the user's first message. |
 | `welcome` | `{ title?: string; subtitle?: string; icon?: string; iconUrl?: string }` | Optional welcome header shown above starter prompts. If `welcome` is provided without `initialPrompts`, the header still appears. |
-| `filterResponse` | function | `(response: string) => string` - Function to process the AI's responses before display ([see example](/docs/providers/openai-assistant/removing-citations)). |
+| `filterResponse` | function | `(response: string) => string` - Function to process the AI's responses before display. Useful for removing citations, provider-specific markers, or formatting responses. |
 | `onClose` | function | `() => void` - Function executed when the chat popup closes |
 | `onOpen` | function | `() => void` - Function executed when the chat popup opens |
 | `theme` | object | Contains customization properties for the widget's appearance |

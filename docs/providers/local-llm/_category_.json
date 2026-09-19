@@ -1,0 +1,8 @@
+{
+  "label": "Local LLM",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Guides for OpenAI-compatible local LLM providers."
+  }
+}

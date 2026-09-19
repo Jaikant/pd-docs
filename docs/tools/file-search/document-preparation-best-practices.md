@@ -1,6 +1,6 @@
 ---
 title: Document Preparation Best Practices
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Document Preparation Best Practices

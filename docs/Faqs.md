@@ -49,9 +49,7 @@ slug: /faqs
   Inside your system instructions, reference those keys using `{{page}}`, `{{plan}}`, or `{{betaFlag}}`. At runtime the widget replaces each placeholder before the model sees the prompt, letting you shape instructions per session.
 </details>
 <details>
-  <summary>How to remove the OpenAI Citation markers e.g&nbsp; `【5:0†source】`</summary>
+  <summary>Can I modify AI responses before they are displayed?</summary>
 
-   On WhatsApp, the citation markers are removed by default.
-   For the web widgets, you can remove it by using the `filterResponse` prop. 
-   You can follow this [documentation](/docs/providers/openai-assistant/removing-citations) to remove the citation markers.
+   Yes. For web widgets, use the `filterResponse` prop to transform the model response before it is shown to visitors. This is useful for formatting responses or removing provider-specific markers.
 </details>

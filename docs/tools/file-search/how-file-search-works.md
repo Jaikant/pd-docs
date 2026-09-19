@@ -1,9 +1,9 @@
 ---
-title: How Knowledge Base & RAG Works
-sidebar_position: 1
+title: How RAG Works
+sidebar_position: 2
 ---
 
-# How Knowledge Base & RAG Works
+# How RAG Works
 
 **Estimated Time: 4 minutes**
 
