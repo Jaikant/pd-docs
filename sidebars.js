@@ -92,6 +92,7 @@ const sidebars = {
               ],
             },
             'channels/web/custom-css',
+            'channels/web/ui-renderers',
             {
               type: 'category',
               label: 'Advanced Usage',
@@ -152,7 +153,7 @@ const sidebars = {
       label: 'Tools',
       link: {
         type: 'generated-index',
-        description: 'Tools that skills use for knowledge, APIs, apps, and website payloads.',
+        description: 'Tools that skills use for knowledge, APIs, apps, and custom web UI.',
       },
       items: [
         'tools/overview',
@@ -172,7 +173,8 @@ const sidebars = {
         },
         'tools/http-tool',
         'tools/app-connection-tool',
-        'tools/website-payload-tool',
+        'tools/send-data-to-ui',
+        'tools/request-user-input',
       ],
     },
     {
@@ -230,6 +232,11 @@ const sidebars = {
               type: 'doc',
               id: 'api-reference/sessions',
               label: 'Sessions'
+            },
+            {
+              type: 'doc',
+              id: 'api-reference/custom-agent-ui',
+              label: 'Custom Agent UI'
             },
           ],
         },

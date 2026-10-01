@@ -47,6 +47,6 @@ The **Skill Instructions** card contains the agent behaviour. It also contains *
 
 ## Next Steps
 
-- **Add knowledge and actions**: Use the [Tools overview](/docs/tools/overview) to add searchable documents, API tools, app connections, or website payload actions to the agent skill.
+- **Add knowledge and actions**: Use the [Tools overview](/docs/tools/overview) to add searchable documents, API tools, app connections, or Custom Agent UI actions to the agent skill.
 - **Choose Channel**: Embed your agent on your website or connect to WhatsApp.
 - **Test Your Agent**: Send test messages to verify everything works correctly.

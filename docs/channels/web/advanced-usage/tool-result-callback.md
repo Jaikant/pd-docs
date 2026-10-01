@@ -4,7 +4,7 @@ description: Use completed tool outputs from your web widget with the onToolResu
 
 # onToolResult Callback
 
-The `onToolResult` prop lets your website receive completed tool outputs from an assistant response. Use it when a tool result should update your page UI, populate a custom panel, or render structured data outside the chat transcript.
+The `onToolResult` prop lets your website receive completed tool outputs from an assistant response. Use it when a tool result should update your page UI, populate a custom panel, or trigger application logic outside the chat transcript. To render a card **inside** the conversation as soon as output arrives, use [`uiRenderers`](/docs/channels/web/ui-renderers) instead.
 
 `onToolResult` only runs after an assistant response has finished. It fires once for each completed tool invocation and includes both successful and failed tool calls.
 
@@ -154,7 +154,9 @@ Agent.initStandard({
 });
 ```
 
-Keep this UI separate from the chatbot messages. The chat transcript remains controlled by the widget, while `onToolResult` gives your page a clean signal for rendering custom experiences from completed tool outputs.
+This example keeps its UI outside the chatbot messages. You can also register a `uiRenderers` function for the same tool to display its output inside the conversation. Rendering does not depend on `onToolResult`.
+
+Handle visitor interactions with event listeners in your renderer. Input renderers provide their own controls and use `context.requestSubmit()` or `context.requestCancel()` to resolve a pending form. Those methods are separate from `onToolResult`.
 
 ## Behavior Notes
 

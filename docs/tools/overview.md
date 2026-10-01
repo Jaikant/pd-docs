@@ -7,7 +7,7 @@ sidebar_position: 1
 
 **Estimated Time: 2 minutes**
 
-Tools are capabilities used inside a skill. They let a skill search your knowledge base, call your HTTP endpoints, connect to supported apps, or send structured JSON back to the website where the chatbot is embedded.
+Tools are capabilities used inside a skill. They let a skill search your knowledge base, call your HTTP endpoints, connect to supported apps, or exchange structured data with the website where the chatbot is embedded.
 
 You add tools from **Knowledge and actions** in the chatbot agent builder. Each tool has a name, a short description that helps the assistant know when to use it, and the configuration needed to run it.
 
@@ -31,11 +31,17 @@ Connect a supported app account and choose which app actions the skill can use. 
 
 **Learn more:** [App Connection Tool](/docs/tools/app-connection-tool)
 
-### Website Payload Tool
+### Send Data to UI
 
-Send structured JSON from the assistant to your website. Your website can receive the completed payload through the widget `onToolResult` callback and use it to update UI, call JavaScript, or trigger application workflows.
+Send structured JSON from the assistant to your website. Use `uiRenderers` to show it inside the conversation, or `onToolResult` to update UI elsewhere on the page after the response finishes.
 
-**Learn more:** [Website Payload Tool](/docs/tools/website-payload-tool)
+**Learn more:** [Send Data to UI](/docs/tools/send-data-to-ui)
+
+### Request User Input
+
+Ask a visitor for information through custom interactive UI inside the conversation. The assistant provides the UI definition; your registered renderer displays it, and the widget submits or cancels the visitor's response.
+
+**Learn more:** [Request User Input](/docs/tools/request-user-input)
 
 ## How Tools Run
 
@@ -63,5 +69,7 @@ Tool results are visible in Sessions so you can inspect what ran, what inputs we
 
 - [Skills](/docs/skills)
 - [HTTP Tool](/docs/tools/http-tool)
+- [Send Data to UI](/docs/tools/send-data-to-ui)
+- [Request User Input](/docs/tools/request-user-input)
 - [Knowledge Base & RAG](/docs/tools/file-search/how-file-search-works)
 - [Pass-through auth](/docs/channels/web/advanced-usage/pass-through-auth)

@@ -17,7 +17,7 @@ A skill can include:
 
 - Instructions that define how the agent should behave.
 - Knowledge sources the agent can search.
-- Tools for APIs, app connections, or website payloads.
+- Tools for APIs, app connections, or Custom Agent UI.
 
 When you update skill instructions or add items under **Knowledge and actions**, you are configuring the agent's skill.
 
@@ -42,7 +42,8 @@ Current tool types include:
 - [Knowledge Base & RAG](/docs/tools/file-search/how-file-search-works)
 - [HTTP Tool](/docs/tools/http-tool)
 - [App Connection Tool](/docs/tools/app-connection-tool)
-- [Website Payload Tool](/docs/tools/website-payload-tool)
+- [Send Data to UI](/docs/tools/send-data-to-ui)
+- [Request User Input](/docs/tools/request-user-input)
 
 ## Coming Later: Multiple Skills
 
