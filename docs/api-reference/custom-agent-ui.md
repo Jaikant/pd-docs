@@ -19,7 +19,7 @@ type ToolRendererHandle = {
 
 type ToolRenderer = (
   container: HTMLDivElement,
-  ui: unknown,
+  uiData: unknown,
   context: {
     initialValues?: unknown;
     requestSubmit?: () => Promise<void>;
@@ -33,7 +33,7 @@ type ToolRenderer = (
 | Argument | Description |
 | --- | --- |
 | `container` | Widget-owned element into which the renderer mounts its UI. |
-| `ui` | Tool output for a completed output tool, or tool arguments (which may be empty) for pending input. The renderer does not receive the tool's lifecycle source. |
+| `uiData` | Tool output for a completed output tool, or tool arguments (which may be empty) for pending input. The renderer does not receive the tool's lifecycle source. |
 | `context.initialValues` | Previously submitted values, when available for restored input UI. |
 | [`context.requestSubmit()`](#request-submit) | Requests submission of pending input. Available only for input UI. |
 | [`context.requestCancel()`](#request-cancel) | Cancels pending input. Available only for input UI. |

@@ -13,10 +13,12 @@ This differs from other tools, which have produced a tool output which also coul
 
 1. In your agent's **Knowledge and actions** section, click **Website UI**, then select "Request user input"
 2. Give the tool a label and describe when the assistant should ask for this input.
-3. (optional) Under **Inputs**, define the optional JSON fields your renderer may need. These are dynamic values you want the llm to generate.
+3. Under **Inputs**, the tool includes `message` by default. The LLM generates this value when it calls the tool, and the chat widget automatically shows it as dynamic copy with the UI, such as a short prompt or explanation.
 4. Save the tool. Open its three-dot menu and select **Copy tool name**, [then use that name as the key in `uiRenderers` on your website](https://predictabledialogs.com/docs/channels/web/ui-renderers).
 
-For example, name the tool `collect_email` and leave **Inputs** empty. When the assistant calls `collect_email`, your renderer displays an email form with its own controls. On submission, the widget reads the visitor's email through `getValues()` and sends it back as the tool result.
+`message` is a reserved field for this tool. You can remove it if your renderer does not need dynamic copy, and you can add more fields for other UI-specific data, but do not use `message` for unrelated values.
+
+For example, name the tool `collect_email` and keep the default `message` input. When the assistant calls `collect_email`, the widget shows the LLM-generated message with your rendered email form. On submission, the widget reads the visitor's email through `getValues()` and sends it back as the tool result.
 
 ## Render and Submit Input
 
@@ -25,6 +27,7 @@ import Agent from '@agent-embed/js/web';
 
 function renderEmailForm(container, _ui, { initialValues, requestSubmit, requestCancel }) {
   const form = document.createElement('form');
+
   const label = document.createElement('label');
   label.textContent = 'Email address';
 
