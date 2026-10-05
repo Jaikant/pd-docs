@@ -249,7 +249,7 @@ You can control the widget through JavaScript using the following methods:
 | `getAuthToken` | Optional | function | `() => Promise<string>` - Callback invoked before chat requests to return the signed-in user's raw token for API actions that use pass-through auth. See [Advanced Usage: Pass-through Auth](/docs/channels/web/advanced-usage/pass-through-auth). |
 | `onSend` | Optional | function | Callback invoked when the user clicks Send (runs alongside the default send action). Useful for custom UI, analytics, or app logic. See [Advanced Usage: onSend Hook](/docs/channels/web/advanced-usage/onsend-callback) for detailed examples. |
 | `onToolResult` | Optional | function | Completion callback for updating the host page after an assistant response finishes. See [onToolResult Callback](/docs/channels/web/advanced-usage/tool-result-callback). |
-| `uiRenderers` | Optional | `Record<string, ToolRenderer>` | Render tool output or interactive request-user-input UI inside the conversation. See [Render Tool UI in the Conversation](/docs/channels/web/ui-renderers). |
+| `agentUi` | Optional | `{ css?: string; components: Record<string, ToolRenderer> }` | Render tool output or interactive request-user-input UI inside the conversation. Use `css` for styles that belong to those custom components. See [Render Tool UI in the Conversation](/docs/channels/web/ui-renderers). |
 
 
 ### Widget Behaviour & Styling Parameters (optional)

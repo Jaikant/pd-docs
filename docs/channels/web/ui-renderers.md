@@ -5,14 +5,14 @@ description: Interactive UI inside the web widget.
 
 # Render Tool UI in the Conversation
 
-`uiRenderers` lets your website mount custom UI inside the agent UI. 
+`agentUi` lets your website mount custom UI inside the agent UI.
 
 When the LLM runs a tool, the tool’s output is sent to the widget code. You can use that output to render any UI you want.
 This is different from the [Request user input tool](/docs/tools/request-user-input), which collects input from the user and sends it to the LLM. We use the same rendering mechanism for both cases.
 
 
 ## Getting Started
-In the Predictable Dialogs dashboard, open the tool card's three-dot menu and select **Copy tool name**. We will use the `uiRenderers` prop available on the agent widget to display the custom ui. The prop works with Standard, Bubble, and Popup widgets.
+In the Predictable Dialogs dashboard, open the tool card's three-dot menu and select **Copy tool name**. Use that name as the key in `agentUi.components` to display custom UI for the tool. The prop works with Standard, Bubble, and Popup widgets.
 
 ## Example: Showing a Product Card in the agent UI
 
@@ -33,16 +33,18 @@ function renderProductCard(container, toolOutput) {
 
 Agent.initStandard({
   agentName: 'your-agent-name',
-  uiRenderers: {
-    show_product: renderProductCard,
+  agentUi: {
+    css: '.product-card { padding: 12px; border: 1px solid #d1d5db; }',
+    components: {
+      show_product: renderProductCard,
+    },
   },
-  customCss: '.product-card { padding: 12px; border: 1px solid #d1d5db; }',
 });
 ```
 
 In the above, `renderProductCard` would be a function defined in your code, which would render your ui inside the agent ui.
 
-We can also pass custom css for this card via the `customCss` prop.
+We can also pass CSS for these custom components through `agentUi.css`.
 
 The function we use for the ui, in this case `renderProductCard` takes two arguments: the first argument is the mounting element, where your custom ui would be mounted. The second argument is the tool output received from the predictable dialogs backend, your function uses this data to build the card.
 
@@ -94,6 +96,7 @@ This `collect_email` tool has no custom Inputs. The renderer uses a fixed email 
 ```js
 function renderEmailForm(container, _ui, { initialValues, requestSubmit, requestCancel }) {
   const form = document.createElement('form');
+  form.className = 'email-form';
 
   const label = document.createElement('label');
   label.textContent = 'Email address';
@@ -142,8 +145,11 @@ function renderEmailForm(container, _ui, { initialValues, requestSubmit, request
 
 Agent.initStandard({
   agentName: 'your-agent-name',
-  uiRenderers: {
-    collect_email: renderEmailForm,
+  agentUi: {
+    css: '.email-form { display: grid; gap: 8px; }',
+    components: {
+      collect_email: renderEmailForm,
+    },
   },
 });
 ```
@@ -185,16 +191,20 @@ For an app-owned interaction such as a Details click, handle the event directly 
 ```js
 Agent.initStandard({
   agentName: 'your-agent-name',
-  uiRenderers: {
-    show_product: (container, toolOutput) => {
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.textContent = 'Details';
-      button.addEventListener('click', () => {
-        const productId = toolOutput.id;
-        if (productId) window.location.assign(`/products/${encodeURIComponent(productId)}`);
-      });
-      container.append(button);
+  agentUi: {
+    css: '.product-details-button { padding: 8px 12px; border: 1px solid #d1d5db; }',
+    components: {
+      show_product: (container, toolOutput) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'product-details-button';
+        button.textContent = 'Details';
+        button.addEventListener('click', () => {
+          const productId = toolOutput.id;
+          if (productId) window.location.assign(`/products/${encodeURIComponent(productId)}`);
+        });
+        container.append(button);
+      },
     },
   },
 });
@@ -222,20 +232,24 @@ export default function ProductChat() {
   return (
     <Standard
       agentName="your-agent-name"
-      uiRenderers={{ show_product: renderProductCard }}
-      customCss=".product-card { padding: 12px; border: 1px solid #d1d5db; }"
+      agentUi={{
+        css: '.product-card { padding: 12px; border: 1px solid #d1d5db; }',
+        components: {
+          show_product: renderProductCard,
+        },
+      }}
     />
   );
 }
 ```
 
-In Next.js, use this in a client component and import `Standard` from `@agent-embed/nextjs` instead. The same `uiRenderers` prop and renderer function work in other React frameworks. For interactive input UI, render your own controls, connect them to `requestSubmit()` and `requestCancel()`, and return a handle with `getValues()` (and optionally `validate()` and `onInteractionStateChange()`).
+In Next.js, use this in a client component and import `Standard` from `@agent-embed/nextjs` instead. The same `agentUi` prop and renderer function work in other React frameworks. For interactive input UI, render your own controls, connect them to `requestSubmit()` and `requestCancel()`, and return a handle with `getValues()` (and optionally `validate()` and `onInteractionStateChange()`).
 
 The widget runs `cleanup` when a tool part or message is replaced or removed, the chat session resets, or the widget unmounts. Returning a function is shorthand for `{ cleanup: function }`.
 
 ## Styling and Safety
 
-The widget uses Shadow DOM, so CSS on the host page does not style cards mounted inside it. Supply rules through the widget's `customCss` prop or dashboard [Custom CSS](/docs/channels/web/custom-css). Each invocation has a separate container; avoid global selectors that would affect other cards.
+The widget uses Shadow DOM, so CSS on the host page does not style cards mounted inside it. Supply rules for custom renderer components through `agentUi.css`. Use the widget's `customCss` prop or dashboard [Custom CSS](/docs/channels/web/custom-css) for broader widget/theme overrides. Each invocation has a separate container; avoid global selectors that would affect other cards.
 
 Renderer-created DOM is **not sanitized or sandboxed**. Treat `ui` as untrusted data: use `textContent` or framework escaping, and sanitize any HTML you deliberately inject. Keep rendering free of side effects because persisted tool parts can mount again after reload.
 

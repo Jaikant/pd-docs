@@ -7,14 +7,14 @@ description: Send structured JSON from a skill to your website or an in-chat ren
 
 Use **Send data to UI** when the assistant should generate structured JSON for your website. The tool appears under **Knowledge and actions** and then **Website UI** in the Predictable Dialogs Dashboard.
 
-Your website can display the data inside the conversation with `uiRenderers`, receive it outside the conversation with `onToolResult`, or use both. Unlike [Request user input](/docs/tools/request-user-input), this tool has completed before its output renderer runs; the assistant is not waiting for a visitor response.
+Your website can display the data inside the conversation with `agentUi.components`, receive it outside the conversation with `onToolResult`, or use both. Unlike [Request user input](/docs/tools/request-user-input), this tool has completed before its output renderer runs; the assistant is not waiting for a visitor response.
 
 ## Configure the Tool
 
 1. In your agent's **Knowledge and actions** section, click **Website UI**, then select **Send data to UI**.
 2. Label the tool and describe when the assistant should use it.
 3. Under **Inputs**, define the JSON fields the assistant should generate. You can add fields individually, import example JSON, or paste a supported JSON Schema object.
-4. Save the tool. Open its three-dot menu and select **Copy tool name**. Use that name as the key in [`uiRenderers`](/docs/channels/web/ui-renderers) or the name checked by [`onToolResult`](/docs/channels/web/advanced-usage/tool-result-callback) on your website.
+4. Save the tool. Open its three-dot menu and select **Copy tool name**. Use that name as the key in [`agentUi.components`](/docs/channels/web/ui-renderers) or the name checked by [`onToolResult`](/docs/channels/web/advanced-usage/tool-result-callback) on your website.
 
 
 ## Display Output Inside the Conversation
@@ -26,15 +26,19 @@ import Agent from '@agent-embed/js/web';
 
 Agent.initStandard({
   agentName: 'your-agent-name',
-  uiRenderers: {
-    show_product_card: (container, ui) => {
-      const product = ui && typeof ui === 'object' ? ui : {};
-      const card = document.createElement('article');
-      const title = document.createElement('h3');
-      title.textContent = typeof product.name === 'string'
-        ? product.name : 'Product';
-      card.append(title);
-      container.append(card);
+  agentUi: {
+    css: '.product-card { padding: 12px; border: 1px solid #d1d5db; }',
+    components: {
+      show_product_card: (container, ui) => {
+        const product = ui && typeof ui === 'object' ? ui : {};
+        const card = document.createElement('article');
+        card.className = 'product-card';
+        const title = document.createElement('h3');
+        title.textContent = typeof product.name === 'string'
+          ? product.name : 'Product';
+        card.append(title);
+        container.append(card);
+      },
     },
   },
 });

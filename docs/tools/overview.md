@@ -33,7 +33,7 @@ Connect a supported app account and choose which app actions the skill can use. 
 
 ### Send Data to UI
 
-Send structured JSON from the assistant to your website. Use `uiRenderers` to show it inside the conversation, or `onToolResult` to update UI elsewhere on the page after the response finishes.
+Send structured JSON from the assistant to your website. Use `agentUi.components` to show it inside the conversation, or `onToolResult` to update UI elsewhere on the page after the response finishes.
 
 **Learn more:** [Send Data to UI](/docs/tools/send-data-to-ui)
 

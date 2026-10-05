@@ -5,7 +5,7 @@ description: TypeScript reference for custom UI renderers in the web widget.
 
 # Custom Agent UI
 
-The web widget accepts `uiRenderers?: Record<string, ToolRenderer>` in its initialization options. Register each renderer under the tool name copied from the dashboard, not the display label. The same option works with Standard, Bubble, and Popup widgets.
+The web widget accepts `agentUi?: AgentUi` in its initialization options. Register each renderer under the tool name copied from the dashboard, not the display label. The same option works with Standard, Bubble, and Popup widgets.
 
 ```ts
 type ToolUIInteractionState = 'waiting' | 'ready' | 'submitting' | 'resolved';
@@ -26,7 +26,19 @@ type ToolRenderer = (
     requestCancel?: () => Promise<void>;
   }
 ) => void | (() => void) | ToolRendererHandle;
+
+type AgentUi = {
+  css?: string;
+  components: Record<string, ToolRenderer>;
+};
 ```
+
+## AgentUi Options
+
+| Option | Description |
+| --- | --- |
+| `components` | Renderer map keyed by the copied tool name. Each value is a `ToolRenderer`. |
+| `css` | Optional CSS injected into the widget for the custom UI components in `components`. Use this for renderer-specific styles instead of the widget-level `customCss` prop. |
 
 ## Renderer Arguments
 

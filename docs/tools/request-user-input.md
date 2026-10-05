@@ -14,7 +14,7 @@ This differs from other tools, which have produced a tool output which also coul
 1. In your agent's **Knowledge and actions** section, click **Website UI**, then select "Request user input"
 2. Give the tool a label and describe when the assistant should ask for this input.
 3. Under **Inputs**, the tool includes `message` by default. The LLM generates this value when it calls the tool, and the chat widget automatically shows it as dynamic copy with the UI, such as a short prompt or explanation.
-4. Save the tool. Open its three-dot menu and select **Copy tool name**, [then use that name as the key in `uiRenderers` on your website](https://predictabledialogs.com/docs/channels/web/ui-renderers).
+4. Save the tool. Open its three-dot menu and select **Copy tool name**, [then use that name as the key in `agentUi.components` on your website](https://predictabledialogs.com/docs/channels/web/ui-renderers).
 
 `message` is a reserved field for this tool. You can remove it if your renderer does not need dynamic copy, and you can add more fields for other UI-specific data, but do not use `message` for unrelated values.
 
@@ -27,6 +27,7 @@ import Agent from '@agent-embed/js/web';
 
 function renderEmailForm(container, _ui, { initialValues, requestSubmit, requestCancel }) {
   const form = document.createElement('form');
+  form.className = 'email-form';
 
   const label = document.createElement('label');
   label.textContent = 'Email address';
@@ -68,8 +69,11 @@ function renderEmailForm(container, _ui, { initialValues, requestSubmit, request
 
 Agent.initStandard({
   agentName: 'your-agent-name',
-  uiRenderers: {
-    collect_email: renderEmailForm,
+  agentUi: {
+    css: '.email-form { display: grid; gap: 8px; }',
+    components: {
+      collect_email: renderEmailForm,
+    },
   },
 });
 ```
