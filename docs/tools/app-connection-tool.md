@@ -1,14 +1,14 @@
 ---
 title: App Connection Tool
 sidebar_position: 4
-description: Connect supported apps to a skill.
+description: Connect supported apps to an agent skill or MCP server.
 ---
 
 # App Connection Tool
 
 **Estimated Time: 4 minutes**
 
-The App Connection Tool lets a skill use an external app account. Google Calendar is currently supported.
+The App Connection Tool lets an agent skill or MCP server use an external app account. Google Calendar is currently supported.
 
 Use this tool when the chatbot should help with scheduling from a connected Google Calendar account.
 
@@ -16,9 +16,9 @@ Use this tool when the chatbot should help with scheduling from a connected Goog
 
 To add Google Calendar:
 
-1. Open the chatbot agent.
+1. Open your agent's skill, or the **Tools** tab of your [MCP server](/docs/mcp-servers/configuration).
 2. Go to **Knowledge and actions**.
-3. Add an **App connection** action.
+3. Click **Action**, then **Connect an app**.
 4. Choose **Google Calendar**.
 5. Connect a Google account or choose an existing connection.
 6. Choose the allowed actions and scheduling policy.
@@ -46,6 +46,6 @@ The scheduling policy controls how appointment availability is handled:
 
 Use these settings to keep chatbot scheduling aligned with the calendar owner's real availability rules.
 
-## Sessions
+## Inspect results
 
-After a conversation uses Google Calendar, open Sessions to review the app action that ran and the result returned to the assistant.
+After Google Calendar is called, open **Sessions** for an agent or [Activity](/docs/mcp-servers/activity) for an MCP server to review the action and its result.

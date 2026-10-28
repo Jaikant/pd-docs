@@ -24,7 +24,7 @@ With an AI&nbsp;Chatbot in place, pick the **channel** - where users will chat.
 | Channel | Ideal for | Key perks | Limitations |
 |---------|-----------|-----------|-------------|
 | **Web Widget** | Websites, web apps, docs sites | • Multiple widget styles (Standard, Bubble, Popup) <br/>• Full Theme & **Custom CSS** control <br/>• Real‑time streaming | Requires adding a small `<script>` tag to your site |
-| **WhatsApp** | Mobile‑first audiences, existing WhatsApp followers | • Direct messaging inside users’ favourite app <br/>• Automatic citation removal | WhatsApp controls UI & experience |
+| **WhatsApp** | Mobile‑first audiences, existing WhatsApp followers | • Direct messaging inside users’ favourite app <br/> | WhatsApp controls UI & experience |
 
 > Select **Web Widget** and see the [Theme & Custom CSS](/docs/channels/web/theme) guide for brand colours, fonts, gradients etc
 

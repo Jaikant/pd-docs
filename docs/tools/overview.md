@@ -7,9 +7,9 @@ sidebar_position: 1
 
 **Estimated Time: 2 minutes**
 
-Tools are capabilities used inside a skill. They let a skill search your knowledge base, call your HTTP endpoints, connect to supported apps, or exchange structured data with the website where the chatbot is embedded.
+Tools are capabilities shared by agent skills and MCP servers. They let agents search your knowledge base, call your HTTP endpoints, connect to supported apps, or exchange structured data with the website where the chatbot is embedded.
 
-You add tools from **Knowledge and actions** in the chatbot agent builder. Each tool has a name, a short description that helps the assistant know when to use it, and the configuration needed to run it.
+You add tools from **Knowledge and actions** in the agent builder or the MCP server's **Tools** tab. Each tool has a name, a short description that helps the assistant know when to use it, and the configuration needed to run it.
 
 ## Available Tool Types
 
@@ -33,11 +33,15 @@ Connect a supported app account and choose which app actions the skill can use. 
 
 ### Send Data to UI
 
+This is a website agent tool.
+
 Send structured JSON from the assistant to your website. Use `agentUi.components` to show it inside the conversation, or `onToolResult` to update UI elsewhere on the page after the response finishes.
 
 **Learn more:** [Send Data to UI](/docs/tools/send-data-to-ui)
 
 ### Request User Input
+
+This is a website agent tool.
 
 Ask a visitor for information through custom interactive UI inside the conversation. The assistant provides the UI definition; your registered renderer displays it, and the widget submits or cancels the visitor's response.
 
@@ -45,27 +49,32 @@ Ask a visitor for information through custom interactive UI inside the conversat
 
 ## How Tools Run
 
-The assistant decides when to use a tool based on the skill instructions, the tool name, and the tool description. You can also configure advanced rules for when a tool is eligible, whether it should run after another item, or whether it should be skipped for some messages.
+For agents, the assistant decides when to use a tool based on the skill instructions, the tool name, and the tool description. You can also configure advanced rules for when a tool is eligible, whether it should run after another item, or whether it should be skipped for some messages.
 
-Tool results are visible in Sessions so you can inspect what ran, what inputs were sent, and what output came back.
+For MCP servers, the external client chooses which tools to call. Agent-specific execution rules and website UI tools do not apply.
+
+Inspect inputs and results in **Sessions** for agents or [Activity](/docs/mcp-servers/activity) for MCP servers.
 
 ## Getting Started
 
-1. Open your chatbot agent.
+1. Open your agent's skill or your MCP server's **Tools** tab.
 2. Go to **Knowledge and actions**.
 3. Add a Knowledge item or an Action item.
 4. Name the tool and describe when the assistant should use it.
-5. Configure the tool, test it when testing is available, and review tool usage in Sessions.
+5. Configure the tool, test it when testing is available, and review tool usage in Sessions or MCP Activity.
 
 ## Best Practices
 
 - Keep each tool focused on one job.
 - Use clear tool names and usage descriptions.
 - Keep input schemas as small as practical.
-- Use pass-through auth for user-specific app actions whenever the action should run with the signed-in user's permissions.
-- Review Sessions after testing so you can see the exact tool inputs and outputs.
+- For web agents, use pass-through auth for user-specific app actions whenever the action should run with the signed-in user's permissions.
+- Review Sessions or MCP Activity after testing so you can see the exact tool inputs and outputs.
 
 ## Next Steps
+
+- [Create an MCP server](/docs/getting-started/create-mcp-server)
+- [MCP configuration and tools](/docs/mcp-servers/configuration)
 
 - [Skills](/docs/skills)
 - [HTTP Tool](/docs/tools/http-tool)

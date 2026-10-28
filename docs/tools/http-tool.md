@@ -1,16 +1,20 @@
 ---
 title: HTTP Tool
 sidebar_position: 3
-description: Call your own HTTP APIs from a skill.
+description: Call your own HTTP APIs from an agent skill or MCP server.
 ---
 
 # HTTP Tool
 
 **Estimated Time: 5 minutes**
 
-The HTTP Tool lets a skill call your API endpoints during a conversation. This action appears as **Custom API** under **Knowledge and actions**.
+The HTTP Tool lets an agent skill or MCP server call your API endpoints. This action appears as **Custom API** under **Knowledge and actions**.
 
 Use it when the chatbot needs live data or needs to perform an action through your backend, such as looking up an order, creating a lead, updating an account, or triggering an internal workflow.
+
+## Add an HTTP tool
+
+Open your agent's skill, or the **Tools** tab of your [MCP server](/docs/mcp-servers/configuration). In **Knowledge and actions**, click **Action**, then **Use any API**. Configure the endpoint, authentication, and inputs below.
 
 ## HTTP Methods
 
@@ -74,7 +78,7 @@ Give the connection a name and paste the bearer token. Predictable Dialogs store
 
 ### Pass-through From The Client
 
-Use this when the HTTP Tool should call your backend with the signed-in website user's token. Predictable Dialogs does not store this token. The web widget requests it from your page through the `getAuthToken` callback and forwards it as a bearer token for the current request.
+For web agents, use this when the HTTP Tool should call your backend with the signed-in website user's token. Predictable Dialogs does not store this token. The web widget requests it from your page through the `getAuthToken` callback and forwards it as a bearer token for the current request.
 
 Set the tool authentication to **Pass-through from the client**, then configure `getAuthToken` in the widget.
 
@@ -104,4 +108,4 @@ Use **Test request** from the builder to send a real request with sample values.
 
 For pass-through auth tests, enter a temporary token. The token is used only for that test request and is not saved.
 
-After testing in a conversation, open Sessions to inspect the tool call, arguments, endpoint response, and status.
+After calling the tool, open **Sessions** for an agent or [Activity](/docs/mcp-servers/activity) for an MCP server to inspect the arguments, response, and status.

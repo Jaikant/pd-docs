@@ -8,13 +8,13 @@ slug: /tools/file-search/setup
 
 This guide covers the specific steps for setting up searchable files. For an overview of knowledge base and RAG concepts, document preparation, and best practices, see [How Knowledge Base & RAG works](/docs/tools/file-search/how-file-search-works).
 
-### From the Agents Page (During Setup)
+## Add a knowledge tool
 
-After adding the AI, you'll see an alert with an option to add "Knowledge and actions":
+1. Open your agent's skill, or open the **Tools** tab of your [MCP server](/docs/mcp-servers/configuration).
+2. In **Knowledge and actions**, click **Knowledge**.
+3. Choose **Use files as knowledge** to open the upload section.
 
-1. Click the **Add** button in the alert
-2. This opens the "Add knowledge or actions" modal 
-3. Click "Use files as knowledge", this opens the upload section where you can upload your files.
+The following upload and configuration steps apply to both agents and MCP servers.
 
 ### File Upload
 

@@ -1,17 +1,17 @@
 ---
 id: intro
-description: Predictable Dialogs was designed from the ground up to enable the easy design and embedding of AI agents into websites.
+description: Create agents for websites and WhatsApp, or expose tools to external agents through MCP servers.
 slug: /
 ---
 
 # Introduction
 
-Predictable Dialogs will help you deploy an AI-powered interface swiftly.
+Predictable Dialogs lets you create agents for websites and WhatsApp, and expose tools to external agents through MCP servers.
 
-Building a custom tech stack is costly. Instead, focus on fine-tuning and perfecting your AI conversations while we handle the technology to seamlessly integrate it.
+- [Create an agent](/docs/getting-started/create-agent) to answer questions and perform actions in conversations with your users. Then choose a channel to publish it.
+- [Create an MCP server](/docs/getting-started/create-mcp-server) to make knowledge, APIs, and connected apps available to external agents through an MCP endpoint.
 
-Predictable Dialogs is an AI integration tool.
-
+Both workflows use the same [knowledge and action tools](/docs/tools/overview). Explore the **Agent** section for channels, providers, skills, and features, or the **MCP server** section for tool configuration and activity.
 
 ## Something missing? {#something-missing}
 If you find issues with the documentation or have suggestions on how to improve the documentation or the project in general, please send an email to jai@predictabledialogs.com

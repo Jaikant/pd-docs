@@ -1,252 +1,274 @@
-/**
- * Creating a sidebar enables you to:
- - create an ordered group of docs
- - render a sidebar for each doc of that group
- - provide next/previous navigation
-
- The sidebars can be generated from the filesystem, or explicitly defined here.
-
- Create as many sidebars as you want.
- */
-
 // @ts-check
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  // By default, Docusaurus generates a sidebar from the docs folder structure
-  tutorialSidebar: [
+  "tutorialSidebar": [
     {
-      type: 'doc',
-      id: 'intro',
-      label: 'Introduction',
+      "type": "doc",
+      "id": "intro",
+      "label": "Introduction"
     },
     {
-      type: 'doc',
-      id: 'pd-platforms',
-      label: 'Platforms',
-    },
-    {
-      type: 'category',
-      label: 'Getting Started',
-      link: {
+      "type": "category",
+      "label": "Getting Started",
+      "link": {
         "type": "generated-index",
-        "description": "Embed Powerful AI Agents into Your Website"
+        "description": "Create an agent for your users or an MCP server for external agents."
       },
-      items: [
+      "items": [
         {
-          type: 'doc',
-          id: 'getting-started/create-agent',
-          label: 'Create Chatbot Agent'
+          "type": "category",
+          "label": "Create agent",
+          "link": {
+            "type": "doc",
+            "id": "getting-started/create-agent"
+          },
+          "items": [
+            {
+              "type": "doc",
+              "id": "getting-started/choose-channel",
+              "label": "Choose channel"
+            }
+          ]
         },
         {
-          type: 'doc',
-          id: 'getting-started/choose-channel',
-          label: 'Choose Channel'
-        },
-      ],
+          "type": "doc",
+          "id": "getting-started/create-mcp-server",
+          "label": "Create MCP server"
+        }
+      ]
     },
     {
-      type: 'category',
-      label: 'Channels',
-      link: {
-        type: 'generated-index',
-        description: 'Channels to connect your agents with users.',
+      "type": "category",
+      "label": "Agent",
+      "link": {
+        "type": "generated-index",
+        "description": "Configure and publish agents for websites and WhatsApp."
       },
-      items: [
+      "items": [
         {
-          type: 'category',
-          label: 'Web',
-          items: [
-            'channels/web/index',
-            'channels/web/embed-widget',
+          "type": "doc",
+          "id": "pd-platforms",
+          "label": "Platforms"
+        },
+        {
+          "type": "category",
+          "label": "Channels",
+          "link": {
+            "type": "generated-index",
+            "description": "Channels to connect your agents with users.",
+            "slug": "/category/channels"
+          },
+          "items": [
             {
-              type: 'category',
-              label: 'Widgets',
-              link: {
-                type: 'generated-index',
-                description: 'Different widget types for embedding your AI agent on websites.',
-              },
-              items: [
-                'channels/web/widgets/bubble',
-                'channels/web/widgets/popup',
-                'channels/web/widgets/standard',
+              "type": "category",
+              "label": "Web",
+              "items": [
+                "channels/web/index",
+                "channels/web/embed-widget",
+                {
+                  "type": "category",
+                  "label": "Widgets",
+                  "link": {
+                    "type": "generated-index",
+                    "description": "Different widget types for embedding your AI agent on websites."
+                  },
+                  "items": [
+                    "channels/web/widgets/bubble",
+                    "channels/web/widgets/popup",
+                    "channels/web/widgets/standard"
+                  ]
+                },
+                "channels/web/streaming",
+                "channels/web/feedback",
+                {
+                  "type": "category",
+                  "label": "Theme",
+                  "link": {
+                    "type": "doc",
+                    "id": "channels/web/theme"
+                  },
+                  "items": [
+                    "channels/web/theme/greeting-message",
+                    "channels/web/theme/background",
+                    "channels/web/theme/font",
+                    "channels/web/theme/avatars",
+                    "channels/web/theme/bubble",
+                    "channels/web/theme/input-styling",
+                    "channels/web/theme/theme-templates"
+                  ]
+                },
+                "channels/web/custom-css",
+                "channels/web/ui-renderers",
+                {
+                  "type": "category",
+                  "label": "Advanced Usage",
+                  "link": {
+                    "type": "generated-index",
+                    "description": "This section covers advanced features and programmatic control options available across the web widget types (Standard, Bubble, and Popup)."
+                  },
+                  "items": [
+                    "channels/web/advanced-usage/context-variables",
+                    "channels/web/advanced-usage/onsend-callback",
+                    "channels/web/advanced-usage/tool-result-callback",
+                    "channels/web/advanced-usage/pass-through-auth"
+                  ]
+                }
               ]
             },
-            'channels/web/streaming',
-            'channels/web/feedback',
             {
-              type: 'category',
-              label: 'Theme',
-              link: {
-                type: 'doc',
-                id: 'channels/web/theme',
-              },
-              items: [
-                'channels/web/theme/greeting-message',
-                'channels/web/theme/background',
-                'channels/web/theme/font',
-                'channels/web/theme/avatars',
-                'channels/web/theme/bubble',
-                'channels/web/theme/input-styling',
-                'channels/web/theme/theme-templates',
-              ],
-            },
-            'channels/web/custom-css',
-            'channels/web/ui-renderers',
-            {
-              type: 'category',
-              label: 'Advanced Usage',
-              link: {
-                type: 'generated-index',
-                description: 'This section covers advanced features and programmatic control options available across the web widget types (Standard, Bubble, and Popup).',
-              },
-              items: [
-                'channels/web/advanced-usage/context-variables',
-                'channels/web/advanced-usage/onsend-callback',
-                'channels/web/advanced-usage/tool-result-callback',
-                'channels/web/advanced-usage/pass-through-auth',
+              "type": "category",
+              "label": "WhatsApp",
+              "items": [
+                {
+                  "type": "category",
+                  "label": "Business Setup",
+                  "items": [
+                    "channels/whatsapp/business-setup/create-a-business-account",
+                    "channels/whatsapp/business-setup/create-a-meta-app",
+                    "channels/whatsapp/business-setup/generate-whatsapp-token",
+                    "channels/whatsapp/business-setup/add-phone-number",
+                    "channels/whatsapp/business-setup/update-webhooks-in-meta"
+                  ]
+                },
+                "channels/whatsapp/quick-start"
               ]
             }
           ]
         },
         {
-          type: 'category',
-          label: 'WhatsApp',
-          items: [
+          "type": "category",
+          "label": "Providers",
+          "link": {
+            "type": "generated-index",
+            "description": "Integrations with language‑model providers.",
+            "slug": "/category/providers"
+          },
+          "items": [
             {
-              type: 'category',
-              label: 'Business Setup',
-              items: [
-                'channels/whatsapp/business-setup/create-a-business-account',
-                'channels/whatsapp/business-setup/create-a-meta-app',
-                'channels/whatsapp/business-setup/generate-whatsapp-token',
-                'channels/whatsapp/business-setup/add-phone-number',
-                'channels/whatsapp/business-setup/update-webhooks-in-meta',
-              ]
-            },
-            'channels/whatsapp/quick-start',
+              "type": "autogenerated",
+              "dirName": "providers"
+            }
+          ]
+        },
+        {
+          "type": "doc",
+          "id": "skills",
+          "label": "Skills"
+        },
+        {
+          "type": "category",
+          "label": "Features",
+          "link": {
+            "type": "generated-index",
+            "description": "Features of Predictable Dialogs.",
+            "slug": "/category/features"
+          },
+          "items": [
+            "features/api-keys",
+            "features/sessions",
+            "features/reports"
           ]
         }
-      ],
+      ]
     },
     {
-      type: 'category',
-      label: 'Providers',
-      link: {
-        type: 'generated-index',
-        description: 'Integrations with language‑model providers.',
+      "type": "category",
+      "label": "MCP server",
+      "link": {
+        "type": "generated-index",
+        "description": "Expose tools to external agents and inspect their activity."
       },
-      items: [
+      "items": [
+        "mcp-servers/configuration",
+        "mcp-servers/activity"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Tools",
+      "link": {
+        "type": "generated-index",
+        "description": "Shared knowledge, API, and app tools for agents and MCP servers, plus website UI tools for agents."
+      },
+      "items": [
+        "tools/overview",
         {
-          type: 'autogenerated',
-          dirName: 'providers',
-        },
-      ],
-    },
-    {
-      type: 'doc',
-      id: 'skills',
-      label: 'Skills',
-    },
-    {
-      type: 'category',
-      label: 'Tools',
-      link: {
-        type: 'generated-index',
-        description: 'Tools that skills use for knowledge, APIs, apps, and custom web UI.',
-      },
-      items: [
-        'tools/overview',
-        {
-          type: 'category',
-          label: 'Knowledge Base & RAG',
-          link: {
-            type: 'generated-index',
-            description: 'Use uploaded knowledge sources with Retrieval-Augmented Generation in Predictable Dialogs.',
-          },
-          items: [
-            {
-              type: 'autogenerated',
-              dirName: 'tools/file-search',
-            },
-          ],
-        },
-        'tools/http-tool',
-        'tools/app-connection-tool',
-        'tools/send-data-to-ui',
-        'tools/request-user-input',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Features',
-      link: {
-        type: 'generated-index',
-        description: 'Features of Predictable Dialogs.',
-      },
-      items: [
-        'features/api-keys',
-        'features/sessions',
-        'features/reports',
-      ],
-    },
-    {
-          type: 'category',
-          label: "API Reference (Beta)",
-          link: {
+          "type": "category",
+          "label": "Knowledge Base & RAG",
+          "link": {
             "type": "generated-index",
-            "description": "Management API for agents"
+            "description": "Use uploaded knowledge sources with Retrieval-Augmented Generation in Predictable Dialogs."
           },
-          items: [
+          "items": [
             {
-              type: 'doc',
-              id: 'api-reference/introduction',
-              label: 'Introduction'
-            },
-            {
-              type: 'doc',
-              id: 'api-reference/authentication',
-              label: 'Authentication'
-            },
-            {
-              type: 'doc',
-              id: 'api-reference/making-requests',
-              label: 'Making Requests'
-            },
-            {
-              type: 'doc',
-              id: 'api-reference/agents',
-              label: 'Agents'
-            },
-            {
-              type: 'doc',
-              id: 'api-reference/ai-resources',
-              label: 'AI Resources'
-            },
-            {
-              type: 'doc',
-              id: 'api-reference/agent-theme',
-              label: 'Agent Theme'
-            },
-            {
-              type: 'doc',
-              id: 'api-reference/sessions',
-              label: 'Sessions'
-            },
-            {
-              type: 'doc',
-              id: 'api-reference/custom-agent-ui',
-              label: 'Custom Agent UI'
-            },
-          ],
+              "type": "autogenerated",
+              "dirName": "tools/file-search"
+            }
+          ]
         },
-    {
-      type: 'doc',
-      id: 'quick-faq',
-      label: 'FAQs',
+        "tools/http-tool",
+        "tools/app-connection-tool",
+        "tools/send-data-to-ui",
+        "tools/request-user-input"
+      ]
     },
-  ],
-
+    {
+      "type": "category",
+      "label": "API Reference (Beta)",
+      "link": {
+        "type": "generated-index",
+        "description": "Management API for agents"
+      },
+      "items": [
+        {
+          "type": "doc",
+          "id": "api-reference/introduction",
+          "label": "Introduction"
+        },
+        {
+          "type": "doc",
+          "id": "api-reference/authentication",
+          "label": "Authentication"
+        },
+        {
+          "type": "doc",
+          "id": "api-reference/making-requests",
+          "label": "Making Requests"
+        },
+        {
+          "type": "doc",
+          "id": "api-reference/agents",
+          "label": "Agents"
+        },
+        {
+          "type": "doc",
+          "id": "api-reference/ai-resources",
+          "label": "AI Resources"
+        },
+        {
+          "type": "doc",
+          "id": "api-reference/agent-theme",
+          "label": "Agent Theme"
+        },
+        {
+          "type": "doc",
+          "id": "api-reference/sessions",
+          "label": "Sessions"
+        },
+        {
+          "type": "doc",
+          "id": "api-reference/custom-agent-ui",
+          "label": "Custom Agent UI"
+        }
+      ]
+    },
+    {
+      "type": "doc",
+      "id": "quick-faq",
+      "label": "FAQs"
+    }
+  ]
 };
 
 export default sidebars;
