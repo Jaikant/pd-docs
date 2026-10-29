@@ -10,6 +10,10 @@ title: Configuration and tools
 
 Copy the complete endpoint using the copy icon beside the URL. Add it to your external agent's MCP configuration as a remote server URL. Clients such as Claude Code and Codex can connect to remote MCP servers; follow your client's setup instructions to register the endpoint.
 
+New servers are public by default. To require a token, open **Access** in the sidebar and select **Access token**. Follow [Access](/docs/mcp-servers/access) to create a token and configure [Codex](/docs/mcp-servers/access/connect-codex) or [Claude Code](/docs/mcp-servers/access/connect-claude-code).
+
+To change the URL after creation, choose **Edit endpoint** from the three-dot menu on the server card or at the top of its **Tools** page. See [Edit the endpoint after creation](/docs/getting-started/create-mcp-server#edit-the-endpoint-after-creation). Update your clients with the new URL after saving.
+
 After adding tools, connect or refresh the server in your client so it can discover the available tools.
 
 ## Add knowledge

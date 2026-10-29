@@ -181,6 +181,18 @@ const sidebars = {
       },
       "items": [
         "mcp-servers/configuration",
+        {
+          "type": "category",
+          "label": "Access",
+          "link": {
+            "type": "doc",
+            "id": "mcp-servers/access"
+          },
+          "items": [
+            "mcp-servers/access/connect-codex",
+            "mcp-servers/access/connect-claude-code"
+          ]
+        },
         "mcp-servers/activity"
       ]
     },
